@@ -1,0 +1,6 @@
+/* 상단 네비게이션/헤더 숨기기 */
+header,
+nav,
+.page-title {
+  display: none !important;
+}
