@@ -1,5 +1,3 @@
-# Slowlane
-
 # **Slowlane**
 
 Independent mobile product studio.
