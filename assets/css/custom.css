@@ -4,3 +4,54 @@ nav,
 .page-title {
   display: none !important;
 }
+/*
+  GitHub Pages(Jekyll) 테마마다 헤더 DOM 클래스명이 달라서
+  "보이는 것" 위주로 넓게 잡아 숨깁니다.
+  - 상단 사이트 헤더/네비게이션
+  - 페이지 타이틀(테마가 자동으로 1회 더 찍는 경우)
+
+  적용 확인 방법:
+  1) 브라우저에서 페이지 새로고침(강력 새로고침) 후
+  2) 개발자도구 > Network에서 custom.css가 로드되는지 확인
+*/
+
+/* 상단 헤더/네비게이션 계열 */
+header,
+nav,
+.site-header,
+.site-nav,
+.site-title,
+.page-header,
+.pagehead,
+.Header,
+.navbar,
+.NavBar,
+.top-nav,
+.topnav,
+.masthead,
+.masthead__inner-wrap,
+.gh-header,
+.gh-nav {
+  display: none !important;
+}
+
+/* 페이지 내 자동 타이틀(중복 H1) 계열 */
+.page-title,
+.post-title,
+.entry-title,
+.page-heading,
+h1.page-title,
+h1.post-title,
+h1.entry-title,
+.markdown-body > h1:first-child {
+  display: none !important;
+}
+
+/* 위 요소가 사라져서 생기는 상단 여백 줄이기 */
+main,
+.page-content,
+.container,
+.wrapper {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
