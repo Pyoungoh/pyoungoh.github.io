@@ -25,7 +25,7 @@ Slowlane은 복잡함을 줄이고 본질에 집중합니다.
 
 ## **Products**
 
-[Pace Lab](https://pyoungoh.github.io/pacelab/index.md)
+[Pace Lab](https://pyoungoh.github.io/pacelab)
 
 러너를 위한 스마트 러닝 계산기
 

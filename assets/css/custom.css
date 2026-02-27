@@ -85,3 +85,15 @@ main,
   padding-bottom: 0 !important;
   margin-bottom: 0 !important;
 }
+
+/* 전체 콘텐츠 중앙 정렬 */
+body {
+  display: flex;
+  justify-content: center;
+  padding: 0 1rem; /* 화면 가장자리 여백 */
+}
+
+main {
+  width: 100%;
+  max-width: 800px; /* 원하는 최대 폭으로 조정 가능 */
+}
