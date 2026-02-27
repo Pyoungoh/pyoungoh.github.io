@@ -5,9 +5,10 @@ exclude:
   - "Gemfile"
   - "Gemfile.lock"
 
+css: /assets/css/custom.css
+
 defaults:
   - scope:
       path: ""
     values:
       layout: default
-      css: /assets/css/custom.css

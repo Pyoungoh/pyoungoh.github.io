@@ -1,24 +1,21 @@
 ---
-layout: page
-title: "Pace Lab 개인정보 처리방침"
+layout: default
 permalink: /pacelab/privacy/
 ---
+
+# Pace Lab 개인정보 처리방침
 
 최종 업데이트: 2026년 2월 17일
 
 Pace Lab은 러너를 위한 기록 및 계산 도구 애플리케이션입니다. 본 앱은 회원가입 또는 로그인 기능을 제공하지 않습니다.
 
----
-
-## **1. 수집하는 개인정보**
+## 1. 수집하는 개인정보
 
 Pace Lab은 사용자의 이름, 이메일 주소, 전화번호, 위치 정보 등 직접적인 개인 식별 정보를 수집하거나 저장하지 않습니다.
 
 사용자가 입력하는 기록 및 계산 데이터는 사용자의 기기 내부에만 저장되며, 외부 서버로 전송되지 않습니다.
 
----
-
-## **2. 광고 및 제3자 서비스**
+## 2. 광고 및 제3자 서비스
 
 Pace Lab은 Google AdMob을 통해 광고를 표시합니다.
 
@@ -30,30 +27,22 @@ Pace Lab은 Google AdMob을 통해 광고를 표시합니다.
 
 해당 정보는 Google의 개인정보 처리방침에 따라 처리됩니다.
 
-Google 개인정보 처리방침:
+Google 개인정보 처리방침: [https://policies.google.com/privacy](https://policies.google.com/privacy)
 
-https://policies.google.com/privacy
-
----
-
-## **3. 데이터 보관**
+## 3. 데이터 보관
 
 Pace Lab은 사용자 데이터를 외부 서버에 저장하지 않습니다.
 
 사용자가 입력한 데이터는 사용자의 기기 내부에만 저장됩니다.
 
----
-
-## **4. 추적 및 광고 식별자 사용**
+## 4. 추적 및 광고 식별자 사용
 
 본 앱은 제3자 광고 네트워크(Google AdMob)를 사용하며, 광고 제공을 위해 광고 식별자(IDFA 등)가 사용될 수 있습니다.
 
 사용자는 iOS 설정을 통해 광고 추적 허용 여부를 관리할 수 있습니다.
 
----
-
-## **5. 문의**
+## 5. 문의
 
 개인정보 처리방침과 관련하여 문의 사항이 있는 경우 아래 이메일로 연락해 주시기 바랍니다.
 
-slowlane.dev@gmail.com
+[slowlane.dev@gmail.com](mailto:slowlane.dev@gmail.com)
