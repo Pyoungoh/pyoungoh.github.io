@@ -69,7 +69,7 @@ Pace Labは、氏名、メールアドレス、位置情報などの直接的な
 
 これらの情報は、Googleのプライバシーポリシーに基づいて処理されます。
 
-Google Privacy Policy: https://policies.google.com/privacy
+Google Privacy Policy: [https://policies.google.com/privacy](https://policies.google.com/privacy)
 
 **3. データの保管**
 

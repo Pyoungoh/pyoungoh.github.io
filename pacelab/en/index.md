@@ -2,43 +2,43 @@
 
 **Focused tools for smarter running.**
 
-Pace Lab은 러닝 훈련과 레이스 전략을 위한 계산 도구입니다.
+Pace Lab is a calculation tool designed for running training and race strategy.
 
-필요한 기능을 빠르게 실행하고, 즉시 결과를 확인할 수 있습니다.
+You can quickly access the tools you need and see results instantly.
 
 ## Features
 
-### 속도 계산기
+### Pace calculator
 
-입력한 거리와 시간을 기준으로 러닝 페이스와 시속을 정확하게 계산합니다.
+Accurately calculates running pace and speed based on the distance and time you enter.
 
-### 페이스 계산기
+### Race pace calculator
 
-목표 기록을 입력하면 완주를 위해 필요한 평균 페이스를 계산합니다.
+Calculates the average pace required to achieve your target finish time.
 
-### 트레드밀 속도 변환
+### Treadmill pace converter
 
-야외 러닝 페이스를 트레드밀에서 설정할 수 있는 속도로 변환합니다.
+Converts your outdoor running pace into a treadmill speed setting.
 
-### 400m 랩 계산기
+### 400m lap calculator
 
-트랙 한 바퀴(400m) 기록을 기준으로 구간별 페이스와 목표 기록을 계산합니다.
+Calculates lap pace and projected finish times based on a 400m track lap.
 
-### 훈련 페이스 계산기
+### Training pace calculator
 
-목표 기록을 바탕으로 훈련 강도별 권장 페이스를 안내합니다.
+Provides recommended training paces based on your target race time.
 
-### 심박존 계산기
+### Heart rate zone calculator
 
-최대 심박수, 안정 시 심박수, 역치 심박수를 기준으로 개인별 심박존을 산출합니다.
+Generates personalized heart rate zones based on your maximum, resting, and lactate threshold heart rate.
 
-### 대회 기록 예측
+### Race time predictor
 
-최근 레이스 기록을 기반으로 5K, 10K, 하프, 풀코스 예상 완주 시간을 예측합니다.
+Predicts estimated finish times for 5K, 10K, half marathon, and full marathon based on your recent race results.
 
-### 에너지젤 보급 계산기
+### Energy gel calculator
 
-목표 페이스와 거리 정보를 바탕으로 에너지젤 섭취 수량과 적절한 보급 시점을 안내합니다.
+Advises on the number of energy gels and optimal intake timing based on your target pace and race distance.
 
 ## Support
 
@@ -46,32 +46,29 @@ Pace Lab은 러닝 훈련과 레이스 전략을 위한 계산 도구입니다.
 
 ## Privacy Policy
 
-Last updated: 2026-02-17
+Last updated: March 2, 2026
 
-Pace Lab은 러너를 위한 계산 도구 앱으로, 회원가입이나 로그인 기능을 제공하지 않습니다.
+Pace Lab ("the App") is developed and operated by Slowlane ("we," "our," or "us"). This Privacy Policy explains how information is handled when you use the App.
 
-**1. 개인정보 수집**
+### 1. Information We Collect
 
-Pace Lab은 사용자의 이름, 이메일, 위치 정보 등 직접적인 개인 정보를 수집하거나 저장하지 않습니다.
+The App does not require account registration and does not directly collect or store personally identifiable information such as your name, email address, or precise location.
 
-사용자가 입력하는 기록 및 계산 데이터는 사용자의 기기 내부에만 저장되며, 서버로 전송되지 않습니다.
+All running records, calculation inputs, and related data entered within the App are stored locally on your device. This information is not transmitted to our servers and is not accessible by us.
 
-**2. 광고 및 제3자 서비스**
+### 2. Advertising and Third-Party Services
 
-본 앱은 Google AdMob을 사용하여 광고를 제공합니다.
+The App uses Google AdMob to display advertisements. AdMob may collect certain information automatically for the purpose of delivering and measuring advertisements, including but not limited to:
 
-광고 제공 및 성과 측정을 위해 Google은 다음과 같은 정보를 수집할 수 있습니다:
+- Advertising identifiers (such as IDFA or Google Advertising ID)
+- Device information (such as device model, operating system, and IP address)
+- App usage data related to ad interactions
 
-- 광고 식별자 (IDFA 등)
-- 기기 정보
-- 앱 사용 정보
+Such information is collected and processed by Google in accordance with its own privacy policies. We do not control or store this data.
 
-해당 정보는 Google의 개인정보 처리방침에 따라 처리됩니다.
+For more information, please refer to Google’s Privacy Policy:
+[https://policies.google.com/privacy](https://policies.google.com/privacy)
 
-Google Privacy Policy: [https://policies.google.com/privacy](https://policies.google.com/privacy)
+### 3. Data Storage and Retention
 
-**3. 데이터 보관**
-
-앱은 사용자 데이터를 서버에 저장하지 않습니다.
-
-입력 데이터는 사용자의 기기 내부에만 저장됩니다.
+We do not store user data on external servers. All user-entered data remains on the user’s device unless the user chooses to delete the App or clear the App’s data.
