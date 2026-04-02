@@ -38,8 +38,8 @@ You can use this converter to align treadmill workouts with your outdoor running
 
 Use the full Pace Lab app for more features like pace calculation, split charts, race prediction, heart rate zones, and fueling planning.
 
-- App Store: https://apps.apple.com/us/app/pace-lab-running-calculator/id6759136568
-- Google Play: https://play.google.com/store/apps/details?id=com.kr.slowlane.pacelab
+- [App Store](https://apps.apple.com/us/app/pace-lab-running-calculator/id6759136568)
+- [Google Play](https://play.google.com/store/apps/details?id=com.kr.slowlane.pacelab)
 
 ## Related tools
 

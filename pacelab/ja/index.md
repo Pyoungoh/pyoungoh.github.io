@@ -10,8 +10,8 @@ Pace Labは、トレーニングとレース計画に使える無料のランニ
 
 Pace Labをダウンロード:
 
-- App Store: https://apps.apple.com/us/app/pace-lab-running-calculator/id6759136568
-- Google Play: https://play.google.com/store/apps/details?id=com.kr.slowlane.pacelab
+- [App Store](https://apps.apple.com/us/app/pace-lab-running-calculator/id6759136568)
+- [Google Play](https://play.google.com/store/apps/details?id=com.kr.slowlane.pacelab)
 
 ## Features
 

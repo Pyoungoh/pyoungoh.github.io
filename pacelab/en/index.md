@@ -10,8 +10,8 @@ You can quickly access the tools you need and get clear results right away.
 
 Download Pace Lab:
 
-- App Store: https://apps.apple.com/us/app/pace-lab-running-calculator/id6759136568
-- Google Play: https://play.google.com/store/apps/details?id=com.kr.slowlane.pacelab
+- [App Store](https://apps.apple.com/us/app/pace-lab-running-calculator/id6759136568)
+- [Google Play](https://play.google.com/store/apps/details?id=com.kr.slowlane.pacelab)
 
 ## Features
 

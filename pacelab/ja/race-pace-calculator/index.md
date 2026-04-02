@@ -33,8 +33,8 @@
 
 Pace Labアプリでは、トレーニングペース計算、心拍ゾーン、レース予想タイム、補給戦略など、さらに多くの機能を利用できます。
 
-- App Store: https://apps.apple.com/us/app/pace-lab-running-calculator/id6759136568
-- Google Play: https://play.google.com/store/apps/details?id=com.kr.slowlane.pacelab
+- [App Store](https://apps.apple.com/us/app/pace-lab-running-calculator/id6759136568)
+- [Google Play](https://play.google.com/store/apps/details?id=com.kr.slowlane.pacelab)
 
 ## Related tools
 

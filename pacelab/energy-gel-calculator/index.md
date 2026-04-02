@@ -33,8 +33,8 @@
 
 Pace Lab 앱에서는 속도 계산기, 통과 시간표, 대회 기록 예측, 심박존 같은 더 많은 기능을 함께 사용할 수 있습니다.
 
-- App Store: https://apps.apple.com/us/app/pace-lab-running-calculator/id6759136568
-- Google Play: https://play.google.com/store/apps/details?id=com.kr.slowlane.pacelab
+- [App Store](https://apps.apple.com/us/app/pace-lab-running-calculator/id6759136568)
+- [Google Play](https://play.google.com/store/apps/details?id=com.kr.slowlane.pacelab)
 
 ## Related tools
 

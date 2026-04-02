@@ -35,8 +35,8 @@ You can use this calculator to test pacing strategies and plan your race executi
 
 Use the full Pace Lab app for more features like training pace calculation, heart rate zones, race prediction, and fueling planning.
 
-- App Store: https://apps.apple.com/us/app/pace-lab-running-calculator/id6759136568
-- Google Play: https://play.google.com/store/apps/details?id=com.kr.slowlane.pacelab
+- [App Store](https://apps.apple.com/us/app/pace-lab-running-calculator/id6759136568)
+- [Google Play](https://play.google.com/store/apps/details?id=com.kr.slowlane.pacelab)
 
 ## Related tools
 
