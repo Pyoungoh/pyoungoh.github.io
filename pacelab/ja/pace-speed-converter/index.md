@@ -6,14 +6,14 @@
 
 このペース・速度変換は、ペース（min/km または min/mi）と速度（km/h または mph）を手軽に切り替えられるため、トレッドミル設定や練習強度の調整に便利です。
 
-## What you can do
+## できること
 
 - ランニングのペースを速度に変換（km/h または mph）
 - 速度を対応するランニングペースに変換
 - 入力を調整して結果をすぐ確認
 - ロード、トレッドミル、トラック練習で活用
 
-## When to use it
+## 使う場面
 
 こんなときに使えます:
 
@@ -22,7 +22,7 @@
 - km と mile の単位差によるペースの違いを確認したいとき
 - ワークアウト強度をすばやく調整したいとき
 
-## Example
+## 例
 
 ランニングペースが 5:00 min/km の場合:
 
@@ -34,14 +34,14 @@
 
 トレッドミル練習と屋外ランの基準を揃えるのに便利です。
 
-## Get the app
+## アプリをダウンロード
 
 Pace Labアプリでは、ペース計算機、通過タイム表、レース予想タイム、心拍ゾーン、補給戦略など、さらに多くの機能を利用できます。
 
 - [App Store](https://apps.apple.com/us/app/pace-lab-running-calculator/id6759136568)
 - [Google Play](https://play.google.com/store/apps/details?id=com.kr.slowlane.pacelab)
 
-## Related tools
+## 関連ツール
 
 - [ペース計算機](/pacelab/ja/pace-calculator/)
 - [レースペース計算](/pacelab/ja/race-pace-calculator/)

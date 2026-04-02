@@ -6,14 +6,14 @@
 
 このトレーニングペース計算は、最近のレース結果や目標パフォーマンスをもとに、練習ごとの適切な強度を設定するのに役立ちます。
 
-## What you can do
+## できること
 
 - 複数の練習タイプに対応したトレーニングペースを計算
 - イージーラン、マラソンペース、閾値走、インターバルの目安ペースを確認
 - 最近のレース結果をもとに練習強度を調整
 - 入力を調整しながらトレーニングペースの範囲を比較
 
-## When to use it
+## 使う場面
 
 こんなときに使えます:
 
@@ -22,7 +22,7 @@
 - イージーデイを速く走りすぎるのを避けたいとき
 - もっと計画的なトレーニングを組みたいとき
 
-## Example
+## 例
 
 最近10Kを50分で走った場合:
 
@@ -32,14 +32,14 @@
 
 ワークアウトを整理し、安定したペースで継続的に練習したいときに便利です。
 
-## Get the app
+## アプリをダウンロード
 
 Pace Labアプリでは、ペース計算機、通過タイム表、レース予想タイム、心拍ゾーン、補給戦略など、さらに多くの機能を利用できます。
 
 - [App Store](https://apps.apple.com/us/app/pace-lab-running-calculator/id6759136568)
 - [Google Play](https://play.google.com/store/apps/details?id=com.kr.slowlane.pacelab)
 
-## Related tools
+## 関連ツール
 
 - [ペース計算機](/pacelab/ja/pace-calculator/)
 - [レースペース計算](/pacelab/ja/race-pace-calculator/)

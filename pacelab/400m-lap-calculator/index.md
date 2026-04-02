@@ -6,14 +6,14 @@
 
 이 400m 랩 계산기는 표준 400m 트랙 기준으로 페이스와 랩 기록을 서로 변환해 트랙 세션을 계획하고 분석하는 데 도움을 줍니다.
 
-## What you can do
+## 할 수 있는 것
 
 - 페이스(min/km 또는 min/mi)를 400m 랩 기록으로 변환
 - 400m 랩 기록을 해당 러닝 페이스로 변환
 - 목표 랩 기준으로 인터벌 훈련 계획
 - 입력값을 조정하면 결과 즉시 업데이트
 
-## When to use it
+## 언제 사용하나요
 
 이럴 때 활용해 보세요:
 
@@ -22,7 +22,7 @@
 - 인터벌 훈련(예: 400m 반복주)을 분석하고 싶을 때
 - 스피드 훈련에서 페이스 정확도를 높이고 싶을 때
 
-## Example
+## 예시
 
 목표 페이스가 5:00분/km라면:
 
@@ -34,14 +34,14 @@
 
 트랙 세션을 더 정교하게 구성하고 페이스 전략을 다듬는 데 활용할 수 있습니다.
 
-## Get the app
+## 앱 다운로드
 
 Pace Lab 앱에서는 목표 페이스 계산기, 통과 시간표, 심박존, 보급 전략 같은 더 많은 기능을 함께 사용할 수 있습니다.
 
 - [App Store](https://apps.apple.com/us/app/pace-lab-running-calculator/id6759136568)
 - [Google Play](https://play.google.com/store/apps/details?id=com.kr.slowlane.pacelab)
 
-## Related tools
+## 관련 도구
 
 - [속도 계산기](/pacelab/pace-calculator/)
 - [목표 페이스 계산기](/pacelab/race-pace-calculator/)

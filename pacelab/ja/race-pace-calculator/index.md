@@ -6,14 +6,14 @@
 
 このレースペース計算は、5K、10K、ハーフマラソン、マラソンなどのレースに向けてペース戦略を立てるのに役立ちます。
 
-## What you can do
+## できること
 
 - 目標タイムと距離から目標ペースを計算
 - 詳細な通過タイム表を確認（km または mile ごと）
 - ネガティブスプリットやイーブンペースの戦略を計画
 - 入力を調整して結果をすぐ更新
 
-## When to use it
+## 使う場面
 
 こんなときに使えます:
 
@@ -22,7 +22,7 @@
 - 区間ごとの通過タイム表を確認したいとき
 - 序盤のオーバーペースや出遅れを防ぎたいとき
 
-## Example
+## 例
 
 マラソンを4時間で完走したい場合:
 
@@ -31,14 +31,14 @@
 
 複数のペース戦略を比べながら、実際のレースプランを組み立てられます。
 
-## Get the app
+## アプリをダウンロード
 
 Pace Labアプリでは、トレーニングペース計算、心拍ゾーン、レース予想タイム、補給戦略など、さらに多くの機能を利用できます。
 
 - [App Store](https://apps.apple.com/us/app/pace-lab-running-calculator/id6759136568)
 - [Google Play](https://play.google.com/store/apps/details?id=com.kr.slowlane.pacelab)
 
-## Related tools
+## 関連ツール
 
 - [ペース計算機](/pacelab/ja/pace-calculator/)
 - [400mラップ計算](/pacelab/ja/400m-lap-calculator/)

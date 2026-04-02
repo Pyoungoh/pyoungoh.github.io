@@ -6,14 +6,14 @@
 
 この400mラップ計算は、標準的な400mトラックでペースとラップタイムを相互に変換し、トラックセッションの計画や分析に役立ちます。
 
-## What you can do
+## できること
 
 - ペース（min/km または min/mi）を400mラップタイムに変換
 - ラップタイムを対応するランニングペースに変換
 - 目標ラップでインターバルトレーニングを計画
 - 入力を調整して結果をすぐ更新
 
-## When to use it
+## 使う場面
 
 こんなときに使えます:
 
@@ -22,7 +22,7 @@
 - インターバルセッション（例: 400mリピート）を分析したいとき
 - スピード練習でペース精度を高めたいとき
 
-## Example
+## 例
 
 目標ペースが 5:00 min/km の場合:
 
@@ -34,14 +34,14 @@
 
 トラック練習を細かく調整しながら、ペース戦略を整えるのに便利です。
 
-## Get the app
+## アプリをダウンロード
 
 Pace Labアプリでは、レースペース計算、通過タイム表、心拍ゾーン、補給戦略など、さらに多くの機能を利用できます。
 
 - [App Store](https://apps.apple.com/us/app/pace-lab-running-calculator/id6759136568)
 - [Google Play](https://play.google.com/store/apps/details?id=com.kr.slowlane.pacelab)
 
-## Related tools
+## 関連ツール
 
 - [ペース計算機](/pacelab/ja/pace-calculator/)
 - [レースペース計算](/pacelab/ja/race-pace-calculator/)
