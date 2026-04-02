@@ -15,35 +15,35 @@ Download Pace Lab:
 
 ## Features
 
-### Pace calculator
+### [Pace calculator](/pacelab/en/pace-calculator/)
 
 Calculate running pace and speed from your distance and time.
 
-### Race pace calculator
+### [Race pace calculator](/pacelab/en/race-pace-calculator/)
 
 Calculate the target pace for your goal time and distance, then view detailed race splits.
 
-### Pace-speed converter
+### [Pace-speed converter](/pacelab/en/pace-speed-converter/)
 
 Convert between running pace and speed for road, treadmill, and track sessions.
 
-### 400m lap calculator
+### [400m lap calculator](/pacelab/en/400m-lap-calculator/)
 
 Convert pace to 400m lap time, or lap time to pace, for track workouts.
 
-### Training pace calculator
+### [Training pace calculator](/pacelab/en/training-pace-calculator/)
 
 Get recommended training paces for easy runs, marathon pace, threshold, and intervals.
 
-### Heart rate zone calculator
+### [Heart rate zone calculator](/pacelab/en/heart-rate-zone-calculator/)
 
 Calculate heart rate zones using age, max HR, resting HR, or lactate threshold HR.
 
-### Race time predictor
+### [Race time predictor](/pacelab/en/race-time-predictor/)
 
 Predict race times from a recent result with record-based and VDOT-based estimates.
 
-### Energy gel calculator
+### [Energy gel calculator](/pacelab/en/energy-gel-calculator/)
 
 Plan gel count and intake timing based on your race distance, pace, and goal time.
 

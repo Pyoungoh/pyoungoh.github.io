@@ -1,5 +1,3 @@
-
-
 # Running Pace Calculator
 
 Calculate your running pace, speed, and finish time for any distance.
@@ -40,9 +38,9 @@ Use the full Pace Lab app for more features like split charts, race prediction, 
 
 ## Related tools
 
-- Race pace calculator
-- 400m lap calculator
-- Training pace calculator
-- Heart rate zone calculator
-- Race time predictor
-- Energy gel calculator
+- [Race pace calculator](/pacelab/en/race-pace-calculator/)
+- [400m lap calculator](/pacelab/en/400m-lap-calculator/)
+- [Training pace calculator](/pacelab/en/training-pace-calculator/)
+- [Heart rate zone calculator](/pacelab/en/heart-rate-zone-calculator/)
+- [Race time predictor](/pacelab/en/race-time-predictor/)
+- [Energy gel calculator](/pacelab/en/energy-gel-calculator/)
