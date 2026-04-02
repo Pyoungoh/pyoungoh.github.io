@@ -1,50 +1,56 @@
 # Pace Lab
 
-**Running pace calculator, split chart, race predictor, and fueling tools for runners.**
+**Pace, splits, training pace, HR zones, race predictions, and fueling tools for runners.**
 
-Pace Lab is a free running calculator that helps you plan your pace, predict race times, and optimize your training.
+Pace Lab is a free running calculator for training and race planning. Calculate pace and speed, view race splits, predict race times, plan energy gel intake, and check training paces and heart rate zones in one place.
 
-You can quickly access the tools you need and see results instantly.
+You can quickly access the tools you need and get clear results right away.
+
+## Get the app
+
+Download Pace Lab:
+
+- App Store: https://apps.apple.com/us/app/pace-lab-running-calculator/id6759136568
+- Google Play: https://play.google.com/store/apps/details?id=com.kr.slowlane.pacelab
 
 ## Features
 
 ### Pace calculator
 
-Accurately calculates running pace and speed based on the distance and time you enter.
+Calculate running pace and speed from your distance and time.
 
 ### Race pace calculator
 
-Calculates the average pace required to achieve your target finish time.
+Calculate the target pace for your goal time and distance, then view detailed race splits.
 
-### Treadmill pace converter
+### Pace-speed converter
 
-Converts your outdoor running pace into a treadmill speed setting.
+Convert between running pace and speed for road, treadmill, and track sessions.
 
 ### 400m lap calculator
 
-Calculates lap pace and projected finish times based on a 400m track lap.
+Convert pace to 400m lap time, or lap time to pace, for track workouts.
 
 ### Training pace calculator
 
-Provides recommended training paces based on your target race time.
+Get recommended training paces for easy runs, marathon pace, threshold, and intervals.
 
 ### Heart rate zone calculator
 
-Generates personalized heart rate zones based on your maximum, resting, and lactate threshold heart rate.
+Calculate heart rate zones using age, max HR, resting HR, or lactate threshold HR.
 
 ### Race time predictor
 
-Predicts estimated finish times for 5K, 10K, half marathon, and full marathon based on your recent race results.
+Predict race times from a recent result with record-based and VDOT-based estimates.
 
 ### Energy gel calculator
 
-Advises on the number of energy gels and optimal intake timing based on your target pace and race distance.
+Plan gel count and intake timing based on your race distance, pace, and goal time.
 
 ## Support
 
 [slowlane.dev@gmail.com](mailto:slowlane.dev@gmail.com)
 
-## Privacy
+## Privacy Policy
 
-Privacy Policy:  
-https://pyoungoh.github.io/pacelab/en/privacy/
+[View Privacy Policy](https://pyoungoh.github.io/pacelab/en/privacy/)
