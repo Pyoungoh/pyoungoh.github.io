@@ -1,5 +1,7 @@
 # 훈련 페이스 계산기
 
+[Pace Lab 메인으로 돌아가기](/pacelab/)
+
 Easy Run, Marathon Pace, Tempo (LT), Interval (VO2)에 맞는 권장 훈련 페이스를 계산해 보세요.
 
 이 훈련 페이스 계산기는 최근 대회 기록이나 목표 수행 수준을 바탕으로 훈련 종류별 적절한 강도를 설정하는 데 도움을 줍니다.

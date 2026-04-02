@@ -1,5 +1,7 @@
 # Running Pace Calculator
 
+[← Back to Pace Lab home](/pacelab/en/)
+
 Calculate your running pace, speed, and finish time for any distance.
 
 This running pace calculator helps you quickly convert between pace, time, and distance so you can plan your training and races more effectively.

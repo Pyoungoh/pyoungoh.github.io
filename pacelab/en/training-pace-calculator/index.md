@@ -2,6 +2,8 @@
 
 # Training Pace Calculator
 
+[← Back to Pace Lab home](/pacelab/en/)
+
 Calculate recommended training paces for easy runs, marathon pace, threshold workouts, and interval sessions.
 
 This training pace calculator helps runners set the right intensity for different workouts based on a recent race result or target performance.

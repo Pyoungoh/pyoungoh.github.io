@@ -2,6 +2,8 @@
 
 # Heart Rate Zone Calculator
 
+[← Back to Pace Lab home](/pacelab/en/)
+
 Calculate your heart rate zones for running based on age, max HR, resting HR, or lactate threshold HR.
 
 This heart rate zone calculator helps runners set training intensity more accurately for easy runs, tempo runs, threshold workouts, and interval sessions.

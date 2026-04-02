@@ -2,6 +2,8 @@
 
 # Race Time Predictor
 
+[← Back to Pace Lab home](/pacelab/en/)
+
 Predict your race times for 5K, 10K, half marathon, and marathon based on your recent performance.
 
 This race time predictor helps runners estimate finish times using proven methods such as record-based prediction and VDOT-based calculation.

@@ -2,6 +2,8 @@
 
 # Race Pace Calculator
 
+[← Back to Pace Lab home](/pacelab/en/)
+
 Calculate your target pace and view race splits for your goal time and distance.
 
 This race pace calculator helps you plan your pacing strategy for races like 5K, 10K, half marathon, and marathon.

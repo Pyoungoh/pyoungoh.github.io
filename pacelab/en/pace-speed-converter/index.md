@@ -2,6 +2,8 @@
 
 # Pace-Speed Converter
 
+[← Back to Pace Lab home](/pacelab/en/)
+
 Convert running pace to speed, or speed to pace for road, treadmill, and track workouts.
 
 This pace-speed converter helps runners easily switch between pace (min/km or min/mi) and speed (km/h or mph), making it useful for treadmill settings and training adjustments.

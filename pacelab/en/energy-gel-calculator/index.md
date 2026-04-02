@@ -2,6 +2,8 @@
 
 # Energy Gel Calculator
 
+[← Back to Pace Lab home](/pacelab/en/)
+
 Plan how many energy gels you need and when to take them during your race.
 
 This energy gel calculator helps runners create a fueling strategy based on race distance, pace, and goal time so they can avoid hitting the wall.
