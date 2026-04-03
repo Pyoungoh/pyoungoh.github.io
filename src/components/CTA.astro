@@ -1,5 +1,6 @@
 ---
 import StoreBadge from './StoreBadge.astro';
+import StoreBadgeGroup from './StoreBadgeGroup.astro';
 
 const { title, description, links = [], lang = 'en', className = '' } = Astro.props;
 
@@ -8,12 +9,16 @@ const resolveKind = (href) => {
   if (href.includes('play.google.com')) return 'google-play';
   return null;
 };
+
+const hasOnlyStoreLinks = links.length > 0 && links.every((link) => Boolean(resolveKind(link.href)));
 ---
 
 <section class={`cta-panel ${className}`.trim()}>
   <h2>{title}</h2>
   <p>{description}</p>
-  {links.length > 0 && (
+  {hasOnlyStoreLinks ? (
+    <StoreBadgeGroup links={links} lang={lang} />
+  ) : (
     <ul class="cta-links">
       {links.map((link) => {
         const kind = resolveKind(link.href);

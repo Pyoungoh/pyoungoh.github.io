@@ -340,8 +340,13 @@ ul {
     linear-gradient(135deg, rgba(248, 250, 255, 0.94) 0%, rgba(236, 242, 255, 0.92) 100%);
 }
 
+.download-section .cta-panel h2 {
+  margin-bottom: 0.45rem;
+}
+
 .download-section .cta-panel p {
-  max-width: 42ch;
+  max-width: 38ch;
+  margin-bottom: 0;
 }
 
 @media (min-width: 721px) {
@@ -375,94 +380,56 @@ ul {
   font-size: 0.95rem;
 }
 
-.cta-links a.store-badge,
-.prose a[href*="apps.apple.com"],
-.prose a[href*="play.google.com"] {
-  position: relative;
-  display: inline-flex;
+.store-badge-group {
+  display: flex;
   align-items: center;
-  gap: 0.9rem;
-  min-height: 60px;
-  padding: 0.85rem 1rem 0.85rem 0.95rem;
-  border-radius: 18px;
-  border: 1px solid rgba(42, 65, 112, 0.12);
-  background:
-    linear-gradient(180deg, rgba(20, 29, 47, 0.98) 0%, rgba(25, 38, 63, 0.98) 100%);
-  box-shadow: 0 18px 32px rgba(18, 35, 70, 0.18);
-  color: #ffffff !important;
-  text-decoration: none;
+  gap: 18px;
+  list-style: none;
+  padding: 0;
+  margin: 1.15rem 0 0;
+  flex-wrap: wrap;
 }
 
-.cta-links a.store-badge:hover,
-.prose a[href*="apps.apple.com"]:hover,
-.prose a[href*="play.google.com"]:hover {
-  color: #ffffff !important;
-  transform: translateY(-1px);
-}
-
-.store-badge__icon,
-.prose a[href*="apps.apple.com"]::before,
-.prose a[href*="play.google.com"]::before {
+.store-badge-group > li {
+  display: flex;
   flex: 0 0 auto;
+}
+
+.store-badge {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  width: 30px;
-  height: 30px;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.08);
+  line-height: 0;
+  text-decoration: none;
+  border-radius: 12px;
 }
 
-.store-badge__icon svg {
-  width: 20px;
-  height: 20px;
+.store-badge img {
+  display: block;
+  width: auto;
+  height: auto;
 }
 
-.store-badge__text {
-  display: grid;
-  gap: 0.12rem;
+.store-badge--app-store img {
+  height: 56px;
 }
 
-.store-badge__eyebrow {
-  font-size: 0.68rem;
-  line-height: 1;
-  letter-spacing: 0.02em;
-  color: rgba(255, 255, 255, 0.76);
+.store-badge--google-play img {
+  height: 60px;
+  transform: scale(1.2);
+  transform-origin: center;
 }
 
-.store-badge__label {
-  font-size: 1rem;
-  line-height: 1.1;
-  font-weight: 600;
-  color: #ffffff;
+.store-badge:focus-visible {
+  outline: 2px solid var(--accent-strong);
+  outline-offset: 4px;
 }
 
 .prose a[href*="apps.apple.com"],
 .prose a[href*="play.google.com"] {
-  min-width: 200px;
-  margin: 0.15rem 0;
-  padding-left: 3.2rem;
-  font-weight: 700;
-}
-
-.prose a[href*="apps.apple.com"]::before,
-.prose a[href*="play.google.com"]::before {
-  content: "";
-  position: absolute;
-  left: 0.9rem;
-  top: 50%;
-  transform: translateY(-50%);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 18px 18px;
-}
-
-.prose a[href*="apps.apple.com"]::before {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M16.84 12.67a5.03 5.03 0 0 1 2.4-4.21 5.17 5.17 0 0 0-4.07-2.2c-1.72-.18-3.4 1.03-4.28 1.03-.9 0-2.27-1.01-3.72-.98A5.4 5.4 0 0 0 2.6 9.1c-1.95 3.38-.5 8.35 1.38 11.1.94 1.35 2.04 2.85 3.49 2.8 1.41-.06 1.94-.89 3.65-.89 1.7 0 2.2.89 3.66.86 1.52-.02 2.48-1.36 3.38-2.72 1.08-1.55 1.5-3.08 1.52-3.16a4.89 4.89 0 0 1-2.84-4.42Zm-2.8-8.2A4.96 4.96 0 0 0 15.18.9a5.05 5.05 0 0 0-3.28 1.7 4.72 4.72 0 0 0-1.16 3.45 4.18 4.18 0 0 0 3.3-1.58Z'/%3E%3C/svg%3E");
-}
-
-.prose a[href*="play.google.com"]::before {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%2334A853' d='M3 2.5 14.7 12 3 21.5Z'/%3E%3Cpath fill='%234285F4' d='M14.7 12 18.4 8.9 22 12l-3.6 3.1Z'/%3E%3Cpath fill='%23FBBC04' d='M3 2.5 18.4 8.9 14.7 12Z'/%3E%3Cpath fill='%23EA4335' d='M3 21.5 14.7 12 18.4 15.1Z'/%3E%3C/svg%3E");
+  min-width: auto;
+  margin: 0;
+  padding-left: 0;
+  font-weight: 600;
 }
 
 .site-footer {
@@ -483,17 +450,23 @@ ul {
   text-transform: uppercase;
 }
 
+.hero-copy {
+  max-width: 35rem;
+}
+
 .hero-lead {
   font-size: clamp(1rem, 1.7vw, 1.15rem);
   line-height: 1.65;
   color: var(--text);
   margin-bottom: 1rem;
+  max-width: 34rem;
 }
 
 .hero-body {
   display: grid;
   gap: 0.55rem;
   color: var(--muted);
+  max-width: 34rem;
 }
 
 .hero-body p {
@@ -568,7 +541,7 @@ ul {
 }
 
 .device-frame--hero {
-  width: min(100%, 350px);
+  width: min(100%, 376px);
 }
 
 .device-frame--detail {
@@ -726,16 +699,16 @@ ul {
     grid-template-columns: 1fr;
   }
 
-  .cta-links {
-    flex-direction: column;
+  .store-badge-group {
+    gap: 14px;
   }
 
-  .cta-links > li,
-  .cta-links a.store-badge {
-    width: 100%;
+  .store-badge--app-store img {
+    height: 52px;
   }
 
-  .cta-links a.store-badge {
-    justify-content: center;
+  .store-badge--google-play img {
+    height: 56px;
+    transform: scale(1.2);
   }
 }

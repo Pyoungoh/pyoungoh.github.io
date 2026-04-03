@@ -1,0 +1,35 @@
+---
+import StoreBadge from './StoreBadge.astro';
+
+type StoreKind = 'app-store' | 'google-play';
+
+const { links = [], lang = 'en' } = Astro.props as {
+  links?: Array<{ href: string; label: string }>;
+  lang?: 'ko' | 'en' | 'ja';
+};
+
+const resolveKind = (href: string): StoreKind | null => {
+  if (href.includes('apps.apple.com')) return 'app-store';
+  if (href.includes('play.google.com')) return 'google-play';
+  return null;
+};
+
+const storeLinks = links
+  .map((link) => {
+    const kind = resolveKind(link.href);
+    return kind ? { ...link, kind } : null;
+  })
+  .filter((link): link is { href: string; label: string; kind: StoreKind } => Boolean(link));
+---
+
+{
+  storeLinks.length > 0 && (
+    <ul class="store-badge-group">
+      {storeLinks.map((link) => (
+        <li>
+          <StoreBadge href={link.href} label={link.label} kind={link.kind} lang={lang} />
+        </li>
+      ))}
+    </ul>
+  )
+}
