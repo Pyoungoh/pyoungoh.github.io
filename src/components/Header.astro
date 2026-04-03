@@ -1,7 +1,7 @@
 ---
 import { headerLinks, siteTitle } from '../lib/site';
 
-const { currentPath = '/' } = Astro.props;
+const { currentPath = '/', links = headerLinks, cta } = Astro.props;
 ---
 
 <header class="site-header">
@@ -9,7 +9,7 @@ const { currentPath = '/' } = Astro.props;
     <a class="brand" href="/">{siteTitle}</a>
     <nav aria-label="Primary">
       <ul class="nav-list">
-        {headerLinks.map((link) => {
+        {links.map((link) => {
           const active = currentPath === link.href || (link.href !== '/' && currentPath.startsWith(link.href));
 
           return (
@@ -22,5 +22,10 @@ const { currentPath = '/' } = Astro.props;
         })}
       </ul>
     </nav>
+    {cta && (
+      <a class="header-cta" href={cta.href}>
+        {cta.label}
+      </a>
+    )}
   </div>
 </header>

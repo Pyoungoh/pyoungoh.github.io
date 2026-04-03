@@ -1,8 +1,10 @@
 ---
 import FeatureDetailPage from '../../../../components/FeatureDetailPage.astro';
+import FeatureScreenshotSection from '../../../../components/FeatureScreenshotSection.astro';
 import PaceLabDownloadCTA from '../../../../components/PaceLabDownloadCTA.astro';
 import RelatedTools from '../../../../components/RelatedTools.astro';
 import { loadPaceLabFeaturePage, paceLabFeatureSlugs } from '../../../../lib/pacelab-content';
+import { getPaceLabFeatureScreenshots } from '../../../../lib/pacelab-screenshots';
 import { getPaceLabRelatedTools } from '../../../../lib/site';
 
 export async function getStaticPaths() {
@@ -16,6 +18,7 @@ export async function getStaticPaths() {
 
 const { lang, feature } = Astro.params as { lang: 'en' | 'ja'; feature: string };
 const page = await loadPaceLabFeaturePage(lang, feature);
+const screenshots = getPaceLabFeatureScreenshots(lang, feature);
 ---
 
 <FeatureDetailPage
@@ -27,6 +30,8 @@ const page = await loadPaceLabFeaturePage(lang, feature);
   backLabel={page.backLabel}
 >
   <div set:html={page.introHtml} />
+
+  <FeatureScreenshotSection title={lang === 'en' ? 'App preview' : 'アプリ画面'} items={screenshots} />
 
   {page.sections.map((section) => (
     <>

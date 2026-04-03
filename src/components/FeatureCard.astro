@@ -3,8 +3,11 @@ const { href, title, description } = Astro.props;
 ---
 
 <article class="feature-card">
-  <h3>
-    <a href={href}>{title}</a>
-  </h3>
-  <p>{description}</p>
+  <a class="feature-card__link" href={href}>
+    <div class="feature-card__body">
+      <h3>{title}</h3>
+      <p>{description}</p>
+    </div>
+    <span class="feature-card__arrow" aria-hidden="true">→</span>
+  </a>
 </article>

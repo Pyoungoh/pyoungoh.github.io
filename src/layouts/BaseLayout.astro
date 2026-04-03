@@ -9,6 +9,7 @@ const {
   lang = 'en',
   currentPath = '/',
   canonical = new URL(currentPath, Astro.site),
+  headerProps = {},
 } = Astro.props;
 ---
 
@@ -23,7 +24,7 @@ const {
     <link rel="canonical" href={canonical} />
   </head>
   <body>
-    <Header currentPath={currentPath} />
+    <Header currentPath={currentPath} {...headerProps} />
     <main class="page-shell">
       <div class="shell">
         <slot />

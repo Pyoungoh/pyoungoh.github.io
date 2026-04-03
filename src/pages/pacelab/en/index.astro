@@ -1,8 +1,71 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
-import FeatureCard from '../../../components/FeatureCard.astro';
 import PaceLabDownloadCTA from '../../../components/PaceLabDownloadCTA.astro';
+import PaceLabHero from '../../../components/PaceLabHero.astro';
+import ScreenshotGallery from '../../../components/ScreenshotGallery.astro';
+import FeatureGroup from '../../../components/FeatureGroup.astro';
 import { paceLabFeatures } from '../../../lib/site';
+import heroScreenshot from '../../../assets/pacelab/en/home.png';
+import paceCalculatorScreenshot from '../../../assets/pacelab/en/pace-calculator.png';
+import racePaceScreenshot from '../../../assets/pacelab/en/race-pace.png';
+import trainingPaceScreenshot from '../../../assets/pacelab/en/training-pace.png';
+import racePredictorScreenshot from '../../../assets/pacelab/en/race-predictor.png';
+
+const featureGroups = [
+  {
+    title: 'Pace & Time',
+    description: 'Core tools for calculating pace, speed, and race targets from your distance and time.',
+    features: paceLabFeatures.en.filter((feature) =>
+      [
+        '/pacelab/en/pace-calculator/',
+        '/pacelab/en/race-pace-calculator/',
+        '/pacelab/en/pace-speed-converter/',
+        '/pacelab/en/400m-lap-calculator/',
+      ].includes(feature.href),
+    ),
+  },
+  {
+    title: 'Training',
+    description: 'Helpful tools for dialing in training intensity and effort.',
+    features: paceLabFeatures.en.filter((feature) =>
+      ['/pacelab/en/training-pace-calculator/', '/pacelab/en/heart-rate-zone-calculator/'].includes(feature.href),
+    ),
+  },
+  {
+    title: 'Race Planning',
+    description: 'Plan goal pace, predicted race time, and fueling strategy in one place.',
+    features: paceLabFeatures.en.filter((feature) =>
+      ['/pacelab/en/race-time-predictor/', '/pacelab/en/energy-gel-calculator/'].includes(feature.href),
+    ),
+  },
+];
+
+const galleryItems = [
+  {
+    image: paceCalculatorScreenshot,
+    alt: 'Pace Lab pace calculator screen',
+    title: 'Pace calculator',
+    description: 'Enter distance and time to check pace and speed instantly.',
+  },
+  {
+    image: racePaceScreenshot,
+    alt: 'Pace Lab race pace calculator screen',
+    title: 'Race pace calculator',
+    description: 'Set a goal time and distance to get your target race pace.',
+  },
+  {
+    image: trainingPaceScreenshot,
+    alt: 'Pace Lab training pace calculator screen',
+    title: 'Training pace calculator',
+    description: 'See recommended paces from easy runs to intervals.',
+  },
+  {
+    image: racePredictorScreenshot,
+    alt: 'Pace Lab race time predictor screen',
+    title: 'Race time predictor',
+    description: 'Estimate upcoming race times from a recent result.',
+  },
+];
 ---
 
 <BaseLayout
@@ -11,23 +74,37 @@ import { paceLabFeatures } from '../../../lib/site';
   lang="en"
   currentPath="/pacelab/en/"
 >
-  <section class="hero-panel">
-    <h1>Pace Lab</h1>
-    <p><strong>Pace, splits, training pace, HR zones, race predictions, and fueling tools for runners.</strong></p>
-    <p>Pace Lab is a free running calculator for training and race planning. Calculate pace and speed, view race splits, predict race times, plan energy gel intake, and check training paces and heart rate zones in one place.</p>
-    <p>You can quickly access the tools you need and get clear results right away.</p>
+  <PaceLabHero
+    title="Pace Lab"
+    lead="Pace, splits, training pace, HR zones, race predictions, and fueling tools for runners."
+    paragraphs={[
+      'Pace Lab is a free running calculator for training and race planning. Calculate pace and speed, view race splits, predict race times, plan energy gel intake, and check training paces and heart rate zones in one place.',
+      'You can quickly access the tools you need and get clear results right away.',
+    ]}
+    image={heroScreenshot}
+    imageAlt="Pace Lab home screen"
+    frameClass="device-frame--hero"
+    imageClass="device-frame__image--hero"
+  />
+
+  <section id="download" class="download-section">
+    <PaceLabDownloadCTA lang="en" variant="landing" className="cta-panel--wide-copy" />
   </section>
 
-  <PaceLabDownloadCTA lang="en" variant="landing" />
+  <ScreenshotGallery
+    title="App preview"
+    description="Browse a few of the most useful calculators and see how quickly you can get the result you need."
+    items={galleryItems}
+    className="screenshot-gallery--wide-copy"
+  />
 
-  <section class="plain-panel">
-    <h2>Features</h2>
-    <div class="feature-grid">
-      {paceLabFeatures.en.map((feature) => (
-        <FeatureCard {...feature} />
-      ))}
-    </div>
+  <section class="plain-panel feature-groups-panel">
+    {featureGroups.map((group) => (
+      <FeatureGroup {...group} />
+    ))}
+  </section>
 
+  <section class="plain-panel support-panel">
     <h2>Support</h2>
     <p>
       <a href="mailto:slowlane.dev@gmail.com">slowlane.dev@gmail.com</a>

@@ -2,8 +2,8 @@
 import CTA from './CTA.astro';
 import { paceLabDownloadCta } from '../lib/site';
 
-const { lang = 'en', variant = 'landing' } = Astro.props;
+const { lang = 'en', variant = 'landing', className = '' } = Astro.props;
 const config = paceLabDownloadCta[lang][variant];
 ---
 
-<CTA title={config.title} description={config.description} links={config.links} />
+<CTA title={config.title} description={config.description} links={config.links} lang={lang} className={className} />

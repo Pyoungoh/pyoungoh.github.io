@@ -1,8 +1,71 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
-import FeatureCard from '../../../components/FeatureCard.astro';
 import PaceLabDownloadCTA from '../../../components/PaceLabDownloadCTA.astro';
+import PaceLabHero from '../../../components/PaceLabHero.astro';
+import ScreenshotGallery from '../../../components/ScreenshotGallery.astro';
+import FeatureGroup from '../../../components/FeatureGroup.astro';
 import { paceLabFeatures } from '../../../lib/site';
+import heroScreenshot from '../../../assets/pacelab/ja/home.png';
+import paceCalculatorScreenshot from '../../../assets/pacelab/ja/pace-calculator.png';
+import racePaceScreenshot from '../../../assets/pacelab/ja/race-pace.png';
+import trainingPaceScreenshot from '../../../assets/pacelab/ja/training-pace.png';
+import racePredictorScreenshot from '../../../assets/pacelab/ja/race-predictor.png';
+
+const featureGroups = [
+  {
+    title: 'ペース・タイム',
+    description: '距離、時間、目標タイムをもとに、すぐ計算できる基本ツールです。',
+    features: paceLabFeatures.ja.filter((feature) =>
+      [
+        '/pacelab/ja/pace-calculator/',
+        '/pacelab/ja/race-pace-calculator/',
+        '/pacelab/ja/pace-speed-converter/',
+        '/pacelab/ja/400m-lap-calculator/',
+      ].includes(feature.href),
+    ),
+  },
+  {
+    title: 'トレーニング',
+    description: 'トレーニング強度や目安を整えるのに役立つツールです。',
+    features: paceLabFeatures.ja.filter((feature) =>
+      ['/pacelab/ja/training-pace-calculator/', '/pacelab/ja/heart-rate-zone-calculator/'].includes(feature.href),
+    ),
+  },
+  {
+    title: 'レース準備',
+    description: 'レース予測や補給計画をまとめて確認できるツールです。',
+    features: paceLabFeatures.ja.filter((feature) =>
+      ['/pacelab/ja/race-time-predictor/', '/pacelab/ja/energy-gel-calculator/'].includes(feature.href),
+    ),
+  },
+];
+
+const galleryItems = [
+  {
+    image: paceCalculatorScreenshot,
+    alt: 'Pace Lab ペース計算機画面',
+    title: 'ペース計算機',
+    description: '距離と時間を入力すると、ペースと速度をすぐに確認できます。',
+  },
+  {
+    image: racePaceScreenshot,
+    alt: 'Pace Lab レースペース計算画面',
+    title: 'レースペース計算',
+    description: '目標タイムと距離から、目標レースペースをすばやく計算できます。',
+  },
+  {
+    image: trainingPaceScreenshot,
+    alt: 'Pace Lab トレーニングペース計算画面',
+    title: 'トレーニングペース計算',
+    description: 'イージーランからインターバルまで、おすすめペースを一覧で確認できます。',
+  },
+  {
+    image: racePredictorScreenshot,
+    alt: 'Pace Lab レース予想タイム画面',
+    title: 'レース予想タイム',
+    description: '最近の記録から次のレースタイムを予測できます。',
+  },
+];
 ---
 
 <BaseLayout
@@ -11,23 +74,37 @@ import { paceLabFeatures } from '../../../lib/site';
   lang="ja"
   currentPath="/pacelab/ja/"
 >
-  <section class="hero-panel">
-    <h1>Pace Lab</h1>
-    <p><strong>ランナーのための、ペース、通過タイム表、トレーニングペース、心拍ゾーン、レース予想タイム、補給戦略ツール。</strong></p>
-    <p>Pace Labは、トレーニングとレース計画に使える無料のランニング計算アプリです。ペースと速度の計算、通過タイム表の確認、レース予想タイム、エナジージェルの補給計画、トレーニングペースと心拍ゾーンの確認をひとつのアプリで行えます。</p>
-    <p>必要な機能にすぐアクセスして、わかりやすい結果をその場で確認できます。</p>
+  <PaceLabHero
+    title="Pace Lab"
+    lead="ランナーのための、ペース、通過タイム表、トレーニングペース、心拍ゾーン、レース予想タイム、補給戦略ツール。"
+    paragraphs={[
+      'Pace Labは、トレーニングとレース計画に使える無料のランニング計算アプリです。ペースと速度の計算、通過タイム表の確認、レース予想タイム、エナジージェルの補給計画、トレーニングペースと心拍ゾーンの確認をひとつのアプリで行えます。',
+      '必要な機能にすぐアクセスして、わかりやすい結果をその場で確認できます。',
+    ]}
+    image={heroScreenshot}
+    imageAlt="Pace Lab ホーム画面"
+    frameClass="device-frame--hero"
+    imageClass="device-frame__image--hero"
+  />
+
+  <section id="download" class="download-section">
+    <PaceLabDownloadCTA lang="ja" variant="landing" className="cta-panel--wide-copy" />
   </section>
 
-  <PaceLabDownloadCTA lang="ja" variant="landing" />
+  <ScreenshotGallery
+    title="アプリ画面"
+    description="よく使う計算機を中心に、必要な機能へすばやくアクセスできます。"
+    items={galleryItems}
+    className="screenshot-gallery--wide-copy"
+  />
 
-  <section class="plain-panel">
-    <h2>Features</h2>
-    <div class="feature-grid">
-      {paceLabFeatures.ja.map((feature) => (
-        <FeatureCard {...feature} />
-      ))}
-    </div>
+  <section class="plain-panel feature-groups-panel">
+    {featureGroups.map((group) => (
+      <FeatureGroup {...group} />
+    ))}
+  </section>
 
+  <section class="plain-panel support-panel">
     <h2>Support</h2>
     <p>
       <a href="mailto:slowlane.dev@gmail.com">slowlane.dev@gmail.com</a>

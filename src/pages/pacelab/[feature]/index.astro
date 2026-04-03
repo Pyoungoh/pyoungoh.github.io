@@ -1,9 +1,11 @@
 ---
 import FeatureDetailPage from '../../../components/FeatureDetailPage.astro';
+import FeatureScreenshotSection from '../../../components/FeatureScreenshotSection.astro';
 import PaceLabDownloadCTA from '../../../components/PaceLabDownloadCTA.astro';
 import RelatedTools from '../../../components/RelatedTools.astro';
 import { loadPaceLabFeaturePage, paceLabFeatureSlugs } from '../../../lib/pacelab-content';
 import { getPaceLabRelatedTools } from '../../../lib/site';
+import { getPaceLabFeatureScreenshots } from '../../../lib/pacelab-screenshots';
 
 export async function getStaticPaths() {
   return paceLabFeatureSlugs.map((feature) => ({
@@ -13,6 +15,7 @@ export async function getStaticPaths() {
 
 const { feature } = Astro.params;
 const page = await loadPaceLabFeaturePage('ko', feature!);
+const screenshots = getPaceLabFeatureScreenshots('ko', feature!);
 ---
 
 <FeatureDetailPage
@@ -24,6 +27,8 @@ const page = await loadPaceLabFeaturePage('ko', feature!);
   backLabel={page.backLabel}
 >
   <div set:html={page.introHtml} />
+
+  <FeatureScreenshotSection items={screenshots} />
 
   {page.sections.map((section) => (
     <>

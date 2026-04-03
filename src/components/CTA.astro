@@ -1,7 +1,7 @@
 ---
 import StoreBadge from './StoreBadge.astro';
 
-const { title, description, links = [] } = Astro.props;
+const { title, description, links = [], lang = 'en', className = '' } = Astro.props;
 
 const resolveKind = (href) => {
   if (href.includes('apps.apple.com')) return 'app-store';
@@ -10,7 +10,7 @@ const resolveKind = (href) => {
 };
 ---
 
-<section class="cta-panel">
+<section class={`cta-panel ${className}`.trim()}>
   <h2>{title}</h2>
   <p>{description}</p>
   {links.length > 0 && (
@@ -20,7 +20,7 @@ const resolveKind = (href) => {
 
         return (
         <li>
-          {kind ? <StoreBadge href={link.href} label={link.label} kind={kind} /> : <a href={link.href}>{link.label}</a>}
+          {kind ? <StoreBadge href={link.href} label={link.label} kind={kind} lang={lang} /> : <a href={link.href}>{link.label}</a>}
         </li>
         );
       })}

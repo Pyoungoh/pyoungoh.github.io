@@ -1,8 +1,71 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import FeatureCard from '../../components/FeatureCard.astro';
 import PaceLabDownloadCTA from '../../components/PaceLabDownloadCTA.astro';
+import PaceLabHero from '../../components/PaceLabHero.astro';
+import ScreenshotGallery from '../../components/ScreenshotGallery.astro';
+import FeatureGroup from '../../components/FeatureGroup.astro';
 import { paceLabFeatures } from '../../lib/site';
+import heroScreenshot from '../../assets/pacelab/ko/home.png';
+import paceCalculatorScreenshot from '../../assets/pacelab/ko/pace-calculator.png';
+import racePaceScreenshot from '../../assets/pacelab/ko/race-pace.png';
+import trainingPaceScreenshot from '../../assets/pacelab/ko/training-pace.png';
+import racePredictorScreenshot from '../../assets/pacelab/ko/race-predictor.png';
+
+const featureGroups = [
+  {
+    title: '페이스 & 시간',
+    description: '기록과 거리, 레이스 목표를 바탕으로 바로 계산할 수 있는 핵심 도구입니다.',
+    features: paceLabFeatures.ko.filter((feature) =>
+      [
+        '/pacelab/pace-calculator/',
+        '/pacelab/race-pace-calculator/',
+        '/pacelab/pace-speed-converter/',
+        '/pacelab/400m-lap-calculator/',
+      ].includes(feature.href),
+    ),
+  },
+  {
+    title: '훈련',
+    description: '훈련 강도와 주행 감각을 더 안정적으로 맞출 수 있도록 돕는 도구입니다.',
+    features: paceLabFeatures.ko.filter((feature) =>
+      ['/pacelab/training-pace-calculator/', '/pacelab/heart-rate-zone-calculator/'].includes(feature.href),
+    ),
+  },
+  {
+    title: '대회 준비',
+    description: '레이스 전략과 보급 계획을 정리할 때 유용한 도구입니다.',
+    features: paceLabFeatures.ko.filter((feature) =>
+      ['/pacelab/race-time-predictor/', '/pacelab/energy-gel-calculator/'].includes(feature.href),
+    ),
+  },
+];
+
+const galleryItems = [
+  {
+    image: paceCalculatorScreenshot,
+    alt: 'Pace Lab 속도 계산기 화면',
+    title: '속도 계산기',
+    description: '거리와 시간을 입력하면 페이스와 시속을 바로 확인할 수 있습니다.',
+  },
+  {
+    image: racePaceScreenshot,
+    alt: 'Pace Lab 목표 페이스 계산기 화면',
+    title: '목표 페이스 계산기',
+    description: '목표 기록 달성을 위한 레이스 페이스를 빠르게 계산할 수 있습니다.',
+  },
+  {
+    image: trainingPaceScreenshot,
+    alt: 'Pace Lab 훈련 페이스 계산기 화면',
+    title: '훈련 페이스 계산기',
+    description: '목표 기록을 바탕으로 Easy Run부터 Interval까지 추천 페이스를 정리합니다.',
+  },
+  {
+    image: racePredictorScreenshot,
+    alt: 'Pace Lab 대회 기록 예측 화면',
+    title: '대회 기록 예측',
+    description: '최근 기록을 바탕으로 다음 대회 예상 기록을 살펴볼 수 있습니다.',
+  },
+];
 ---
 
 <BaseLayout
@@ -11,29 +74,43 @@ import { paceLabFeatures } from '../../lib/site';
   lang="ko"
   currentPath="/pacelab/"
 >
-  <section class="hero-panel">
-    <h1>Pace Lab</h1>
-    <p><strong>러너를 위한 페이스, 통과 시간표, 훈련 페이스, 심박존, 대회 기록 예측, 보급 전략 도구를 한곳에.</strong></p>
-    <p>Pace Lab은 훈련과 대회 준비를 위한 무료 러닝 계산기 앱입니다. 페이스 및 시속 계산, 통과 시간표 확인, 대회 기록 예측, 에너지젤 보급 전략 계획, 훈련 페이스와 심박존 확인까지 한 번에 할 수 있습니다.</p>
-    <p>필요한 도구를 빠르게 열고, 바로 이해할 수 있는 결과를 확인해 보세요.</p>
+  <PaceLabHero
+    title="Pace Lab"
+    lead="러너를 위한 페이스, 통과 시간표, 훈련 페이스, 심박존, 대회 기록 예측, 보급 전략 도구를 한곳에."
+    paragraphs={[
+      'Pace Lab은 훈련과 대회 준비를 위한 무료 러닝 계산기 앱입니다. 페이스 및 시속 계산, 통과 시간표 확인, 대회 기록 예측, 에너지젤 보급 전략 계획, 훈련 페이스와 심박존 확인까지 한 번에 할 수 있습니다.',
+      '필요한 도구를 빠르게 열고, 바로 이해할 수 있는 결과를 확인해 보세요.',
+    ]}
+    image={heroScreenshot}
+    imageAlt="Pace Lab 한국어 홈 화면"
+    frameClass="device-frame--hero"
+    imageClass="device-frame__image--hero"
+  />
+
+  <section id="download" class="download-section">
+    <PaceLabDownloadCTA lang="ko" variant="landing" className="cta-panel--wide-copy" />
   </section>
 
-  <PaceLabDownloadCTA lang="ko" variant="landing" />
+  <ScreenshotGallery
+    title="앱 화면 미리보기"
+    description="자주 쓰는 계산기를 중심으로, 필요한 도구를 빠르게 열고 결과를 바로 확인할 수 있습니다."
+    items={galleryItems}
+    className="screenshot-gallery--wide-copy"
+  />
 
-  <section class="plain-panel">
-    <h2>Features</h2>
-    <div class="feature-grid">
-      {paceLabFeatures.ko.map((feature) => (
-        <FeatureCard {...feature} />
-      ))}
-    </div>
+  <section class="plain-panel feature-groups-panel">
+    {featureGroups.map((group) => (
+      <FeatureGroup {...group} />
+    ))}
+  </section>
 
-    <h2>Support</h2>
+  <section class="plain-panel support-panel">
+    <h2>지원</h2>
     <p>
       <a href="mailto:slowlane.dev@gmail.com">slowlane.dev@gmail.com</a>
     </p>
 
-    <h2>Privacy Policy</h2>
+    <h2>개인정보 처리방침</h2>
     <p>
       <a href="https://pyoungoh.github.io/pacelab/privacy/">개인정보 처리방침 보기</a>
     </p>

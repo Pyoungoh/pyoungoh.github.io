@@ -25,8 +25,8 @@ export const paceLabStoreLinks = {
 export const paceLabDownloadCta = {
   ko: {
     landing: {
-      title: 'Get the app',
-      description: 'Pace Lab 다운로드:',
+      title: '앱 다운로드',
+      description: '아이폰과 안드로이드에서 Pace Lab을 무료로 사용할 수 있습니다.',
       links: paceLabStoreLinks.ko,
     },
     detail: {
@@ -38,7 +38,7 @@ export const paceLabDownloadCta = {
   en: {
     landing: {
       title: 'Get the app',
-      description: 'Download Pace Lab:',
+      description: 'Available free on iPhone and Android.',
       links: paceLabStoreLinks.en,
     },
     detail: {
