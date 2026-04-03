@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import FeatureCard from '../../../components/FeatureCard.astro';
-import CTA from '../../../components/CTA.astro';
+import PaceLabDownloadCTA from '../../../components/PaceLabDownloadCTA.astro';
 import { paceLabFeatures } from '../../../lib/site';
 ---
 
@@ -18,14 +18,7 @@ import { paceLabFeatures } from '../../../lib/site';
     <p>You can quickly access the tools you need and get clear results right away.</p>
   </section>
 
-  <CTA
-    title="Get the app"
-    description="Download Pace Lab:"
-    links={[
-      { href: 'https://apps.apple.com/us/app/pace-lab-running-calculator/id6759136568', label: 'App Store' },
-      { href: 'https://play.google.com/store/apps/details?id=com.kr.slowlane.pacelab', label: 'Google Play' },
-    ]}
-  />
+  <PaceLabDownloadCTA lang="en" variant="landing" />
 
   <section class="plain-panel">
     <h2>Features</h2>

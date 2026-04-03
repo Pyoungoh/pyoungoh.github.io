@@ -7,6 +7,60 @@ export const headerLinks = [
   { href: '/pacelab/', label: 'Pace Lab' },
 ];
 
+export const paceLabStoreLinks = {
+  ko: [
+    { href: 'https://apps.apple.com/kr/app/pace-lab-running-calculator/id6759136568', label: 'App Store' },
+    { href: 'https://play.google.com/store/apps/details?id=com.kr.slowlane.pacelab', label: 'Google Play' },
+  ],
+  en: [
+    { href: 'https://apps.apple.com/us/app/pace-lab-running-calculator/id6759136568', label: 'App Store' },
+    { href: 'https://play.google.com/store/apps/details?id=com.kr.slowlane.pacelab', label: 'Google Play' },
+  ],
+  ja: [
+    { href: 'https://apps.apple.com/jp/app/pace-lab-running-calculator/id6759136568', label: 'App Store' },
+    { href: 'https://play.google.com/store/apps/details?id=com.kr.slowlane.pacelab', label: 'Google Play' },
+  ],
+} as const;
+
+export const paceLabDownloadCta = {
+  ko: {
+    landing: {
+      title: 'Get the app',
+      description: 'Pace Lab 다운로드:',
+      links: paceLabStoreLinks.ko,
+    },
+    detail: {
+      title: '앱 다운로드',
+      description: 'Pace Lab 앱에서는 통과 시간표, 대회 기록 예측, 심박존, 보급 전략 같은 더 많은 기능을 함께 사용할 수 있습니다.',
+      links: paceLabStoreLinks.ko,
+    },
+  },
+  en: {
+    landing: {
+      title: 'Get the app',
+      description: 'Download Pace Lab:',
+      links: paceLabStoreLinks.en,
+    },
+    detail: {
+      title: 'Get the app',
+      description: 'Use the full Pace Lab app for more features like split charts, race prediction, heart rate zones, and fueling planning.',
+      links: paceLabStoreLinks.en,
+    },
+  },
+  ja: {
+    landing: {
+      title: 'Get the app',
+      description: 'Pace Labをダウンロード:',
+      links: paceLabStoreLinks.ja,
+    },
+    detail: {
+      title: 'アプリをダウンロード',
+      description: 'Pace Labアプリでは、通過タイム表、レース予想タイム、心拍ゾーン、補給戦略など、さらに多くの機能を利用できます。',
+      links: paceLabStoreLinks.ja,
+    },
+  },
+} as const;
+
 export const paceLabFeatures = {
   ko: [
     { href: '/pacelab/pace-calculator/', title: '속도 계산기', description: '거리와 시간을 기준으로 러닝 페이스 및 시속을 계산합니다.' },
@@ -39,3 +93,26 @@ export const paceLabFeatures = {
     { href: '/pacelab/ja/energy-gel-calculator/', title: 'エナジージェル計算', description: 'レース距離、ペース、目標タイムをもとに、推奨ジェル本数と補給タイミングを計画します。' },
   ],
 } as const;
+
+export const paceLabRelatedTools = {
+  ko: {
+    title: '관련 도구',
+    tools: paceLabFeatures.ko,
+  },
+  en: {
+    title: 'Related tools',
+    tools: paceLabFeatures.en,
+  },
+  ja: {
+    title: '関連ツール',
+    tools: paceLabFeatures.ja,
+  },
+} as const;
+
+export function getPaceLabRelatedTools(lang: keyof typeof paceLabRelatedTools, currentSlug: string) {
+  const tools = paceLabRelatedTools[lang].tools.filter((tool) => !tool.href.endsWith(`/${currentSlug}/`));
+  return {
+    title: paceLabRelatedTools[lang].title,
+    tools,
+  };
+}

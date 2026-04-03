@@ -1,0 +1,40 @@
+---
+import FeatureDetailPage from '../../../../components/FeatureDetailPage.astro';
+import PaceLabDownloadCTA from '../../../../components/PaceLabDownloadCTA.astro';
+import RelatedTools from '../../../../components/RelatedTools.astro';
+import { loadPaceLabFeaturePage, paceLabFeatureSlugs } from '../../../../lib/pacelab-content';
+import { getPaceLabRelatedTools } from '../../../../lib/site';
+
+export async function getStaticPaths() {
+  const langs = ['en', 'ja'] as const;
+  return langs.flatMap((lang) =>
+    paceLabFeatureSlugs.map((feature) => ({
+      params: { lang, feature },
+    })),
+  );
+}
+
+const { lang, feature } = Astro.params as { lang: 'en' | 'ja'; feature: string };
+const page = await loadPaceLabFeaturePage(lang, feature);
+---
+
+<FeatureDetailPage
+  title={page.title}
+  description={page.description}
+  lang={lang}
+  currentPath={`/pacelab/${lang}/${feature}/`}
+  backHref={page.backHref}
+  backLabel={page.backLabel}
+>
+  <div set:html={page.introHtml} />
+
+  {page.sections.map((section) => (
+    <>
+      <h2>{section.heading}</h2>
+      <div set:html={section.html} />
+    </>
+  ))}
+
+  <PaceLabDownloadCTA lang={lang} variant="detail" />
+  <RelatedTools {...getPaceLabRelatedTools(lang, feature)} />
+</FeatureDetailPage>

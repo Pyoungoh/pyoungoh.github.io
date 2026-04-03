@@ -1,0 +1,37 @@
+---
+import FeatureDetailPage from '../../../components/FeatureDetailPage.astro';
+import PaceLabDownloadCTA from '../../../components/PaceLabDownloadCTA.astro';
+import RelatedTools from '../../../components/RelatedTools.astro';
+import { loadPaceLabFeaturePage, paceLabFeatureSlugs } from '../../../lib/pacelab-content';
+import { getPaceLabRelatedTools } from '../../../lib/site';
+
+export async function getStaticPaths() {
+  return paceLabFeatureSlugs.map((feature) => ({
+    params: { feature },
+  }));
+}
+
+const { feature } = Astro.params;
+const page = await loadPaceLabFeaturePage('ko', feature!);
+---
+
+<FeatureDetailPage
+  title={page.title}
+  description={page.description}
+  lang="ko"
+  currentPath={`/pacelab/${feature}/`}
+  backHref={page.backHref}
+  backLabel={page.backLabel}
+>
+  <div set:html={page.introHtml} />
+
+  {page.sections.map((section) => (
+    <>
+      <h2>{section.heading}</h2>
+      <div set:html={section.html} />
+    </>
+  ))}
+
+  <PaceLabDownloadCTA lang="ko" variant="detail" />
+  <RelatedTools {...getPaceLabRelatedTools('ko', feature!)} />
+</FeatureDetailPage>

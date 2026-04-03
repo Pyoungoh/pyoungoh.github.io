@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import FeatureCard from '../../../components/FeatureCard.astro';
-import CTA from '../../../components/CTA.astro';
+import PaceLabDownloadCTA from '../../../components/PaceLabDownloadCTA.astro';
 import { paceLabFeatures } from '../../../lib/site';
 ---
 
@@ -18,14 +18,7 @@ import { paceLabFeatures } from '../../../lib/site';
     <p>必要な機能にすぐアクセスして、わかりやすい結果をその場で確認できます。</p>
   </section>
 
-  <CTA
-    title="Get the app"
-    description="Pace Labをダウンロード:"
-    links={[
-      { href: 'https://apps.apple.com/jp/app/pace-lab-running-calculator/id6759136568', label: 'App Store' },
-      { href: 'https://play.google.com/store/apps/details?id=com.kr.slowlane.pacelab', label: 'Google Play' },
-    ]}
-  />
+  <PaceLabDownloadCTA lang="ja" variant="landing" />
 
   <section class="plain-panel">
     <h2>Features</h2>

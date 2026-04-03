@@ -1,0 +1,14 @@
+---
+import FeatureCard from './FeatureCard.astro';
+
+const { title, tools = [] } = Astro.props;
+---
+
+<section class="section-block">
+  <h2>{title}</h2>
+  <div class="feature-grid">
+    {tools.map((tool) => (
+      <FeatureCard {...tool} />
+    ))}
+  </div>
+</section>

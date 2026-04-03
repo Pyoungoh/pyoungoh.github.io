@@ -1,5 +1,7 @@
 import type { CollectionEntry } from 'astro:content';
 
+import { paceLabFeatures } from './site';
+
 type SitePageEntry = CollectionEntry<'sitePages'>;
 
 export function normalizeEntryId(id: string) {
@@ -7,7 +9,10 @@ export function normalizeEntryId(id: string) {
 }
 
 export function routeFromEntryId(id: string) {
-  const normalized = normalizeEntryId(id);
+  let normalized = normalizeEntryId(id);
+
+  normalized = normalized.replace(/^pacelab\/ko(?=\/|$)/, 'pacelab');
+  normalized = normalized.replace(/^justweight\/ko(?=\/|$)/, 'justweight');
 
   if (normalized === 'index') {
     return '/';
@@ -75,13 +80,18 @@ export function getDescription(entry: SitePageEntry) {
 
 export function isSpecialRoute(pathname: string) {
   const key = routeKey(pathname);
+  const pacelabDetailRoutes = new Set(
+    Object.values(paceLabFeatures)
+      .flat()
+      .map((feature) => routeKey(feature.href)),
+  );
+
   return new Set([
     '/',
     '/pacelab',
     '/pacelab/en',
     '/pacelab/ja',
-    '/pacelab/pace-calculator',
-    '/pacelab/en/pace-calculator',
+    ...pacelabDetailRoutes,
   ]).has(key);
 }
 
