@@ -1,0 +1,17 @@
+---
+import FeatureCard from './FeatureCard.astro';
+
+const { title, description, features = [] } = Astro.props;
+---
+
+<section class="feature-group">
+  <div class="section-heading feature-group__header">
+    <h2>{title}</h2>
+    {description && <p>{description}</p>}
+  </div>
+  <div class="feature-grid feature-grid--grouped">
+    {features.map((feature) => (
+      <FeatureCard {...feature} />
+    ))}
+  </div>
+</section>

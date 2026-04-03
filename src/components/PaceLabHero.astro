@@ -1,0 +1,40 @@
+---
+import { Image } from 'astro:assets';
+
+const { title, lead, paragraphs = [], cta, image, imageAlt, frameClass = '', imageClass = '' } = Astro.props;
+---
+
+<section class="hero-panel hero-panel--showcase">
+  <div class="hero-copy">
+    <p class="hero-eyebrow">Smart Running Calculator</p>
+    <h1>{title}</h1>
+    <p class="hero-lead">{lead}</p>
+    <div class="hero-body">
+      {paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+    </div>
+    {cta && (
+      <div class="hero-actions">
+        <a class="hero-button" href={cta.href}>
+          {cta.label}
+        </a>
+      </div>
+    )}
+  </div>
+
+  <div class="hero-visual">
+    <div class:list={['device-frame', frameClass]}>
+      <div class="device-frame__viewport">
+        <Image
+          src={image}
+          alt={imageAlt}
+          widths={[320, 420, 520, 640]}
+          sizes="(max-width: 720px) 72vw, (max-width: 1080px) 32vw, 360px"
+          loading="eager"
+          format="webp"
+          quality={90}
+          class={imageClass}
+        />
+      </div>
+    </div>
+  </div>
+</section>

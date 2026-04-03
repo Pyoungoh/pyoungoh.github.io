@@ -1,0 +1,33 @@
+---
+import { Image } from 'astro:assets';
+
+const { title = '앱 화면', items = [] } = Astro.props;
+---
+
+{
+  items.length > 0 && (
+    <section class="feature-screenshot-block">
+      <h2>{title}</h2>
+      <div class:list={['feature-screenshot-grid', items.length === 1 ? 'feature-screenshot-grid--single' : undefined]}>
+        {items.map((item) => (
+          <figure class="feature-screenshot-card">
+            <div class="device-frame device-frame--detail">
+              <div class="device-frame__viewport">
+                <Image
+                  src={item.image}
+                  alt={item.alt}
+                  widths={[280, 360, 480, 640]}
+                  sizes="(max-width: 720px) 78vw, (max-width: 1080px) 40vw, 320px"
+                  format="webp"
+                  quality={88}
+                  class="device-frame__image--full"
+                />
+              </div>
+            </div>
+            {item.caption && <figcaption>{item.caption}</figcaption>}
+          </figure>
+        ))}
+      </div>
+    </section>
+  )
+}

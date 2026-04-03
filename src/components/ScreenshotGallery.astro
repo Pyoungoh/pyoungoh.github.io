@@ -1,0 +1,36 @@
+---
+import { Image } from 'astro:assets';
+
+const { title, description, items = [], className = '' } = Astro.props;
+---
+
+<section class={`plain-panel screenshot-gallery ${className}`.trim()}>
+  <div class="section-heading">
+    <h2>{title}</h2>
+    {description && <p>{description}</p>}
+  </div>
+
+  <div class="screenshot-grid">
+    {items.map((item) => (
+      <article class="screenshot-card">
+        <div class="device-frame device-frame--small">
+          <div class="device-frame__viewport">
+            <Image
+              src={item.image}
+              alt={item.alt}
+              widths={[280, 360, 440, 560]}
+              sizes="(max-width: 720px) 78vw, (max-width: 1080px) 38vw, 300px"
+              format="webp"
+              quality={88}
+              class="device-frame__image--full"
+            />
+          </div>
+        </div>
+        <div class="screenshot-card__body">
+          <h3>{item.title}</h3>
+          <p>{item.description}</p>
+        </div>
+      </article>
+    ))}
+  </div>
+</section>
