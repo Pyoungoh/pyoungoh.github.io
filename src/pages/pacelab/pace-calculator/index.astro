@@ -1,0 +1,63 @@
+---
+import CTA from '../../../components/CTA.astro';
+import FeatureDetailPage from '../../../components/FeatureDetailPage.astro';
+import FeatureCard from '../../../components/FeatureCard.astro';
+---
+
+<FeatureDetailPage
+  title="속도 계산기"
+  description="어떤 거리에서도 러닝 페이스, 시속, 완주 시간을 계산해 보세요."
+  lang="ko"
+  currentPath="/pacelab/pace-calculator/"
+  backHref="/pacelab/"
+  backLabel="Pace Lab 메인으로 돌아가기"
+>
+  <p>어떤 거리에서도 러닝 페이스, 시속, 완주 시간을 계산해 보세요.</p>
+  <p>이 속도 계산기는 페이스, 시간, 거리의 관계를 빠르게 확인할 수 있어 훈련과 대회 준비를 더 효율적으로 계획하는 데 도움이 됩니다.</p>
+
+  <h2>할 수 있는 것</h2>
+  <ul>
+    <li>거리와 시간으로 페이스 계산</li>
+    <li>페이스를 시속으로 변환(km/h 또는 mph)</li>
+    <li>목표 페이스 기준 완주 시간 예상</li>
+    <li>입력값을 바로 조정하고 결과 즉시 확인</li>
+  </ul>
+
+  <h2>언제 사용하나요</h2>
+  <p>이럴 때 활용해 보세요:</p>
+  <ul>
+    <li>마라톤이나 하프마라톤 페이스를 계획할 때</li>
+    <li>러닝 후 내 페이스를 확인하고 싶을 때</li>
+    <li>훈련을 위한 목표 페이스를 정하고 싶을 때</li>
+    <li>러닝머신 속도와 야외 러닝 페이스를 비교하고 싶을 때</li>
+  </ul>
+
+  <h2>예시</h2>
+  <p>10km를 50분에 달렸다면:</p>
+  <ul>
+    <li>페이스: 5:00분/km</li>
+    <li>시속: 12.0km/h</li>
+  </ul>
+  <p>여러 페이스 전략을 빠르게 비교하며 자신에게 맞는 리듬을 찾는 데 활용할 수 있습니다.</p>
+
+  <CTA
+    title="앱 다운로드"
+    description="Pace Lab 앱에서는 통과 시간표, 대회 기록 예측, 심박존, 보급 전략 같은 더 많은 기능을 함께 사용할 수 있습니다."
+    links={[
+      { href: 'https://apps.apple.com/kr/app/pace-lab-running-calculator/id6759136568', label: 'App Store' },
+      { href: 'https://play.google.com/store/apps/details?id=com.kr.slowlane.pacelab', label: 'Google Play' },
+    ]}
+  />
+
+  <section class="section-block">
+    <h2>관련 도구</h2>
+    <div class="feature-grid">
+      <FeatureCard href="/pacelab/race-pace-calculator/" title="목표 페이스 계산기" description="목표 기록과 거리를 기준으로 목표 페이스를 계산하고, 자세한 통과 시간표를 확인합니다." />
+      <FeatureCard href="/pacelab/400m-lap-calculator/" title="400m 랩 계산기" description="트랙 훈련을 위해 페이스를 400m 랩 기록으로, 또는 400m 랩 기록을 페이스로 변환합니다." />
+      <FeatureCard href="/pacelab/training-pace-calculator/" title="훈련 페이스 계산기" description="Easy Run, Marathon Pace, Tempo (LT), Interval (VO2)에 대한 권장 훈련 페이스를 확인합니다." />
+      <FeatureCard href="/pacelab/heart-rate-zone-calculator/" title="심박존 계산기" description="나이, 최대 심박수, 안정 시 심박수, 역치 심박수를 기준으로 심박존을 계산합니다." />
+      <FeatureCard href="/pacelab/race-time-predictor/" title="대회 기록 예측" description="최근 기록을 바탕으로 기록 기반 예측과 VDOT 기반 예측으로 대회 기록을 추정합니다." />
+      <FeatureCard href="/pacelab/energy-gel-calculator/" title="에너지젤 보급 계산기" description="대회 거리, 페이스, 목표 기록을 바탕으로 권장 에너지젤 개수와 섭취 시점을 계획합니다." />
+    </div>
+  </section>
+</FeatureDetailPage>

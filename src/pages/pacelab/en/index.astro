@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import FeatureCard from '../../../components/FeatureCard.astro';
+import CTA from '../../../components/CTA.astro';
+import { paceLabFeatures } from '../../../lib/site';
+---
+
+<BaseLayout
+  title="Pace Lab"
+  description="Pace, splits, training pace, HR zones, race predictions, and fueling tools for runners."
+  lang="en"
+  currentPath="/pacelab/en/"
+>
+  <section class="hero-panel">
+    <h1>Pace Lab</h1>
+    <p><strong>Pace, splits, training pace, HR zones, race predictions, and fueling tools for runners.</strong></p>
+    <p>Pace Lab is a free running calculator for training and race planning. Calculate pace and speed, view race splits, predict race times, plan energy gel intake, and check training paces and heart rate zones in one place.</p>
+    <p>You can quickly access the tools you need and get clear results right away.</p>
+  </section>
+
+  <CTA
+    title="Get the app"
+    description="Download Pace Lab:"
+    links={[
+      { href: 'https://apps.apple.com/us/app/pace-lab-running-calculator/id6759136568', label: 'App Store' },
+      { href: 'https://play.google.com/store/apps/details?id=com.kr.slowlane.pacelab', label: 'Google Play' },
+    ]}
+  />
+
+  <section class="plain-panel">
+    <h2>Features</h2>
+    <div class="feature-grid">
+      {paceLabFeatures.en.map((feature) => (
+        <FeatureCard {...feature} />
+      ))}
+    </div>
+
+    <h2>Support</h2>
+    <p>
+      <a href="mailto:slowlane.dev@gmail.com">slowlane.dev@gmail.com</a>
+    </p>
+
+    <h2>Privacy Policy</h2>
+    <p>
+      <a href="https://pyoungoh.github.io/pacelab/en/privacy/">View Privacy Policy</a>
+    </p>
+  </section>
+</BaseLayout>

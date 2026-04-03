@@ -1,0 +1,44 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import {
+  getDescription,
+  getTitle,
+  inferLangFromRoute,
+  isSpecialRoute,
+  routeFromEntryId,
+  routeFromSlug,
+  routeKey,
+} from '../lib/content';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('sitePages');
+
+  return entries
+    .map((entry) => {
+      const route = routeFromEntryId(entry.id);
+      return {
+        params: {
+          slug: route === '/' ? undefined : route.slice(1, -1),
+        },
+        props: {
+          entry,
+          route,
+        },
+      };
+    })
+    .filter(({ props }) => !isSpecialRoute(props.route));
+}
+
+const { entry, route } = Astro.props;
+const { Content } = await render(entry);
+const title = getTitle(entry);
+const description = getDescription(entry);
+const lang = entry.data.lang ?? inferLangFromRoute(routeFromSlug(Astro.params.slug));
+---
+
+<BaseLayout title={title} description={description} lang={lang} currentPath={route}>
+  <article class="prose">
+    <Content />
+  </article>
+</BaseLayout>

@@ -1,0 +1,37 @@
+---
+type StoreKind = 'app-store' | 'google-play';
+
+const { href, label, kind } = Astro.props as {
+  href: string;
+  label: string;
+  kind: StoreKind;
+};
+
+const eyebrow = kind === 'app-store' ? 'Download on the' : 'Get it on';
+---
+
+<a class={`store-badge ${kind}`} href={href}>
+  <span class="store-badge__icon" aria-hidden="true">
+    {
+      kind === 'app-store' ? (
+        <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+          <path
+            fill="currentColor"
+            d="M16.84 12.67a5.03 5.03 0 0 1 2.4-4.21 5.17 5.17 0 0 0-4.07-2.2c-1.72-.18-3.4 1.03-4.28 1.03-.9 0-2.27-1.01-3.72-.98A5.4 5.4 0 0 0 2.6 9.1c-1.95 3.38-.5 8.35 1.38 11.1.94 1.35 2.04 2.85 3.49 2.8 1.41-.06 1.94-.89 3.65-.89 1.7 0 2.2.89 3.66.86 1.52-.02 2.48-1.36 3.38-2.72 1.08-1.55 1.5-3.08 1.52-3.16a4.89 4.89 0 0 1-2.84-4.42Zm-2.8-8.2A4.96 4.96 0 0 0 15.18.9a5.05 5.05 0 0 0-3.28 1.7 4.72 4.72 0 0 0-1.16 3.45 4.18 4.18 0 0 0 3.3-1.58Z"
+          />
+        </svg>
+      ) : (
+        <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+          <path fill="#34A853" d="M3 2.5 14.7 12 3 21.5Z" />
+          <path fill="#4285F4" d="M14.7 12 18.4 8.9 22 12l-3.6 3.1Z" />
+          <path fill="#FBBC04" d="M3 2.5 18.4 8.9 14.7 12Z" />
+          <path fill="#EA4335" d="M3 21.5 14.7 12 18.4 15.1Z" />
+        </svg>
+      )
+    }
+  </span>
+  <span class="store-badge__text">
+    <span class="store-badge__eyebrow">{eyebrow}</span>
+    <span class="store-badge__label">{label}</span>
+  </span>
+</a>

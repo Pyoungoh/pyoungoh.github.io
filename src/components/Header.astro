@@ -1,0 +1,26 @@
+---
+import { headerLinks, siteTitle } from '../lib/site';
+
+const { currentPath = '/' } = Astro.props;
+---
+
+<header class="site-header">
+  <div class="shell">
+    <a class="brand" href="/">{siteTitle}</a>
+    <nav aria-label="Primary">
+      <ul class="nav-list">
+        {headerLinks.map((link) => {
+          const active = currentPath === link.href || (link.href !== '/' && currentPath.startsWith(link.href));
+
+          return (
+            <li>
+              <a href={link.href} data-active={active ? 'true' : undefined}>
+                {link.label}
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+    </nav>
+  </div>
+</header>

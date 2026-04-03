@@ -1,0 +1,63 @@
+---
+import CTA from '../../../../components/CTA.astro';
+import FeatureDetailPage from '../../../../components/FeatureDetailPage.astro';
+import FeatureCard from '../../../../components/FeatureCard.astro';
+---
+
+<FeatureDetailPage
+  title="Running Pace Calculator"
+  description="Calculate your running pace, speed, and finish time for any distance."
+  lang="en"
+  currentPath="/pacelab/en/pace-calculator/"
+  backHref="/pacelab/en/"
+  backLabel="← Back to Pace Lab home"
+>
+  <p>Calculate your running pace, speed, and finish time for any distance.</p>
+  <p>This running pace calculator helps you quickly convert between pace, time, and distance so you can plan your training and races more effectively.</p>
+
+  <h2>What you can do</h2>
+  <ul>
+    <li>Calculate pace from distance and time</li>
+    <li>Convert pace to speed (km/h or mph)</li>
+    <li>Estimate finish time for a target pace</li>
+    <li>Adjust inputs instantly and see results</li>
+  </ul>
+
+  <h2>When to use it</h2>
+  <p>Use this tool when you want to:</p>
+  <ul>
+    <li>Plan your marathon or half marathon pace</li>
+    <li>Check your pace after a run</li>
+    <li>Set a target pace for workouts</li>
+    <li>Convert treadmill speed and outdoor pace</li>
+  </ul>
+
+  <h2>Example</h2>
+  <p>If you run 10 km in 50 minutes:</p>
+  <ul>
+    <li>Pace: 5:00 min/km</li>
+    <li>Speed: 12.0 km/h</li>
+  </ul>
+  <p>You can use this calculator to quickly test different pacing strategies.</p>
+
+  <CTA
+    title="Get the app"
+    description="Use the full Pace Lab app for more features like split charts, race prediction, heart rate zones, and fueling planning."
+    links={[
+      { href: 'https://apps.apple.com/us/app/pace-lab-running-calculator/id6759136568', label: 'App Store' },
+      { href: 'https://play.google.com/store/apps/details?id=com.kr.slowlane.pacelab', label: 'Google Play' },
+    ]}
+  />
+
+  <section class="section-block">
+    <h2>Related tools</h2>
+    <div class="feature-grid">
+      <FeatureCard href="/pacelab/en/race-pace-calculator/" title="Race pace calculator" description="Calculate the target pace for your goal time and distance, then view detailed race splits." />
+      <FeatureCard href="/pacelab/en/400m-lap-calculator/" title="400m lap calculator" description="Convert pace to 400m lap time, or lap time to pace, for track workouts." />
+      <FeatureCard href="/pacelab/en/training-pace-calculator/" title="Training pace calculator" description="Get recommended training paces for easy runs, marathon pace, threshold, and intervals." />
+      <FeatureCard href="/pacelab/en/heart-rate-zone-calculator/" title="Heart rate zone calculator" description="Calculate heart rate zones using age, max HR, resting HR, or lactate threshold HR." />
+      <FeatureCard href="/pacelab/en/race-time-predictor/" title="Race time predictor" description="Predict race times from a recent result with record-based and VDOT-based estimates." />
+      <FeatureCard href="/pacelab/en/energy-gel-calculator/" title="Energy gel calculator" description="Plan gel count and intake timing based on your race distance, pace, and goal time." />
+    </div>
+  </section>
+</FeatureDetailPage>

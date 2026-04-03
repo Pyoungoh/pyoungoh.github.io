@@ -1,0 +1,29 @@
+---
+import StoreBadge from './StoreBadge.astro';
+
+const { title, description, links = [] } = Astro.props;
+
+const resolveKind = (href) => {
+  if (href.includes('apps.apple.com')) return 'app-store';
+  if (href.includes('play.google.com')) return 'google-play';
+  return null;
+};
+---
+
+<section class="cta-panel">
+  <h2>{title}</h2>
+  <p>{description}</p>
+  {links.length > 0 && (
+    <ul class="cta-links">
+      {links.map((link) => {
+        const kind = resolveKind(link.href);
+
+        return (
+        <li>
+          {kind ? <StoreBadge href={link.href} label={link.label} kind={kind} /> : <a href={link.href}>{link.label}</a>}
+        </li>
+        );
+      })}
+    </ul>
+  )}
+</section>

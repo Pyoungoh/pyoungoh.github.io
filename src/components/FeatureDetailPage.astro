@@ -1,0 +1,22 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const {
+  title,
+  description,
+  lang = 'en',
+  currentPath,
+  backHref,
+  backLabel,
+} = Astro.props;
+---
+
+<BaseLayout title={title} description={description} lang={lang} currentPath={currentPath}>
+  <article class="prose">
+    <h1>{title}</h1>
+    <p>
+      <a href={backHref}>{backLabel}</a>
+    </p>
+    <slot />
+  </article>
+</BaseLayout>

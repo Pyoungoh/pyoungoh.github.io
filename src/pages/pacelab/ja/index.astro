@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import FeatureCard from '../../../components/FeatureCard.astro';
+import CTA from '../../../components/CTA.astro';
+import { paceLabFeatures } from '../../../lib/site';
+---
+
+<BaseLayout
+  title="Pace Lab"
+  description="ランナーのための、ペース、通過タイム表、トレーニングペース、心拍ゾーン、レース予想タイム、補給戦略ツール。"
+  lang="ja"
+  currentPath="/pacelab/ja/"
+>
+  <section class="hero-panel">
+    <h1>Pace Lab</h1>
+    <p><strong>ランナーのための、ペース、通過タイム表、トレーニングペース、心拍ゾーン、レース予想タイム、補給戦略ツール。</strong></p>
+    <p>Pace Labは、トレーニングとレース計画に使える無料のランニング計算アプリです。ペースと速度の計算、通過タイム表の確認、レース予想タイム、エナジージェルの補給計画、トレーニングペースと心拍ゾーンの確認をひとつのアプリで行えます。</p>
+    <p>必要な機能にすぐアクセスして、わかりやすい結果をその場で確認できます。</p>
+  </section>
+
+  <CTA
+    title="Get the app"
+    description="Pace Labをダウンロード:"
+    links={[
+      { href: 'https://apps.apple.com/jp/app/pace-lab-running-calculator/id6759136568', label: 'App Store' },
+      { href: 'https://play.google.com/store/apps/details?id=com.kr.slowlane.pacelab', label: 'Google Play' },
+    ]}
+  />
+
+  <section class="plain-panel">
+    <h2>Features</h2>
+    <div class="feature-grid">
+      {paceLabFeatures.ja.map((feature) => (
+        <FeatureCard {...feature} />
+      ))}
+    </div>
+
+    <h2>Support</h2>
+    <p>
+      <a href="mailto:slowlane.dev@gmail.com">slowlane.dev@gmail.com</a>
+    </p>
+
+    <h2>Privacy Policy</h2>
+    <p>
+      <a href="https://pyoungoh.github.io/pacelab/ja/privacy/">Privacy Policyを見る</a>
+    </p>
+  </section>
+</BaseLayout>
