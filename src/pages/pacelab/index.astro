@@ -40,39 +40,39 @@ const galleryItems = [
 const featureHighlights = [
   {
     href: '/pacelab/pace-calculator/',
-    text: '어떤 거리든 내 러닝 페이스를 정확하게 계산',
+    text: '어떤 거리든 내 러닝 페이스를 정확하게 계산하세요',
   },
   {
     href: '/pacelab/race-pace-calculator/',
-    text: '정확한 통과 시간표로 레이스 전략 세우기',
+    text: '정확한 통과 시간표로 레이스 전략을 세우세요',
   },
   {
     href: '/pacelab/race-time-predictor/',
-    text: '검증된 공식으로 예상 완주 기록 예측',
+    text: '지난 기록을 바탕으로 완주 기록을 예측하세요',
   },
   {
     href: '/pacelab/energy-gel-calculator/',
-    text: '장거리 러닝을 위한 보급 전략 최적화',
+    text: '장거리 러닝을 위한 보급 전략을 최적화하세요',
   },
   {
     href: '/pacelab/heart-rate-zone-calculator/',
-    text: '심박존 기반으로 더 똑똑하게 훈련',
+    text: '심박존으로 더 똑똑하게 훈련하세요',
   },
 ];
 ---
 
 <BaseLayout
   title="러닝 페이스 계산기 & 마라톤 도구 | Pace Lab"
-  description="Pace Lab은 10K, 하프마라톤, 풀마라톤을 준비하는 러너를 위한 러닝 페이스 계산기 앱입니다. 페이스, 통과 시간표, 기록 예측, 보급 전략, 심박존을 한곳에서 확인하세요."
+  description="10K, 하프마라톤, 마라톤 러너를 위한 러닝 페이스 계산기와 마라톤 도구. 페이스, 통과 시간표, 완주 기록 예측, 보급 전략, 심박존을 한 앱에서 확인하세요."
   lang="ko"
   currentPath="/pacelab/"
 >
   <PaceLabHero
     title="러닝 페이스 계산기 & 마라톤 도구"
-    lead="레이스 페이스, 통과 시간, 보급 전략을 한 앱에서 계획하세요"
+    lead="목표 기록에 맞춰 얼마나 빠르게 달려야 하는지 정확히 확인하세요. 페이스, 통과 시간표, 레이스 전략을 한 앱에서 계획할 수 있습니다."
     paragraphs={[
-      '10K, 하프마라톤, 풀마라톤을 준비하는 러너를 위한 앱입니다.',
-      'Pace Lab으로 마라톤 페이스를 계산하고, 통과 시간표를 확인하고, 예상 기록과 심박존까지 함께 점검해 레이스와 훈련을 더 체계적으로 준비할 수 있습니다.',
+      '10K, 하프마라톤, 마라톤을 준비하는 러너를 위한 앱입니다.',
+      '감이 아니라 숫자로 준비하세요. 다음 러닝을 더 명확하게 계획할 수 있습니다.',
     ]}
     image={heroScreenshot}
     imageAlt="Pace Lab 한국어 홈 화면"
@@ -81,7 +81,7 @@ const featureHighlights = [
   />
 
   <section id="download" class="download-section">
-    <CTA title="Pace Lab 다운로드" description="iOS 및 Android에서 이용 가능" links={paceLabStoreLinks.ko} lang="ko" className="cta-panel--wide-copy" />
+    <CTA title="앱을 다운로드하고 다음 러닝을 계획해보세요" description="iOS 및 Android에서 이용 가능" links={paceLabStoreLinks.ko} lang="ko" className="cta-panel--wide-copy" />
   </section>
 
   <ScreenshotGallery
@@ -117,26 +117,22 @@ const featureHighlights = [
   </section>
 
   <section class="plain-panel trust-panel">
-    <h2>간단하게, 러너답게</h2>
-    <p>로그인 없이 바로 사용. 개인 데이터 저장 없이 가볍게. 러너를 위해 만들었습니다.</p>
+    <h2>복잡함 없이 바로 쓸 수 있어요</h2>
+    <p>로그인 없이 바로 사용. 개인 데이터를 저장하지 않습니다. 러너를 위해 만들었습니다.</p>
   </section>
 
   <section class="plain-panel seo-panel">
     <h2>러닝 페이스 계산기란?</h2>
     <p>
-      러닝 페이스 계산기는 훈련과 레이스 준비에 필요한 숫자를 빠르게 보여주는 도구입니다.
-    </p>
-    <p>
-      레이스 전에 페이스, 통과 시간표, 훈련 강도를 한눈에 확인할 수 있습니다.
+      러닝 페이스 계산기는 목표 기록을 달성하기 위해 어느 속도로 달려야 하는지 정확하게 보여주는 도구입니다. 5K, 하프마라톤, 마라톤 준비에 유용합니다.
     </p>
     <ul class="seo-list">
-      <li>5K부터 마라톤까지 거리별 페이스 계산</li>
-      <li>훈련 전과 레이스 전에 marathon pace 확인</li>
-      <li>구간별 split times 미리 계획</li>
-      <li>최근 기록 기준으로 race prediction 비교</li>
-      <li>heart rate zones 기준으로 훈련 강도 설정</li>
+      <li>어떤 거리든 페이스를 계산</li>
+      <li>정확한 통과 시간표를 계획</li>
+      <li>지난 기록을 바탕으로 완주 기록 예측</li>
+      <li>심박존으로 더 똑똑하게 훈련</li>
     </ul>
-    <p>Pace Lab은 페이스, 통과 시간표, 기록 예측, 심박존을 한곳에 모아 러너가 더 빠르고 간단하게 판단할 수 있게 도와줍니다.</p>
+    <p>Pace Lab은 이 모든 도구를 하나의 간단한 앱에 담아, 더 자신 있게 계획하고 달릴 수 있도록 도와줍니다.</p>
   </section>
 
   <section class="plain-panel support-panel">
@@ -220,15 +216,22 @@ const featureHighlights = [
     color: var(--muted);
   }
 
-  .trust-panel p,
-  .seo-panel p {
+  .trust-panel p {
     max-width: 72ch;
+  }
+
+  .seo-panel h2 {
+    text-wrap: wrap;
+  }
+
+  .seo-panel p,
+  .seo-list {
+    max-width: none;
   }
 
   .seo-list {
     margin: 1rem 0;
     padding-left: 1.2rem;
-    max-width: 72ch;
   }
 
   .seo-list li + li {

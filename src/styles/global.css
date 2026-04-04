@@ -383,7 +383,7 @@ ul {
 .store-badge-group {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 28px;
   list-style: none;
   padding: 0;
   margin: 1.15rem 0 0;
@@ -701,7 +701,7 @@ ul {
   }
 
   .store-badge-group {
-    gap: 14px;
+    gap: 20px;
   }
 
   .store-badge img {

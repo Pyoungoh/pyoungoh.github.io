@@ -1,7 +1,6 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
-import CTA from '../../../components/CTA.astro';
-import PaceLabHero from '../../../components/PaceLabHero.astro';
+import { Image } from 'astro:assets';
 import ScreenshotGallery from '../../../components/ScreenshotGallery.astro';
 import heroScreenshot from '../../../assets/pacelab/en/home.png';
 import paceCalculatorScreenshot from '../../../assets/pacelab/en/pace-calculator.png';
@@ -44,11 +43,11 @@ const featureHighlights = [
   },
   {
     href: '/pacelab/en/race-pace-calculator/',
-    text: 'Plan your race with precise split times',
+    text: 'Plan your race with accurate split times',
   },
   {
     href: '/pacelab/en/race-time-predictor/',
-    text: 'Predict race finish time using proven formulas',
+    text: 'Predict your finish time from past runs',
   },
   {
     href: '/pacelab/en/energy-gel-calculator/',
@@ -63,25 +62,75 @@ const featureHighlights = [
 
 <BaseLayout
   title="Running Pace Calculator & Marathon Tools | Pace Lab"
-  description="Pace Lab is a running pace calculator and marathon planning app for runners training for 10K, half marathon, and full marathon. Calculate pace, split times, race prediction, fueling, and heart rate zones."
+  description="Running pace calculator and marathon tools for 10K, half marathon, and marathon runners. Plan pace, splits, finish time, fueling, and heart rate zones in one app."
   lang="en"
   currentPath="/pacelab/en/"
 >
-  <PaceLabHero
-    title="Running Pace Calculator & Marathon Tools"
-    lead="Plan your race pace, splits, and fueling — all in one app"
-    paragraphs={[
-      'For runners training for 10K, half marathon, and full marathon.',
-      'Use Pace Lab to calculate marathon pace, review split times, predict race results, and check heart rate zones before training sessions and race day.',
-    ]}
-    image={heroScreenshot}
-    imageAlt="Pace Lab home screen"
-    frameClass="device-frame--hero"
-    imageClass="device-frame__image--hero"
-  />
+  <section class="hero-panel hero-panel--showcase">
+    <div class="hero-copy">
+      <h1>Running Pace Calculator & Marathon Tools</h1>
+      <p class="hero-lead">
+        Know exactly how fast you need to run to hit your goal time. Plan your pace, splits, and race strategy — all in one app.
+      </p>
+      <div class="hero-body">
+        <p>For runners training for 10K, half marathon, and marathon.</p>
+        <p>No guessing. Just clear numbers for your next run.</p>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="device-frame device-frame--hero">
+        <div class="device-frame__viewport">
+          <Image
+            src={heroScreenshot}
+            alt="Pace Lab home screen"
+            widths={[320, 420, 520, 640]}
+            sizes="(max-width: 720px) 74vw, (max-width: 1080px) 34vw, 384px"
+            loading="eager"
+            format="webp"
+            quality={90}
+            class="device-frame__image--hero"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section id="download" class="download-section">
-    <CTA title="Download Pace Lab" description="Available on iOS & Android" links={paceLabStoreLinks.en} lang="en" className="cta-panel--wide-copy" />
+    <div class="cta-panel cta-panel--wide-copy">
+      <h2>Get the app and start planning your next run</h2>
+      <p>Available on iOS & Android</p>
+      <ul class="store-badge-group" data-lang="en">
+        <li>
+          <a
+            class="store-badge store-badge--app-store"
+            href={paceLabStoreLinks.en[0].href}
+            aria-label="Download Pace Lab on the App Store"
+          >
+            <img
+              src="/store-badges/app-store-en.svg"
+              alt="Download on the App Store"
+              loading="eager"
+              decoding="async"
+            />
+          </a>
+        </li>
+        <li>
+          <a
+            class="store-badge store-badge--google-play"
+            href={paceLabStoreLinks.en[1].href}
+            aria-label="Get Pace Lab on Google Play"
+          >
+            <img
+              src="/store-badges/google-play-en.png"
+              alt="Get it on Google Play"
+              loading="eager"
+              decoding="async"
+            />
+          </a>
+        </li>
+      </ul>
+    </div>
   </section>
 
   <ScreenshotGallery
@@ -124,19 +173,15 @@ const featureHighlights = [
   <section class="plain-panel seo-panel">
     <h2>What is a running pace calculator?</h2>
     <p>
-      A running pace calculator helps you plan training and race day with clear numbers.
-    </p>
-    <p>
-      It shows the pace, split times, and effort targets you need before you run.
+      A running pace calculator shows exactly how fast you should run to hit your goal time — for 5K, half marathon, and marathon.
     </p>
     <ul class="seo-list">
-      <li>Calculate your pace for any distance, from 5K to marathon</li>
-      <li>Check marathon pace before race day and long runs</li>
-      <li>Plan split times for each mile or kilometer</li>
-      <li>Compare race prediction results from recent performances</li>
-      <li>Set training targets with heart rate zones</li>
+      <li>Calculate your pace for any distance</li>
+      <li>Plan accurate split times</li>
+      <li>Predict your finish time from past runs</li>
+      <li>Train smarter with heart rate zones</li>
     </ul>
-    <p>With pace, split times, race prediction, and heart rate zones in one place, Pace Lab helps runners make faster, simpler decisions.</p>
+    <p>Pace Lab combines all these tools in one simple app, so you can plan better and run with confidence.</p>
   </section>
 
   <section class="plain-panel support-panel">
@@ -165,9 +210,16 @@ const featureHighlights = [
   }
 
   :global(.download-section .store-badge-group) {
+    display: flex;
     justify-content: center;
     align-items: center;
     gap: 28px;
+    list-style: none;
+    width: fit-content;
+    max-width: 100%;
+    padding: 0;
+    margin: 1.15rem auto 0;
+    flex-wrap: wrap;
   }
 
   :global(.download-section .store-badge-group > li) {
@@ -180,12 +232,6 @@ const featureHighlights = [
     min-height: 56px;
     align-items: center;
     justify-content: center;
-  }
-
-  :global(.download-section .store-badge img) {
-    height: 56px;
-    width: auto;
-    max-width: 100%;
   }
 
   .feature-benefit-list {
@@ -220,15 +266,22 @@ const featureHighlights = [
     color: var(--muted);
   }
 
-  .trust-panel p,
-  .seo-panel p {
+  .trust-panel p {
     max-width: 72ch;
+  }
+
+  .seo-panel h2 {
+    text-wrap: wrap;
+  }
+
+  .seo-panel p,
+  .seo-list {
+    max-width: none;
   }
 
   .seo-list {
     margin: 1rem 0;
     padding-left: 1.2rem;
-    max-width: 72ch;
   }
 
   .seo-list li + li {

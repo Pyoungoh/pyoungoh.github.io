@@ -40,39 +40,39 @@ const galleryItems = [
 const featureHighlights = [
   {
     href: '/pacelab/ja/pace-calculator/',
-    text: 'どんな距離でも自分に合うランニングペースを計算',
+    text: 'どんな距離でも最適なランニングペースを計算できます',
   },
   {
     href: '/pacelab/ja/race-pace-calculator/',
-    text: '正確なスプリット表でレースプランを作成',
+    text: '正確なスプリットでレースプランを立てられます',
   },
   {
     href: '/pacelab/ja/race-time-predictor/',
-    text: '実績ある計算式で完走タイムを予測',
+    text: '過去の記録からゴールタイムを予測できます',
   },
   {
     href: '/pacelab/ja/energy-gel-calculator/',
-    text: 'ロングラン向けの補給戦略を最適化',
+    text: 'ロングラン向けの補給戦略を最適化できます',
   },
   {
     href: '/pacelab/ja/heart-rate-zone-calculator/',
-    text: '心拍ゾーンを使って効率よくトレーニング',
+    text: '心拍ゾーンでより賢くトレーニングできます',
   },
 ];
 ---
 
 <BaseLayout
   title="ランニングペース計算機 & マラソンツール | Pace Lab"
-  description="Pace Labは10K、ハーフマラソン、フルマラソンを目指すランナーのためのランニングペース計算アプリです。ペース、スプリット、レース予測、補給計画、心拍ゾーンをまとめて確認できます。"
+  description="10K、ハーフマラソン、マラソンのランナー向けランニングペース計算機とマラソンツール。ペース、スプリット、ゴールタイム予測、補給計画、心拍ゾーンを1つのアプリで確認できます。"
   lang="ja"
   currentPath="/pacelab/ja/"
 >
   <PaceLabHero
     title="ランニングペース計算機 & マラソンツール"
-    lead="レースペース、スプリット、補給計画をひとつのアプリで"
+    lead="目標タイムに届くために、どのくらいの速さで走ればいいかを正確に把握できます。ペース、スプリット、レース戦略をひとつのアプリで計画できます。"
     paragraphs={[
-      '10K、ハーフマラソン、フルマラソンを目指すランナー向けのアプリです。',
-      'Pace Labならマラソンペースの確認、スプリット表の作成、レース予測、心拍ゾーンのチェックまでまとめて行えます。',
+      '10K、ハーフマラソン、マラソンを目指すランナー向けのアプリです。',
+      '勘に頼らず、次のランに必要な数字をはっきり確認できます。',
     ]}
     image={heroScreenshot}
     imageAlt="Pace Lab 日本語ホーム画面"
@@ -81,7 +81,7 @@ const featureHighlights = [
   />
 
   <section id="download" class="download-section">
-    <CTA title="Pace Labをダウンロード" description="iOSとAndroidで利用できます" links={paceLabStoreLinks.ja} lang="ja" className="cta-panel--wide-copy" />
+    <CTA title="アプリをダウンロードして次のランを計画しよう" description="iOSとAndroidで利用できます" links={paceLabStoreLinks.ja} lang="ja" className="cta-panel--wide-copy" />
   </section>
 
   <ScreenshotGallery
@@ -118,25 +118,21 @@ const featureHighlights = [
 
   <section class="plain-panel trust-panel">
     <h2>シンプルに使える設計</h2>
-    <p>ログイン不要。個人データを保存せず、軽く使えます。ランナーのために作りました。</p>
+    <p>ログイン不要。個人データは保存しません。ランナーのために作りました。</p>
   </section>
 
   <section class="plain-panel seo-panel">
     <h2>ランニングペース計算機とは？</h2>
     <p>
-      ランニングペース計算機は、練習とレース準備に必要な数字をすばやく確認できるツールです。
-    </p>
-    <p>
-      レース前にペース、スプリット、練習強度の目安をひと目で確認できます。
+      ランニングペース計算機は、目標タイムに合わせてどのくらいの速さで走ればよいかを正確に示してくれるツールです。5K、ハーフマラソン、マラソンの準備に役立ちます。
     </p>
     <ul class="seo-list">
-      <li>5Kからマラソンまで距離別のペースを計算</li>
-      <li>練習前や本番前に marathon pace を確認</li>
-      <li>区間ごとの split times を事前に計画</li>
-      <li>最近の記録をもとに race prediction を比較</li>
-      <li>heart rate zones を使って練習強度を調整</li>
+      <li>どんな距離でもペースを計算</li>
+      <li>正確なスプリットを計画</li>
+      <li>過去の記録からゴールタイムを予測</li>
+      <li>心拍ゾーンでより賢くトレーニング</li>
     </ul>
-    <p>Pace Labなら、ペース、スプリット、記録予測、心拍ゾーンをひとつにまとめて、ランナーがより簡単に判断できます。</p>
+    <p>Pace Labはこれらのツールをひとつのシンプルなアプリにまとめ、より自信を持って計画し、走れるようにサポートします。</p>
   </section>
 
   <section class="plain-panel support-panel">
@@ -220,15 +216,22 @@ const featureHighlights = [
     color: var(--muted);
   }
 
-  .trust-panel p,
-  .seo-panel p {
+  .trust-panel p {
     max-width: 72ch;
+  }
+
+  .seo-panel h2 {
+    text-wrap: wrap;
+  }
+
+  .seo-panel p,
+  .seo-list {
+    max-width: none;
   }
 
   .seo-list {
     margin: 1rem 0;
     padding-left: 1.2rem;
-    max-width: 72ch;
   }
 
   .seo-list li + li {
