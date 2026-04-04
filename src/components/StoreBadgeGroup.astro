@@ -24,7 +24,7 @@ const storeLinks = links
 
 {
   storeLinks.length > 0 && (
-    <ul class="store-badge-group">
+    <ul class="store-badge-group" data-lang={lang}>
       {storeLinks.map((link) => (
         <li>
           <StoreBadge href={link.href} label={link.label} kind={link.kind} lang={lang} />

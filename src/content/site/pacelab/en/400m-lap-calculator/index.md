@@ -4,25 +4,23 @@
 
 [← Back to Pace Lab home](/pacelab/en/)
 
-Convert running pace to 400m lap time, or lap time to pace for track workouts.
+Convert running pace to 400m lap time, or 400m lap time to running pace for track workouts.
 
-This 400m lap calculator helps you plan and analyze track sessions by converting between pace and lap time on a standard 400m track.
+This 400m lap calculator helps you check pace and 400m lap time side by side for track sessions.
 
 ## What you can do
 
-- Convert pace (min/km or min/mi) to 400m lap time
-- Convert lap time to equivalent running pace
-- Plan interval workouts with target lap splits
-- Adjust inputs and instantly see updated results
+- Convert running pace to 400m lap time
+- Convert 400m lap time to running pace
+- Check a 400m lap target for a chosen pace
 
 ## When to use it
 
 Use this tool when you want to:
 
-- Plan track workouts with consistent lap pacing
-- Convert your race pace into track lap targets
-- Analyze interval sessions (e.g., 400m repeats)
-- Improve pacing accuracy during speed training
+- Check a 400m lap target before a track workout
+- Turn a running pace into a 400m lap time
+- Turn a recorded 400m lap time back into pace
 
 ## Example
 

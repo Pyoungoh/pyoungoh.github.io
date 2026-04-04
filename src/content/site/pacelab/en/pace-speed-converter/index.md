@@ -4,25 +4,23 @@
 
 [← Back to Pace Lab home](/pacelab/en/)
 
-Convert running pace to speed, or speed to pace for road, treadmill, and track workouts.
+Convert running pace to speed, or speed to pace.
 
-This pace-speed converter helps runners easily switch between pace (min/km or min/mi) and speed (km/h or mph), making it useful for treadmill settings and training adjustments.
+This pace-speed converter helps you switch between pace and speed for the same effort.
 
 ## What you can do
 
-- Convert running pace to speed (km/h or mph)
-- Convert speed to equivalent running pace
-- Adjust inputs instantly and see results
-- Use for road running, treadmill, or track training
+- Convert pace to speed
+- Convert speed to pace
+- Switch units and check the converted value right away
 
 ## When to use it
 
 Use this tool when you want to:
 
-- Match outdoor pace with treadmill speed
-- Convert km/h to pace for training plans
-- Understand pace differences between units (km vs mile)
-- Adjust workout intensity quickly
+- Match treadmill speed to running pace
+- Switch between pace and speed units
+- Make a quick conversion during training planning
 
 ## Example
 
@@ -34,7 +32,7 @@ If your treadmill speed is 10 km/h:
 
 - Pace: 6:00 min/km
 
-You can use this converter to align treadmill workouts with your outdoor running pace.
+You can use this converter to compare pace and speed in the format you want to use.
 
 ## Get the app
 

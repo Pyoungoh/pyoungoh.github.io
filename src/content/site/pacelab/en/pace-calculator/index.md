@@ -2,25 +2,23 @@
 
 [← Back to Pace Lab home](/pacelab/en/)
 
-Calculate your running pace, speed, and finish time for any distance.
+Calculate running pace, speed, and finish time from distance and time.
 
-This running pace calculator helps you quickly convert between pace, time, and distance so you can plan your training and races more effectively.
+This running pace calculator lets you check pace, speed, and time together in one place.
 
 ## What you can do
 
 - Calculate pace from distance and time
-- Convert pace to speed (km/h or mph)
-- Estimate finish time for a target pace
-- Adjust inputs instantly and see results
+- Check the matching speed with the result
+- See the corresponding finish time when one value changes
 
 ## When to use it
 
 Use this tool when you want to:
 
-- Plan your marathon or half marathon pace
-- Check your pace after a run
-- Set a target pace for workouts
-- Convert treadmill speed and outdoor pace
+- Review a recent run result
+- Compare distance, time, and pace together
+- Check a simple pace reference before a run
 
 ## Example
 
@@ -29,7 +27,7 @@ If you run 10 km in 50 minutes:
 - Pace: 5:00 min/km
 - Speed: 12.0 km/h
 
-You can use this calculator to quickly test different pacing strategies.
+You can use this calculator to check the relationship between pace, speed, and time at a glance.
 
 ## Get the app
 

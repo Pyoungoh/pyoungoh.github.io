@@ -4,34 +4,32 @@
 
 [← Back to Pace Lab home](/pacelab/en/)
 
-Plan how many energy gels you need and when to take them during your race.
+Plan recommended gel count and suggested intake timing for your race.
 
-This energy gel calculator helps runners create a fueling strategy based on race distance, pace, and goal time so they can avoid hitting the wall.
+This energy gel calculator helps you review a fueling plan from distance, pace, and goal time.
 
 ## What you can do
 
-- Calculate the number of gels needed for your race
-- Plan optimal intake timing during the race
-- Adjust fueling strategy based on pace and duration
-- Test different race scenarios instantly
+- Check recommended gel count
+- Check suggested intake timing
+- Adjust the plan with distance, pace, and goal time
 
 ## When to use it
 
 Use this tool when you want to:
 
-- Prepare fueling strategy for a marathon or half marathon
-- Avoid energy crashes during long runs
-- Optimize gel timing for better performance
-- Plan race-day nutrition in advance
+- Review a gel plan before a long race
+- Compare fueling plans for different goal times
+- Check gel count and timing in one view
 
 ## Example
 
-If you plan to run a marathon in 4 hours:
+If you enter your race distance, pace, and goal time:
 
-- Total gels: ~5–6
-- Intake: every 30–40 minutes
+- the calculator shows a recommended gel count
+- it also shows suggested intake timing
 
-You can use this calculator to build a consistent fueling plan and improve endurance during races.
+You can use this calculator to review count and timing together before race day.
 
 ## Get the app
 

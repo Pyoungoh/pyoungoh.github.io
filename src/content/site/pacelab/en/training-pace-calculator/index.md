@@ -4,35 +4,32 @@
 
 [← Back to Pace Lab home](/pacelab/en/)
 
-Calculate recommended training paces for easy runs, marathon pace, threshold workouts, and interval sessions.
+Calculate recommended training paces for several workout types.
 
-This training pace calculator helps runners set the right intensity for different workouts based on a recent race result or target performance.
+This training pace calculator helps you review pace ranges for Easy Run, Marathon Pace, Tempo (LT), and Interval (VO2).
 
 ## What you can do
 
-- Calculate training paces for multiple workout types
-- Get suggested paces for easy, marathon, threshold, and interval runs
-- Use recent race results to guide workout intensity
-- Adjust inputs and instantly compare training pace ranges
+- Check recommended paces for each workout type
+- Review Easy Run, Marathon Pace, Tempo (LT), and Interval (VO2) together
+- Compare pace ranges after changing your result
 
 ## When to use it
 
 Use this tool when you want to:
 
-- Set the right pace for daily training
-- Plan easy runs, tempo runs, and interval workouts
-- Avoid running easy days too fast
-- Build a more structured training plan
+- Plan different workout days
+- Check the pace for a specific session
+- Review training pace ranges from a recent result
 
 ## Example
 
-If you recently ran a 10K in 50 minutes:
+If you enter a recent result:
 
-- Easy pace will be slower and comfortable
-- Threshold pace will be faster but controlled
-- Interval pace will be faster and more demanding
+- the calculator shows separate pace ranges for each workout type
+- you can review the workout types in one list
 
-You can use this calculator to organize your workouts and train with more consistent pacing.
+You can use this calculator to organize pace references for different sessions.
 
 ## Get the app
 

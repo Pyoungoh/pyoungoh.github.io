@@ -4,34 +4,32 @@
 
 [← Back to Pace Lab home](/pacelab/en/)
 
-Calculate your heart rate zones for running based on age, max HR, resting HR, or lactate threshold HR.
+Calculate heart rate zone ranges for running from your input values.
 
-This heart rate zone calculator helps runners set training intensity more accurately for easy runs, tempo runs, threshold workouts, and interval sessions.
+This heart rate zone calculator helps you review heart rate zone ranges for different training efforts.
 
 ## What you can do
 
-- Calculate heart rate zones using multiple methods
-- Use age-based, max HR, resting HR, or lactate threshold HR inputs
-- Check zone ranges for different training intensities
-- Adjust inputs and instantly compare results
+- Check heart rate zone ranges from your inputs
+- Review the range for each zone in one view
+- Compare zone ranges after changing your values
 
 ## When to use it
 
 Use this tool when you want to:
 
-- Set heart rate targets for easy and long runs
-- Plan tempo, threshold, and interval workouts
-- Compare zone calculations from different methods
-- Train with more consistent intensity
+- Check target heart rate ranges before training
+- Review zone ranges for easier or harder sessions
+- Compare zone ranges after changing an input
 
 ## Example
 
-If your max heart rate is 180 bpm and your resting heart rate is 60 bpm:
+If you enter your values:
 
-- Recovery and easy zones will be lower
-- Tempo and threshold zones will be higher
+- the calculator shows zone ranges from lower to higher intensity
+- you can review each zone in one list
 
-You can use this calculator to build a more structured heart rate-based training plan.
+You can use this calculator to check zone ranges before a heart rate based session.
 
 ## Get the app
 

@@ -4,25 +4,23 @@
 
 [← Back to Pace Lab home](/pacelab/en/)
 
-Calculate your target pace and view race splits for your goal time and distance.
+Calculate target pace and review race splits for a goal time and distance.
 
-This race pace calculator helps you plan your pacing strategy for races like 5K, 10K, half marathon, and marathon.
+This race pace calculator helps you check a target pace and the split table that goes with it.
 
 ## What you can do
 
 - Calculate target pace from goal time and distance
-- View detailed split times (per km or mile)
-- Plan negative splits or even pacing strategies
-- Adjust inputs and instantly see updated results
+- Review the split table based on that pace
+- Compare how the result changes when goal time or distance changes
 
 ## When to use it
 
 Use this tool when you want to:
 
-- Set a realistic pace for your race goal
-- Plan your marathon pacing strategy
-- Check split times for each segment
-- Avoid starting too fast or too slow
+- Set a race pace goal before a race
+- Check split times for a target finish
+- Compare different goal times
 
 ## Example
 
@@ -31,7 +29,7 @@ If your goal is to finish a marathon in 4 hours:
 - Target pace: 5:41 min/km
 - Half split: ~2:00:00
 
-You can use this calculator to test pacing strategies and plan your race execution.
+You can use this calculator to check pace and splits together before race day.
 
 ## Get the app
 
