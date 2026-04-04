@@ -58,6 +58,25 @@ const featureHighlights = [
     text: 'Train smarter with heart rate zones',
   },
 ];
+
+const storeBadges = [
+  {
+    href: paceLabStoreLinks.en[0].href,
+    kind: 'app-store',
+    ariaLabel: 'Download Pace Lab on the App Store',
+    src: '/store-badges/app-store-en.svg',
+    alt: 'Download on the App Store',
+    imageClass: '',
+  },
+  {
+    href: paceLabStoreLinks.en[1].href,
+    kind: 'google-play',
+    ariaLabel: 'Get Pace Lab on Google Play',
+    src: '/store-badges/google-play-en.png',
+    alt: 'Get it on Google Play',
+    imageClass: 'play',
+  },
+];
 ---
 
 <BaseLayout
@@ -96,39 +115,28 @@ const featureHighlights = [
     </div>
   </section>
 
-  <section id="download" class="download-section">
+  <section class="download-section download-section--hero">
     <div class="cta-panel cta-panel--wide-copy">
       <h2>Get the app and start planning your next run</h2>
       <p>Available on iOS & Android</p>
-      <ul class="store-badge-group" data-lang="en">
-        <li>
-          <a
-            class="store-badge store-badge--app-store"
-            href={paceLabStoreLinks.en[0].href}
-            aria-label="Download Pace Lab on the App Store"
-          >
-            <img
-              src="/store-badges/app-store-en.svg"
-              alt="Download on the App Store"
-              loading="eager"
-              decoding="async"
-            />
-          </a>
-        </li>
-        <li>
-          <a
-            class="store-badge store-badge--google-play"
-            href={paceLabStoreLinks.en[1].href}
-            aria-label="Get Pace Lab on Google Play"
-          >
-            <img
-              src="/store-badges/google-play-en.png"
-              alt="Get it on Google Play"
-              loading="eager"
-              decoding="async"
-            />
-          </a>
-        </li>
+      <ul class="store-badge-group store-buttons" data-lang="en">
+        {storeBadges.map((badge) => (
+          <li>
+            <a
+              class={`store-badge store-badge--${badge.kind}`}
+              href={badge.href}
+              aria-label={badge.ariaLabel}
+            >
+              <img
+                class={badge.imageClass}
+                src={badge.src}
+                alt={badge.alt}
+                loading="eager"
+                decoding="async"
+              />
+            </a>
+          </li>
+        ))}
       </ul>
     </div>
   </section>
@@ -165,6 +173,32 @@ const featureHighlights = [
     </p>
   </section>
 
+  <section id="download" class="download-section download-section--secondary">
+    <div class="cta-panel cta-panel--wide-copy">
+      <h2>Get the app and start planning your next run</h2>
+      <p>Available on iOS & Android</p>
+      <ul class="store-badge-group store-buttons" data-lang="en">
+        {storeBadges.map((badge) => (
+          <li>
+            <a
+              class={`store-badge store-badge--${badge.kind}`}
+              href={badge.href}
+              aria-label={badge.ariaLabel}
+            >
+              <img
+                class={badge.imageClass}
+                src={badge.src}
+                alt={badge.alt}
+                loading="eager"
+                decoding="async"
+              />
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
   <section class="plain-panel trust-panel">
     <h2>Built to stay simple</h2>
     <p>No login required. No personal data stored. Built for runners.</p>
@@ -172,9 +206,7 @@ const featureHighlights = [
 
   <section class="plain-panel seo-panel">
     <h2>What is a running pace calculator?</h2>
-    <p>
-      A running pace calculator shows exactly how fast you should run to hit your goal time — for 5K, half marathon, and marathon.
-    </p>
+    <p>A running pace calculator shows exactly how fast you should run to hit your goal time.</p>
     <ul class="seo-list">
       <li>Calculate your pace for any distance</li>
       <li>Plan accurate split times</li>
@@ -198,7 +230,16 @@ const featureHighlights = [
 </BaseLayout>
 
 <style>
+  .download-section {
+    margin-top: 1.5rem;
+  }
+
+  .download-section--hero {
+    margin-top: 0;
+  }
+
   :global(.download-section .cta-panel) {
+    margin-top: 0;
     text-align: center;
   }
 
@@ -209,20 +250,20 @@ const featureHighlights = [
     font-size: 0.95rem;
   }
 
-  :global(.download-section .store-badge-group) {
+  :global(.download-section .store-buttons) {
     display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 28px;
+    align-items: center;
+    justify-content: center;
     list-style: none;
     width: fit-content;
     max-width: 100%;
     padding: 0;
-    margin: 1.15rem auto 0;
+    margin: 12px auto 0;
     flex-wrap: wrap;
   }
 
-  :global(.download-section .store-badge-group > li) {
+  :global(.download-section .store-buttons > li) {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -232,6 +273,21 @@ const featureHighlights = [
     min-height: 56px;
     align-items: center;
     justify-content: center;
+  }
+
+  :global(.download-section .store-buttons img) {
+    height: 56px;
+    width: auto;
+    max-width: 100%;
+  }
+
+  :global(.download-section .store-buttons img.play) {
+    transform: scale(1.12);
+    margin-top: 1px;
+  }
+
+  :global(.download-section .store-buttons[data-lang="en"] .store-badge--google-play img.play) {
+    transform: scale(1.5);
   }
 
   .feature-benefit-list {
@@ -289,15 +345,11 @@ const featureHighlights = [
   }
 
   @media (max-width: 720px) {
-    :global(.download-section .store-badge-group) {
-      gap: 20px;
-    }
-
     :global(.download-section .store-badge) {
       min-height: 52px;
     }
 
-    :global(.download-section .store-badge img) {
+    :global(.download-section .store-buttons img) {
       height: 52px;
     }
   }
