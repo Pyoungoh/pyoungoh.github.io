@@ -1,85 +1,78 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import PaceLabDownloadCTA from '../../components/PaceLabDownloadCTA.astro';
+import CTA from '../../components/CTA.astro';
 import PaceLabHero from '../../components/PaceLabHero.astro';
 import ScreenshotGallery from '../../components/ScreenshotGallery.astro';
-import FeatureGroup from '../../components/FeatureGroup.astro';
-import { paceLabFeatures } from '../../lib/site';
 import heroScreenshot from '../../assets/pacelab/ko/home.png';
 import paceCalculatorScreenshot from '../../assets/pacelab/ko/pace-calculator.png';
 import racePaceScreenshot from '../../assets/pacelab/ko/race-pace.png';
 import trainingPaceScreenshot from '../../assets/pacelab/ko/training-pace.png';
 import racePredictorScreenshot from '../../assets/pacelab/ko/race-predictor.png';
-
-const featureGroups = [
-  {
-    title: '페이스 & 시간',
-    description: '기록과 거리, 레이스 목표를 바탕으로 바로 계산할 수 있는 핵심 도구입니다.',
-    features: paceLabFeatures.ko.filter((feature) =>
-      [
-        '/pacelab/pace-calculator/',
-        '/pacelab/race-pace-calculator/',
-        '/pacelab/pace-speed-converter/',
-        '/pacelab/400m-lap-calculator/',
-      ].includes(feature.href),
-    ),
-  },
-  {
-    title: '훈련',
-    description: '훈련 강도와 주행 감각을 더 안정적으로 맞출 수 있도록 돕는 도구입니다.',
-    features: paceLabFeatures.ko.filter((feature) =>
-      ['/pacelab/training-pace-calculator/', '/pacelab/heart-rate-zone-calculator/'].includes(feature.href),
-    ),
-  },
-  {
-    title: '대회 준비',
-    description: '레이스 전략과 보급 계획을 정리할 때 유용한 도구입니다.',
-    features: paceLabFeatures.ko.filter((feature) =>
-      ['/pacelab/race-time-predictor/', '/pacelab/energy-gel-calculator/'].includes(feature.href),
-    ),
-  },
-];
+import { paceLabStoreLinks } from '../../lib/site';
 
 const galleryItems = [
   {
     image: paceCalculatorScreenshot,
     alt: 'Pace Lab 속도 계산기 화면',
     title: '속도 계산기',
-    description: '거리와 시간을 입력하면 페이스와 시속을 바로 확인할 수 있습니다.',
+    description: '거리와 시간을 입력하면 페이스와 시속을 빠르게 확인할 수 있습니다.',
   },
   {
     image: racePaceScreenshot,
     alt: 'Pace Lab 목표 페이스 계산기 화면',
     title: '목표 페이스 계산기',
-    description: '목표 기록 달성을 위한 레이스 페이스를 빠르게 계산할 수 있습니다.',
+    description: '목표 기록을 바탕으로 레이스 페이스와 통과 시간을 미리 계획할 수 있습니다.',
   },
   {
     image: trainingPaceScreenshot,
     alt: 'Pace Lab 훈련 페이스 계산기 화면',
     title: '훈련 페이스 계산기',
-    description: '목표 기록을 바탕으로 Easy Run부터 Interval까지 추천 페이스를 정리합니다.',
+    description: 'Easy Run부터 Marathon Pace까지 훈련 페이스를 한눈에 정리합니다.',
   },
   {
     image: racePredictorScreenshot,
     alt: 'Pace Lab 대회 기록 예측 화면',
     title: '대회 기록 예측',
-    description: '최근 기록을 바탕으로 다음 대회 예상 기록을 살펴볼 수 있습니다.',
+    description: '최근 기록을 기준으로 현실적인 예상 기록을 확인할 수 있습니다.',
+  },
+];
+
+const featureHighlights = [
+  {
+    href: '/pacelab/pace-calculator/',
+    text: '어떤 거리든 내 러닝 페이스를 정확하게 계산',
+  },
+  {
+    href: '/pacelab/race-pace-calculator/',
+    text: '정확한 통과 시간표로 레이스 전략 세우기',
+  },
+  {
+    href: '/pacelab/race-time-predictor/',
+    text: '검증된 공식으로 예상 완주 기록 예측',
+  },
+  {
+    href: '/pacelab/energy-gel-calculator/',
+    text: '장거리 러닝을 위한 보급 전략 최적화',
+  },
+  {
+    href: '/pacelab/heart-rate-zone-calculator/',
+    text: '심박존 기반으로 더 똑똑하게 훈련',
   },
 ];
 ---
 
 <BaseLayout
-  title="Pace Lab"
-  description="러너를 위한 페이스, 통과 시간표, 훈련 페이스, 심박존, 대회 기록 예측, 보급 전략 도구를 한곳에."
+  title="러닝 페이스 계산기 & 마라톤 도구 | Pace Lab"
+  description="Pace Lab은 10K, 하프마라톤, 풀마라톤을 준비하는 러너를 위한 러닝 페이스 계산기 앱입니다. 페이스, 통과 시간표, 기록 예측, 보급 전략, 심박존을 한곳에서 확인하세요."
   lang="ko"
   currentPath="/pacelab/"
 >
   <PaceLabHero
-    title="Pace Lab"
-    lead="러너를 위한 페이스, 통과 시간표, 훈련 페이스, 심박존, 대회 기록 예측, 보급 전략 도구를 한곳에."
+    title="러닝 페이스 계산기 & 마라톤 도구"
+    lead="레이스 페이스, 통과 시간, 보급 전략을 한 앱에서 계획하세요"
     paragraphs={[
-      'Pace Lab은 훈련과 대회 준비를 위한 무료 러닝 계산기 앱입니다. 페이스 및 시속 계산, 통과 시간표 확인, 대회 기록 예측, 에너지젤 보급 전략 계획, 훈련 페이스와 심박존 확인까지 한 번에 할 수 있습니다.',
-      '필요한 도구를 빠르게 열고, 바로 이해할 수 있는 결과를 확인해 보세요.',
+      '10K, 하프마라톤, 풀마라톤을 준비하는 러너를 위한 앱입니다.',
+      'Pace Lab으로 마라톤 페이스를 계산하고, 통과 시간표를 확인하고, 예상 기록과 심박존까지 함께 점검해 레이스와 훈련을 더 체계적으로 준비할 수 있습니다.',
     ]}
     image={heroScreenshot}
     imageAlt="Pace Lab 한국어 홈 화면"
@@ -88,20 +81,62 @@ const galleryItems = [
   />
 
   <section id="download" class="download-section">
-    <PaceLabDownloadCTA lang="ko" variant="landing" className="cta-panel--wide-copy" />
+    <CTA title="Pace Lab 다운로드" description="iOS 및 Android에서 이용 가능" links={paceLabStoreLinks.ko} lang="ko" className="cta-panel--wide-copy" />
   </section>
 
   <ScreenshotGallery
     title="앱 화면 미리보기"
-    description="자주 쓰는 계산기를 중심으로, 필요한 도구를 빠르게 열고 결과를 바로 확인할 수 있습니다."
+    description="러너가 가장 자주 사용하는 계산기를 중심으로 페이스, 통과 시간, 레이스 전략을 몇 초 안에 확인할 수 있습니다."
     items={galleryItems}
     className="screenshot-gallery--wide-copy"
   />
 
-  <section class="plain-panel feature-groups-panel">
-    {featureGroups.map((group) => (
-      <FeatureGroup {...group} />
-    ))}
+  <section class="plain-panel feature-benefits-panel">
+    <div class="section-heading">
+      <h2>러너가 Pace Lab을 사용하는 이유</h2>
+      <p>훈련 판단, 레이스 전략, 기록 예측에 필요한 핵심 계산을 빠르고 간단하게 확인할 수 있습니다.</p>
+    </div>
+
+    <ul class="feature-benefit-list">
+      {featureHighlights.map((feature) => (
+        <li>
+          <a href={feature.href}>{feature.text}</a>
+        </li>
+      ))}
+    </ul>
+
+    <p class="internal-links">
+      인기 도구:
+      {' '}
+      <a href="/pacelab/pace-calculator/">페이스 계산기</a>,
+      {' '}
+      <a href="/pacelab/race-time-predictor/">기록 예측</a>,
+      {' '}
+      <a href="/pacelab/race-pace-calculator/">통과 시간표</a>
+    </p>
+  </section>
+
+  <section class="plain-panel trust-panel">
+    <h2>간단하게, 러너답게</h2>
+    <p>로그인 없이 바로 사용. 개인 데이터 저장 없이 가볍게. 러너를 위해 만들었습니다.</p>
+  </section>
+
+  <section class="plain-panel seo-panel">
+    <h2>러닝 페이스 계산기란?</h2>
+    <p>
+      러닝 페이스 계산기는 훈련과 레이스 준비에 필요한 숫자를 빠르게 보여주는 도구입니다.
+    </p>
+    <p>
+      레이스 전에 페이스, 통과 시간표, 훈련 강도를 한눈에 확인할 수 있습니다.
+    </p>
+    <ul class="seo-list">
+      <li>5K부터 마라톤까지 거리별 페이스 계산</li>
+      <li>훈련 전과 레이스 전에 marathon pace 확인</li>
+      <li>구간별 split times 미리 계획</li>
+      <li>최근 기록 기준으로 race prediction 비교</li>
+      <li>heart rate zones 기준으로 훈련 강도 설정</li>
+    </ul>
+    <p>Pace Lab은 페이스, 통과 시간표, 기록 예측, 심박존을 한곳에 모아 러너가 더 빠르고 간단하게 판단할 수 있게 도와줍니다.</p>
   </section>
 
   <section class="plain-panel support-panel">
@@ -116,3 +151,101 @@ const galleryItems = [
     </p>
   </section>
 </BaseLayout>
+
+<style>
+  :global(.download-section .cta-panel) {
+    text-align: center;
+  }
+
+  :global(.download-section .cta-panel p) {
+    max-width: none;
+    margin-bottom: 0.9rem;
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+
+  :global(.download-section .store-badge-group) {
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+  }
+
+  :global(.download-section .store-badge-group > li) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  :global(.download-section .store-badge) {
+    min-height: 56px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  :global(.download-section .store-badge img) {
+    height: 56px;
+    width: auto;
+    max-width: 100%;
+  }
+
+  .feature-benefit-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.25rem 0 0;
+    display: grid;
+    gap: 0.85rem;
+  }
+
+  .feature-benefit-list li {
+    margin: 0;
+  }
+
+  .feature-benefit-list a {
+    display: block;
+    padding: 0.95rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: rgba(248, 250, 255, 0.82);
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .feature-benefit-list a:hover {
+    border-color: rgba(77, 94, 168, 0.28);
+    background: rgba(241, 246, 255, 0.96);
+  }
+
+  .internal-links {
+    margin-top: 1rem;
+    color: var(--muted);
+  }
+
+  .trust-panel p,
+  .seo-panel p {
+    max-width: 72ch;
+  }
+
+  .seo-list {
+    margin: 1rem 0;
+    padding-left: 1.2rem;
+    max-width: 72ch;
+  }
+
+  .seo-list li + li {
+    margin-top: 0.5rem;
+  }
+
+  @media (max-width: 720px) {
+    :global(.download-section .store-badge-group) {
+      gap: 20px;
+    }
+
+    :global(.download-section .store-badge) {
+      min-height: 52px;
+    }
+
+    :global(.download-section .store-badge img) {
+      height: 52px;
+    }
+  }
+</style>

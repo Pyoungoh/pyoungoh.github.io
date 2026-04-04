@@ -1,85 +1,78 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
-import PaceLabDownloadCTA from '../../../components/PaceLabDownloadCTA.astro';
+import CTA from '../../../components/CTA.astro';
 import PaceLabHero from '../../../components/PaceLabHero.astro';
 import ScreenshotGallery from '../../../components/ScreenshotGallery.astro';
-import FeatureGroup from '../../../components/FeatureGroup.astro';
-import { paceLabFeatures } from '../../../lib/site';
 import heroScreenshot from '../../../assets/pacelab/en/home.png';
 import paceCalculatorScreenshot from '../../../assets/pacelab/en/pace-calculator.png';
 import racePaceScreenshot from '../../../assets/pacelab/en/race-pace.png';
 import trainingPaceScreenshot from '../../../assets/pacelab/en/training-pace.png';
 import racePredictorScreenshot from '../../../assets/pacelab/en/race-predictor.png';
-
-const featureGroups = [
-  {
-    title: 'Pace & Time',
-    description: 'Core tools for calculating pace, speed, and race targets from your distance and time.',
-    features: paceLabFeatures.en.filter((feature) =>
-      [
-        '/pacelab/en/pace-calculator/',
-        '/pacelab/en/race-pace-calculator/',
-        '/pacelab/en/pace-speed-converter/',
-        '/pacelab/en/400m-lap-calculator/',
-      ].includes(feature.href),
-    ),
-  },
-  {
-    title: 'Training',
-    description: 'Helpful tools for dialing in training intensity and effort.',
-    features: paceLabFeatures.en.filter((feature) =>
-      ['/pacelab/en/training-pace-calculator/', '/pacelab/en/heart-rate-zone-calculator/'].includes(feature.href),
-    ),
-  },
-  {
-    title: 'Race Planning',
-    description: 'Plan goal pace, predicted race time, and fueling strategy in one place.',
-    features: paceLabFeatures.en.filter((feature) =>
-      ['/pacelab/en/race-time-predictor/', '/pacelab/en/energy-gel-calculator/'].includes(feature.href),
-    ),
-  },
-];
+import { paceLabStoreLinks } from '../../../lib/site';
 
 const galleryItems = [
   {
     image: paceCalculatorScreenshot,
     alt: 'Pace Lab pace calculator screen',
     title: 'Pace calculator',
-    description: 'Enter distance and time to check pace and speed instantly.',
+    description: 'Check pace and speed quickly from your distance and time.',
   },
   {
     image: racePaceScreenshot,
     alt: 'Pace Lab race pace calculator screen',
     title: 'Race pace calculator',
-    description: 'Set a goal time and distance to get your target race pace.',
+    description: 'Set a goal time and review race splits before race day.',
   },
   {
     image: trainingPaceScreenshot,
     alt: 'Pace Lab training pace calculator screen',
     title: 'Training pace calculator',
-    description: 'See recommended paces from easy runs to intervals.',
+    description: 'See useful training paces from easy runs to marathon pace.',
   },
   {
     image: racePredictorScreenshot,
     alt: 'Pace Lab race time predictor screen',
     title: 'Race time predictor',
-    description: 'Estimate upcoming race times from a recent result.',
+    description: 'Estimate a realistic finish time from a recent result.',
+  },
+];
+
+const featureHighlights = [
+  {
+    href: '/pacelab/en/pace-calculator/',
+    text: 'Calculate your perfect running pace for any distance',
+  },
+  {
+    href: '/pacelab/en/race-pace-calculator/',
+    text: 'Plan your race with precise split times',
+  },
+  {
+    href: '/pacelab/en/race-time-predictor/',
+    text: 'Predict race finish time using proven formulas',
+  },
+  {
+    href: '/pacelab/en/energy-gel-calculator/',
+    text: 'Optimize your fueling strategy for long runs',
+  },
+  {
+    href: '/pacelab/en/heart-rate-zone-calculator/',
+    text: 'Train smarter with heart rate zones',
   },
 ];
 ---
 
 <BaseLayout
-  title="Pace Lab"
-  description="Pace, splits, training pace, HR zones, race predictions, and fueling tools for runners."
+  title="Running Pace Calculator & Marathon Tools | Pace Lab"
+  description="Pace Lab is a running pace calculator and marathon planning app for runners training for 10K, half marathon, and full marathon. Calculate pace, split times, race prediction, fueling, and heart rate zones."
   lang="en"
   currentPath="/pacelab/en/"
 >
   <PaceLabHero
-    title="Pace Lab"
-    lead="Pace, splits, training pace, HR zones, race predictions, and fueling tools for runners."
+    title="Running Pace Calculator & Marathon Tools"
+    lead="Plan your race pace, splits, and fueling — all in one app"
     paragraphs={[
-      'Pace Lab is a free running calculator for training and race planning. Calculate pace and speed, view race splits, predict race times, plan energy gel intake, and check training paces and heart rate zones in one place.',
-      'You can quickly access the tools you need and get clear results right away.',
+      'For runners training for 10K, half marathon, and full marathon.',
+      'Use Pace Lab to calculate marathon pace, review split times, predict race results, and check heart rate zones before training sessions and race day.',
     ]}
     image={heroScreenshot}
     imageAlt="Pace Lab home screen"
@@ -88,20 +81,62 @@ const galleryItems = [
   />
 
   <section id="download" class="download-section">
-    <PaceLabDownloadCTA lang="en" variant="landing" className="cta-panel--wide-copy" />
+    <CTA title="Download Pace Lab" description="Available on iOS & Android" links={paceLabStoreLinks.en} lang="en" className="cta-panel--wide-copy" />
   </section>
 
   <ScreenshotGallery
     title="App preview"
-    description="Browse a few of the most useful calculators and see how quickly you can get the result you need."
+    description="See the core calculators runners use to plan pace, split times, and race-day decisions in seconds."
     items={galleryItems}
     className="screenshot-gallery--wide-copy"
   />
 
-  <section class="plain-panel feature-groups-panel">
-    {featureGroups.map((group) => (
-      <FeatureGroup {...group} />
-    ))}
+  <section class="plain-panel feature-benefits-panel">
+    <div class="section-heading">
+      <h2>Why runners use Pace Lab</h2>
+      <p>Simple tools for race planning, training decisions, and faster answers before every run.</p>
+    </div>
+
+    <ul class="feature-benefit-list">
+      {featureHighlights.map((feature) => (
+        <li>
+          <a href={feature.href}>{feature.text}</a>
+        </li>
+      ))}
+    </ul>
+
+    <p class="internal-links">
+      Popular tools:
+      {' '}
+      <a href="/pacelab/en/pace-calculator/">Pace calculator</a>,
+      {' '}
+      <a href="/pacelab/en/race-time-predictor/">Race predictor</a>,
+      {' '}
+      <a href="/pacelab/en/race-pace-calculator/">Split chart</a>
+    </p>
+  </section>
+
+  <section class="plain-panel trust-panel">
+    <h2>Built to stay simple</h2>
+    <p>No login required. No personal data stored. Built for runners.</p>
+  </section>
+
+  <section class="plain-panel seo-panel">
+    <h2>What is a running pace calculator?</h2>
+    <p>
+      A running pace calculator helps you plan training and race day with clear numbers.
+    </p>
+    <p>
+      It shows the pace, split times, and effort targets you need before you run.
+    </p>
+    <ul class="seo-list">
+      <li>Calculate your pace for any distance, from 5K to marathon</li>
+      <li>Check marathon pace before race day and long runs</li>
+      <li>Plan split times for each mile or kilometer</li>
+      <li>Compare race prediction results from recent performances</li>
+      <li>Set training targets with heart rate zones</li>
+    </ul>
+    <p>With pace, split times, race prediction, and heart rate zones in one place, Pace Lab helps runners make faster, simpler decisions.</p>
   </section>
 
   <section class="plain-panel support-panel">
@@ -116,3 +151,101 @@ const galleryItems = [
     </p>
   </section>
 </BaseLayout>
+
+<style>
+  :global(.download-section .cta-panel) {
+    text-align: center;
+  }
+
+  :global(.download-section .cta-panel p) {
+    max-width: none;
+    margin-bottom: 0.9rem;
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+
+  :global(.download-section .store-badge-group) {
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+  }
+
+  :global(.download-section .store-badge-group > li) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  :global(.download-section .store-badge) {
+    min-height: 56px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  :global(.download-section .store-badge img) {
+    height: 56px;
+    width: auto;
+    max-width: 100%;
+  }
+
+  .feature-benefit-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.25rem 0 0;
+    display: grid;
+    gap: 0.85rem;
+  }
+
+  .feature-benefit-list li {
+    margin: 0;
+  }
+
+  .feature-benefit-list a {
+    display: block;
+    padding: 0.95rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: rgba(248, 250, 255, 0.82);
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .feature-benefit-list a:hover {
+    border-color: rgba(77, 94, 168, 0.28);
+    background: rgba(241, 246, 255, 0.96);
+  }
+
+  .internal-links {
+    margin-top: 1rem;
+    color: var(--muted);
+  }
+
+  .trust-panel p,
+  .seo-panel p {
+    max-width: 72ch;
+  }
+
+  .seo-list {
+    margin: 1rem 0;
+    padding-left: 1.2rem;
+    max-width: 72ch;
+  }
+
+  .seo-list li + li {
+    margin-top: 0.5rem;
+  }
+
+  @media (max-width: 720px) {
+    :global(.download-section .store-badge-group) {
+      gap: 20px;
+    }
+
+    :global(.download-section .store-badge) {
+      min-height: 52px;
+    }
+
+    :global(.download-section .store-badge img) {
+      height: 52px;
+    }
+  }
+</style>
