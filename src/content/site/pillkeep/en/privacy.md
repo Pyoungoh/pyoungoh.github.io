@@ -40,15 +40,16 @@ On Android, the app may use the exact alarm permission to deliver reminders at t
 
 ## 4. Advertising and Third-Party Services
 
-PillKeep uses the following third-party services. Each provider may process information according to applicable law and its own policies, and the PillKeep developer does not separately collect or store that information.
+PillKeep may display advertisements through Google AdMob.
+For ad delivery and performance measurement, Google and other third-party service providers may process certain information in accordance with applicable laws and their own policies, including:
 
-- **Google AdMob**: Displays ads. To serve ads and measure performance, advertising identifiers, device information, and ad-related app usage information may be processed. On iOS, you can choose whether to allow tracking through the App Tracking Transparency (ATT) prompt. If you do not allow it, non-personalized ads are shown.
-- **Firebase Crashlytics**: Collects app error and crash information to improve stability.
-- **Firebase Analytics**: Collects basic usage events such as app opens and screen views. It does not include medication information such as medication names, schedules, or dose records.
-- **Firebase Remote Config**: Delivers app configuration values remotely, such as whether ads are shown.
+- Advertising identifiers
+- Device information
+- App usage information related to advertisements
+
+This information is processed according to the policies of the third-party service providers, and is not separately collected and stored by the developer of PillKeep.
 
 Google Privacy Policy: [https://policies.google.com/privacy](https://policies.google.com/privacy)
-Firebase Privacy and Security: [https://firebase.google.com/support/privacy](https://firebase.google.com/support/privacy)
 
 ## 5. Data Retention
 
@@ -66,7 +67,7 @@ Because PillKeep does not store medication information on an external server, cl
 
 ## 7. Sharing and Sale of Information
 
-PillKeep does not transmit the medication information and settings you enter to the developer's external servers, and does not sell or share them with third parties. Information that the third-party services in Section 4 process on their own may be handled according to each provider's policies.
+PillKeep does not transmit the medication information and settings you enter to the developer's external servers, and does not sell or share them with third parties. However, information processed by third-party services such as Google AdMob during ad delivery may be handled in accordance with those providers’ own policies.
 
 ## 8. Medical Notice
 
