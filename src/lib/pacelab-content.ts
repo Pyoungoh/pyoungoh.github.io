@@ -14,6 +14,9 @@ const stopHeadings = new Set([
   'Related tools',
   '관련 도구',
   '関連ツール',
+  '관련 기능',
+  'Related features',
+  '関連機能',
 ]);
 
 const contentRoots = {
@@ -83,7 +86,7 @@ function renderSimpleMarkdown(markdown: string) {
   return html.join('');
 }
 
-function parseFeatureMarkdown(markdown: string) {
+export function parseFeatureMarkdown(markdown: string) {
   const lines = markdown.replace(/\r\n/g, '\n').split('\n');
   let index = 0;
 

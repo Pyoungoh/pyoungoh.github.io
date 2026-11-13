@@ -1,0 +1,9 @@
+---
+import CTA from './CTA.astro';
+import { pillKeepDownloadCta } from '../lib/site';
+
+const { lang = 'en', variant = 'landing', className = '' } = Astro.props;
+const config = pillKeepDownloadCta[lang][variant];
+---
+
+<CTA title={config.title} description={config.description} links={config.links} lang={lang} className={className} />

@@ -1,6 +1,6 @@
 import type { CollectionEntry } from 'astro:content';
 
-import { paceLabFeatures } from './site';
+import { paceLabFeatures, pillKeepFeatures } from './site';
 
 type SitePageEntry = CollectionEntry<'sitePages'>;
 
@@ -13,6 +13,7 @@ export function routeFromEntryId(id: string) {
 
   normalized = normalized.replace(/^pacelab\/ko(?=\/|$)/, 'pacelab');
   normalized = normalized.replace(/^justweight\/ko(?=\/|$)/, 'justweight');
+  normalized = normalized.replace(/^pillkeep\/ko(?=\/|$)/, 'pillkeep');
 
   if (normalized === 'index') {
     return '/';
@@ -46,6 +47,8 @@ export function inferLangFromRoute(pathname: string) {
   if (pathname === '/en/' || pathname.startsWith('/en/')) return 'en';
   if (pathname.startsWith('/pacelab/ja/') || pathname === '/pacelab/ja/') return 'ja';
   if (pathname.startsWith('/pacelab/en/') || pathname === '/pacelab/en/') return 'en';
+  if (pathname.startsWith('/pillkeep/ja/') || pathname === '/pillkeep/ja/') return 'ja';
+  if (pathname.startsWith('/pillkeep/en/') || pathname === '/pillkeep/en/') return 'en';
   if (pathname.startsWith('/justweight/ja/') || pathname === '/justweight/ja/') return 'ja';
   if (pathname.startsWith('/justweight/en/') || pathname === '/justweight/en/') return 'en';
   return 'ko';
@@ -86,12 +89,20 @@ export function isSpecialRoute(pathname: string) {
       .map((feature) => routeKey(feature.href)),
   );
 
+  const pillkeepDetailRoutes = Object.values(pillKeepFeatures)
+    .flat()
+    .map((feature) => routeKey(feature.href));
+
   return new Set([
     '/',
     '/pacelab',
     '/pacelab/en',
     '/pacelab/ja',
     ...pacelabDetailRoutes,
+    '/pillkeep',
+    '/pillkeep/en',
+    '/pillkeep/ja',
+    ...pillkeepDetailRoutes,
   ]).has(key);
 }
 

@@ -1,0 +1,130 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PaceLabHero from './PaceLabHero.astro';
+import PillKeepDownloadCTA from './PillKeepDownloadCTA.astro';
+
+// 언어별 카피는 pages/pillkeep/**/index.astro 에서 props 로 넘긴다.
+// 스크린샷이 준비되면 hero 에 image/imageAlt 를 넘기고 ScreenshotGallery 를 추가한다.
+const { lang, path, seoTitle, seoDescription, hero, highlights, support, trust, seo, disclaimer } = Astro.props;
+---
+
+<BaseLayout title={seoTitle} description={seoDescription} lang={lang} currentPath={path}>
+  <PaceLabHero eyebrow={hero.eyebrow} title={hero.title} lead={hero.lead} paragraphs={hero.paragraphs} />
+
+  <section id="download" class="download-section">
+    <PillKeepDownloadCTA lang={lang} variant="landing" className="cta-panel--wide-copy" />
+  </section>
+
+  <section class="plain-panel feature-benefits-panel">
+    <div class="section-heading">
+      <h2>{highlights.title}</h2>
+      <p>{highlights.lead}</p>
+    </div>
+
+    <ul class="feature-benefit-list">
+      {highlights.items.map((item) => (
+        <li>
+          <a href={item.href}>{item.text}</a>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="plain-panel trust-panel">
+    <h2>{trust.title}</h2>
+    <p>{trust.text}</p>
+  </section>
+
+  <section class="plain-panel seo-panel">
+    <h2>{seo.title}</h2>
+    <p>{seo.intro}</p>
+    <ul class="seo-list">
+      {seo.list.map((item) => <li>{item}</li>)}
+    </ul>
+    <p>{seo.outro}</p>
+  </section>
+
+  <section class="plain-panel disclaimer-panel">
+    <h2>{disclaimer.title}</h2>
+    <p>{disclaimer.text}</p>
+  </section>
+
+  <section class="plain-panel support-panel">
+    <h2>{support.title}</h2>
+    <p>
+      <a href="mailto:slowlane.dev@gmail.com">slowlane.dev@gmail.com</a>
+    </p>
+
+    <h2>{support.privacyTitle}</h2>
+    <p>
+      <a href={support.privacyHref}>{support.privacyLabel}</a>
+    </p>
+  </section>
+</BaseLayout>
+
+<style>
+  :global(.download-section .cta-panel) {
+    text-align: center;
+  }
+
+  :global(.download-section .cta-panel p) {
+    max-width: none;
+    margin-bottom: 0.9rem;
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+
+  .feature-benefit-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.25rem 0 0;
+    display: grid;
+    gap: 0.85rem;
+  }
+
+  .feature-benefit-list li {
+    margin: 0;
+  }
+
+  .feature-benefit-list a {
+    display: block;
+    padding: 0.95rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: rgba(248, 250, 255, 0.82);
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .feature-benefit-list a:hover {
+    border-color: rgba(77, 94, 168, 0.28);
+    background: rgba(241, 246, 255, 0.96);
+  }
+
+  .trust-panel p {
+    max-width: 72ch;
+  }
+
+  .seo-panel h2 {
+    text-wrap: wrap;
+  }
+
+  .seo-panel p,
+  .seo-list {
+    max-width: none;
+  }
+
+  .seo-list {
+    margin: 1rem 0;
+    padding-left: 1.2rem;
+  }
+
+  .seo-list li + li {
+    margin-top: 0.5rem;
+  }
+
+  .disclaimer-panel p {
+    max-width: 72ch;
+    color: var(--muted);
+  }
+</style>
