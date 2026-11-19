@@ -1,6 +1,6 @@
 # Pill organizer
 
-[Back to PillKeep](/pillkeep/en/)
+[Back to DoseButler](/pillkeep/en/)
 
 Keep each medication organized by name, dose, shape, and color.
 
@@ -29,7 +29,7 @@ If you pause a medication for two weeks, deactivate it instead of deleting it. R
 
 ## Get the app
 
-PillKeep is coming soon. Medication reminders, a daily checklist, and dose history, all in one app.
+DoseButler is coming soon. Medication reminders, a daily checklist, and dose history, all in one app.
 
 ## Related features
 

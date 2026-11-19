@@ -1,8 +1,8 @@
 # Medication schedule
 
-[Back to PillKeep](/pillkeep/en/)
+[Back to DoseButler](/pillkeep/en/)
 
-Set up a schedule for each medication and PillKeep applies it to reminders and your daily checklist.
+Set up a schedule for each medication and DoseButler applies it to reminders and your daily checklist.
 
 Schedule medication taken several times a day, on certain weekdays, or every few days.
 
@@ -29,7 +29,7 @@ For a medication taken every morning (after waking) and evening, choose "Daily" 
 
 ## Get the app
 
-PillKeep is coming soon. Medication reminders, a daily checklist, and dose history, all in one app.
+DoseButler is coming soon. Medication reminders, a daily checklist, and dose history, all in one app.
 
 ## Related features
 

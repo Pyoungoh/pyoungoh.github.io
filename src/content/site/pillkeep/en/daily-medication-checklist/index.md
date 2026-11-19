@@ -1,6 +1,6 @@
 # Daily medication checklist
 
-[Back to PillKeep](/pillkeep/en/)
+[Back to DoseButler](/pillkeep/en/)
 
 See today's doses in time order and check each one off with a tap.
 
@@ -25,11 +25,11 @@ Good for situations like these:
 
 ## Example
 
-If three doses are scheduled today and you have taken two, PillKeep shows "2/3 done" along with the time of your next dose.
+If three doses are scheduled today and you have taken two, DoseButler shows "2/3 done" along with the time of your next dose.
 
 ## Get the app
 
-PillKeep is coming soon. Medication reminders, a daily checklist, and dose history, all in one app.
+DoseButler is coming soon. Medication reminders, a daily checklist, and dose history, all in one app.
 
 ## Related features
 

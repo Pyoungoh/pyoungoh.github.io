@@ -1,8 +1,8 @@
 # Medication reminders
 
-[Back to PillKeep](/pillkeep/en/)
+[Back to DoseButler](/pillkeep/en/)
 
-PillKeep sends a reminder at each scheduled dose time.
+DoseButler sends a reminder at each scheduled dose time.
 
 You can mark a dose as taken, snooze it for 10 minutes, or skip it right from the notification.
 
@@ -28,7 +28,7 @@ When the 8:00 AM reminder arrives, take your medication and tap "Taken" in the n
 
 ## Get the app
 
-PillKeep is coming soon. Medication reminders, a daily checklist, and dose history, all in one app.
+DoseButler is coming soon. Medication reminders, a daily checklist, and dose history, all in one app.
 
 ## Related features
 

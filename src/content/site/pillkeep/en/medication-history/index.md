@@ -1,6 +1,6 @@
 # Dose history and adherence
 
-[Back to PillKeep](/pillkeep/en/)
+[Back to DoseButler](/pillkeep/en/)
 
 Review your weekly and monthly adherence and browse your dose history by date.
 
@@ -28,7 +28,7 @@ Adherence is calculated as taken ÷ (taken + skipped + unconfirmed). Doses that 
 
 ## Get the app
 
-PillKeep is coming soon. Medication reminders, a daily checklist, and dose history, all in one app.
+DoseButler is coming soon. Medication reminders, a daily checklist, and dose history, all in one app.
 
 ## Related features
 

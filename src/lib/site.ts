@@ -5,7 +5,7 @@ export const supportEmail = 'slowlane.dev@gmail.com';
 export const headerLinks = [
   { href: '/', label: 'Home' },
   { href: '/pacelab/', label: 'Pace Lab' },
-  { href: '/pillkeep/', label: 'PillKeep' },
+  { href: '/pillkeep/', label: 'DoseButler' },
 ];
 
 export const paceLabStoreLinks = {
@@ -118,7 +118,7 @@ export function getPaceLabRelatedTools(lang: keyof typeof paceLabRelatedTools, c
   };
 }
 
-// PillKeep (약챙김)
+// DoseButler (약당번)
 // 스토어 링크는 출시 후 채운다. 비어 있으면 다운로드 CTA에 배지 없이 안내 문구만 표시된다.
 export const pillKeepStoreLinks = {
   ko: [],
@@ -130,36 +130,36 @@ export const pillKeepDownloadCta = {
   ko: {
     landing: {
       title: '앱 다운로드',
-      description: '약챙김은 iOS와 Android 앱으로 곧 출시됩니다.',
+      description: '약당번은 iOS와 Android 앱으로 곧 출시됩니다.',
       links: pillKeepStoreLinks.ko,
     },
     detail: {
       title: '앱 다운로드',
-      description: '약챙김 앱은 곧 출시됩니다. 복약 알림, 오늘 복약 체크, 복약 기록을 한 앱에서 사용할 수 있습니다.',
+      description: '약당번 앱은 곧 출시됩니다. 복약 알림, 오늘 복약 체크, 복약 기록을 한 앱에서 사용할 수 있습니다.',
       links: pillKeepStoreLinks.ko,
     },
   },
   en: {
     landing: {
       title: 'Get the app',
-      description: 'PillKeep is coming soon to iOS and Android.',
+      description: 'DoseButler is coming soon to iOS and Android.',
       links: pillKeepStoreLinks.en,
     },
     detail: {
       title: 'Get the app',
-      description: 'PillKeep is coming soon. Medication reminders, a daily checklist, and dose history, all in one app.',
+      description: 'DoseButler is coming soon. Medication reminders, a daily checklist, and dose history, all in one app.',
       links: pillKeepStoreLinks.en,
     },
   },
   ja: {
     landing: {
       title: 'アプリをダウンロード',
-      description: 'ピルキープはiOSとAndroidで近日公開予定です。',
+      description: 'おくすり番はiOSとAndroidで近日公開予定です。',
       links: pillKeepStoreLinks.ja,
     },
     detail: {
       title: 'アプリをダウンロード',
-      description: 'ピルキープは近日公開予定です。服薬リマインダー、今日の服薬チェック、服薬記録をひとつのアプリで使えます。',
+      description: 'おくすり番は近日公開予定です。服薬リマインダー、今日の服薬チェック、服薬記録をひとつのアプリで使えます。',
       links: pillKeepStoreLinks.ja,
     },
   },

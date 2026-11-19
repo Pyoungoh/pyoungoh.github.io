@@ -3,16 +3,16 @@ layout: default
 permalink: /pillkeep/en/privacy/
 ---
 
-# PillKeep Privacy Policy
+# DoseButler Privacy Policy
 
-Last updated: November 13, 2026
+Last updated: November 19, 2026
 
-PillKeep is an application that reminds you when to take your medication and lets you record whether you took it. The app does not provide account registration or login functionality.
+DoseButler is an application that reminds you when to take your medication and lets you record whether you took it. The app does not provide account registration or login functionality.
 
 ## 1. Information We Collect and Process
 
-PillKeep does not collect or store directly identifying personal information such as your name, email address, phone number, or location.
-PillKeep also does not access or collect health data on your device (for example, Health Connect, Google Fit, or the Apple Health app).
+You can use the app without providing your name, email address, or phone number. Section 4 describes information processed by advertising and diagnostics SDKs.
+DoseButler also does not access or collect health data on your device (for example, Health Connect, Google Fit, or the Apple Health app).
 However, to provide its features, information that you enter yourself is stored locally on your device. This includes, for example:
 
 - Medication names, notes, doses, shapes, and colors
@@ -24,36 +24,32 @@ This information is stored only on your device and is not transmitted to the dev
 
 ## 2. How We Use Information
 
-PillKeep uses the information you enter only for the following purposes:
+DoseButler uses the information you enter only for the following purposes:
 
 - Providing medication reminders
 - Showing today's doses, dose history, and adherence
 - Maintaining app settings and your preferences
 
-PillKeep does not use the medication information you enter for advertising or marketing purposes.
+DoseButler does not use the medication information you enter for advertising or marketing purposes.
 
 ## 3. Notification Permission
 
-PillKeep asks for notification permission to send medication reminders. Reminders are local notifications scheduled on your device, and medication information is not sent to an external server. You can use the app without allowing notifications, but you will not receive medication reminders.
+DoseButler asks for notification permission to send medication reminders. Reminders are local notifications scheduled on your device, and medication information is not sent to an external server. You can use the app without allowing notifications, but you will not receive medication reminders.
 
 On Android, the app may use the exact alarm permission to deliver reminders at the scheduled time, and a permission to restore reminders after the device restarts.
 
 ## 4. Advertising and Third-Party Services
 
-PillKeep may display advertisements through Google AdMob.
-For ad delivery and performance measurement, Google and other third-party service providers may process certain information in accordance with applicable laws and their own policies, including:
+- **Google AdMob** delivers banner ads and measures their performance. It may process device identifiers, approximate location derived from IP addresses, ad impressions and interactions, app usage, and diagnostic data. On iOS, you can change your tracking choice in your device’s App Tracking Transparency settings.
+- **Firebase Analytics** processes events such as app launches and screen views, along with app and device information, to help us understand how features are used. Our analytics events omit medication names, schedules, and dose records.
+- **Firebase Crashlytics** may process error reports, stack traces, app, device and operating system information, installation identifiers, and usage events leading up to a crash. We use these reports to diagnose errors.
+- **Firebase Remote Config** delivers app settings such as whether to show ads. When fetching settings, the SDK may process app and installation identifiers, device language, country code, time zone, and operating system information.
 
-- Advertising identifiers
-- Device information
-- App usage information related to advertisements
-
-This information is processed according to the policies of the third-party service providers, and is not separately collected and stored by the developer of PillKeep.
-
-Google Privacy Policy: [https://policies.google.com/privacy](https://policies.google.com/privacy)
+For details on how these services process data, see the [Google Privacy Policy](https://policies.google.com/privacy) and [Firebase Privacy and Security](https://firebase.google.com/support/privacy).
 
 ## 5. Data Retention
 
-PillKeep does not store the medication information and settings you enter on the developer's external servers. This information is stored only on your device and may be kept until you delete it or uninstall the app.
+DoseButler does not store the medication information and settings you enter on the developer's external servers. This information is stored only on your device and may be kept until you delete it or uninstall the app.
 
 ## 6. How to Delete Your Data
 
@@ -63,19 +59,19 @@ You can delete data stored locally in the app in the following ways:
 - Clear the app's storage or app data in your device settings
 - Uninstall the app
 
-Because PillKeep does not store medication information on an external server, clearing app data or uninstalling the app also removes the locally stored medication information.
+Because DoseButler does not store medication information on an external server, clearing app data or uninstalling the app also removes the locally stored medication information.
 
 ## 7. Sharing and Sale of Information
 
-PillKeep does not transmit the medication information and settings you enter to the developer's external servers, and does not sell or share them with third parties. However, information processed by third-party services such as Google AdMob during ad delivery may be handled in accordance with those providers’ own policies.
+DoseButler does not transmit the medication information and settings you enter to the developer's external servers, and does not sell or share them with third parties. Section 4 describes the information processed by third-party SDKs for ads, usage analytics, diagnostics, and remote settings.
 
 ## 8. Medical Notice
 
-PillKeep is a tool for reminders and record keeping. It does not provide medical advice, diagnosis, or prescriptions. Always follow your doctor or pharmacist for the type, method, and amount of your medication.
+DoseButler is a tool for reminders and record keeping. It does not provide medical advice, diagnosis, or prescriptions. Always follow your doctor or pharmacist for the type, method, and amount of your medication.
 
 ## 9. Children's Privacy
 
-PillKeep is not designed primarily for children, does not separately verify users' ages, and does not knowingly collect children's personal information.
+DoseButler is not designed primarily for children, does not separately verify users' ages, and does not knowingly collect children's personal information.
 
 ## 10. Changes to This Policy
 
