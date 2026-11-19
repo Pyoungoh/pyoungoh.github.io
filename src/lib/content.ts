@@ -1,6 +1,6 @@
 import type { CollectionEntry } from 'astro:content';
 
-import { paceLabFeatures, pillKeepFeatures } from './site';
+import { paceLabFeatures, doseButlerFeatures } from './site';
 
 type SitePageEntry = CollectionEntry<'sitePages'>;
 
@@ -13,7 +13,7 @@ export function routeFromEntryId(id: string) {
 
   normalized = normalized.replace(/^pacelab\/ko(?=\/|$)/, 'pacelab');
   normalized = normalized.replace(/^justweight\/ko(?=\/|$)/, 'justweight');
-  normalized = normalized.replace(/^pillkeep\/ko(?=\/|$)/, 'pillkeep');
+  normalized = normalized.replace(/^dosebutler\/ko(?=\/|$)/, 'dosebutler');
 
   if (normalized === 'index') {
     return '/';
@@ -47,8 +47,8 @@ export function inferLangFromRoute(pathname: string) {
   if (pathname === '/en/' || pathname.startsWith('/en/')) return 'en';
   if (pathname.startsWith('/pacelab/ja/') || pathname === '/pacelab/ja/') return 'ja';
   if (pathname.startsWith('/pacelab/en/') || pathname === '/pacelab/en/') return 'en';
-  if (pathname.startsWith('/pillkeep/ja/') || pathname === '/pillkeep/ja/') return 'ja';
-  if (pathname.startsWith('/pillkeep/en/') || pathname === '/pillkeep/en/') return 'en';
+  if (pathname.startsWith('/dosebutler/ja/') || pathname === '/dosebutler/ja/') return 'ja';
+  if (pathname.startsWith('/dosebutler/en/') || pathname === '/dosebutler/en/') return 'en';
   if (pathname.startsWith('/justweight/ja/') || pathname === '/justweight/ja/') return 'ja';
   if (pathname.startsWith('/justweight/en/') || pathname === '/justweight/en/') return 'en';
   return 'ko';
@@ -89,7 +89,7 @@ export function isSpecialRoute(pathname: string) {
       .map((feature) => routeKey(feature.href)),
   );
 
-  const pillkeepDetailRoutes = Object.values(pillKeepFeatures)
+  const doseButlerDetailRoutes = Object.values(doseButlerFeatures)
     .flat()
     .map((feature) => routeKey(feature.href));
 
@@ -99,10 +99,10 @@ export function isSpecialRoute(pathname: string) {
     '/pacelab/en',
     '/pacelab/ja',
     ...pacelabDetailRoutes,
-    '/pillkeep',
-    '/pillkeep/en',
-    '/pillkeep/ja',
-    ...pillkeepDetailRoutes,
+    '/dosebutler',
+    '/dosebutler/en',
+    '/dosebutler/ja',
+    ...doseButlerDetailRoutes,
   ]).has(key);
 }
 

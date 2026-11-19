@@ -5,7 +5,7 @@ export const supportEmail = 'slowlane.dev@gmail.com';
 export const headerLinks = [
   { href: '/', label: 'Home' },
   { href: '/pacelab/', label: 'Pace Lab' },
-  { href: '/pillkeep/', label: 'DoseButler' },
+  { href: '/dosebutler/', label: 'DoseButler' },
 ];
 
 export const paceLabStoreLinks = {
@@ -120,85 +120,85 @@ export function getPaceLabRelatedTools(lang: keyof typeof paceLabRelatedTools, c
 
 // DoseButler (약당번)
 // 스토어 링크는 출시 후 채운다. 비어 있으면 다운로드 CTA에 배지 없이 안내 문구만 표시된다.
-export const pillKeepStoreLinks = {
+export const doseButlerStoreLinks = {
   ko: [],
   en: [],
   ja: [],
 } as const satisfies Record<'ko' | 'en' | 'ja', ReadonlyArray<{ href: string; label: string }>>;
 
-export const pillKeepDownloadCta = {
+export const doseButlerDownloadCta = {
   ko: {
     landing: {
       title: '앱 다운로드',
       description: '약당번은 iOS와 Android 앱으로 곧 출시됩니다.',
-      links: pillKeepStoreLinks.ko,
+      links: doseButlerStoreLinks.ko,
     },
     detail: {
       title: '앱 다운로드',
       description: '약당번 앱은 곧 출시됩니다. 복약 알림, 오늘 복약 체크, 복약 기록을 한 앱에서 사용할 수 있습니다.',
-      links: pillKeepStoreLinks.ko,
+      links: doseButlerStoreLinks.ko,
     },
   },
   en: {
     landing: {
       title: 'Get the app',
       description: 'DoseButler is coming soon to iOS and Android.',
-      links: pillKeepStoreLinks.en,
+      links: doseButlerStoreLinks.en,
     },
     detail: {
       title: 'Get the app',
       description: 'DoseButler is coming soon. Medication reminders, a daily checklist, and dose history, all in one app.',
-      links: pillKeepStoreLinks.en,
+      links: doseButlerStoreLinks.en,
     },
   },
   ja: {
     landing: {
       title: 'アプリをダウンロード',
       description: 'おくすり番はiOSとAndroidで近日公開予定です。',
-      links: pillKeepStoreLinks.ja,
+      links: doseButlerStoreLinks.ja,
     },
     detail: {
       title: 'アプリをダウンロード',
       description: 'おくすり番は近日公開予定です。服薬リマインダー、今日の服薬チェック、服薬記録をひとつのアプリで使えます。',
-      links: pillKeepStoreLinks.ja,
+      links: doseButlerStoreLinks.ja,
     },
   },
 } as const;
 
-export const pillKeepFeatures = {
+export const doseButlerFeatures = {
   ko: [
-    { href: '/pillkeep/medication-reminder/', title: '복약 알림', description: '정해진 시간에 알림을 받고, 알림에서 바로 복용 완료·10분 뒤 다시 알림·건너뛰기를 선택합니다.' },
-    { href: '/pillkeep/daily-medication-checklist/', title: '오늘 복약 체크', description: '오늘 먹을 약을 시간순으로 확인하고 탭 한 번으로 복용을 체크합니다.' },
-    { href: '/pillkeep/medication-schedule/', title: '복약 일정 등록', description: '매일, 요일 반복, N일 간격으로 하루 여러 번의 복용 시간을 등록합니다.' },
-    { href: '/pillkeep/medication-history/', title: '복약 기록과 복용률', description: '이번 주와 이번 달 복용률을 확인하고, 달력에서 날짜별 복약 기록을 살펴봅니다.' },
-    { href: '/pillkeep/pill-organizer/', title: '약장 관리', description: '약의 이름, 복용량, 모양과 색상을 정리하고, 잠시 쉬는 약은 기록을 보존한 채 비활성화합니다.' },
+    { href: '/dosebutler/medication-reminder/', title: '복약 알림', description: '정해진 시간에 알림을 받고, 알림에서 바로 복용 완료·10분 뒤 다시 알림·건너뛰기를 선택합니다.' },
+    { href: '/dosebutler/daily-medication-checklist/', title: '오늘 복약 체크', description: '오늘 먹을 약을 시간순으로 확인하고 탭 한 번으로 복용을 체크합니다.' },
+    { href: '/dosebutler/medication-schedule/', title: '복약 일정 등록', description: '매일, 요일 반복, N일 간격으로 하루 여러 번의 복용 시간을 등록합니다.' },
+    { href: '/dosebutler/medication-history/', title: '복약 기록과 복용률', description: '이번 주와 이번 달 복용률을 확인하고, 달력에서 날짜별 복약 기록을 살펴봅니다.' },
+    { href: '/dosebutler/pill-organizer/', title: '약장 관리', description: '약의 이름, 복용량, 모양과 색상을 정리하고, 잠시 쉬는 약은 기록을 보존한 채 비활성화합니다.' },
   ],
   en: [
-    { href: '/pillkeep/en/medication-reminder/', title: 'Medication reminders', description: 'Get reminders on time and mark a dose as taken, snooze for 10 minutes, or skip it right from the notification.' },
-    { href: '/pillkeep/en/daily-medication-checklist/', title: 'Daily medication checklist', description: "See today's doses in time order and check each one off with a tap." },
-    { href: '/pillkeep/en/medication-schedule/', title: 'Medication schedule', description: 'Set up daily, weekday, or every-N-days schedules with multiple dose times per day.' },
-    { href: '/pillkeep/en/medication-history/', title: 'Dose history and adherence', description: 'Review weekly and monthly adherence and browse your dose history by date on a calendar.' },
-    { href: '/pillkeep/en/pill-organizer/', title: 'Pill organizer', description: 'Keep each medication organized by name, dose, shape, and color, and pause one without losing its history.' },
+    { href: '/dosebutler/en/medication-reminder/', title: 'Medication reminders', description: 'Get reminders on time and mark a dose as taken, snooze for 10 minutes, or skip it right from the notification.' },
+    { href: '/dosebutler/en/daily-medication-checklist/', title: 'Daily medication checklist', description: "See today's doses in time order and check each one off with a tap." },
+    { href: '/dosebutler/en/medication-schedule/', title: 'Medication schedule', description: 'Set up daily, weekday, or every-N-days schedules with multiple dose times per day.' },
+    { href: '/dosebutler/en/medication-history/', title: 'Dose history and adherence', description: 'Review weekly and monthly adherence and browse your dose history by date on a calendar.' },
+    { href: '/dosebutler/en/pill-organizer/', title: 'Pill organizer', description: 'Keep each medication organized by name, dose, shape, and color, and pause one without losing its history.' },
   ],
   ja: [
-    { href: '/pillkeep/ja/medication-reminder/', title: '服薬リマインダー', description: '決まった時間に通知。通知から「服用済み」「10分後に再通知」「スキップ」をすぐに選べます。' },
-    { href: '/pillkeep/ja/daily-medication-checklist/', title: '今日の服薬チェック', description: '今日飲むお薬を時間順に確認し、ワンタップで服用をチェックできます。' },
-    { href: '/pillkeep/ja/medication-schedule/', title: '服薬スケジュール', description: '毎日、曜日指定、N日おきのスケジュールを、1日に複数回の服用時間で登録できます。' },
-    { href: '/pillkeep/ja/medication-history/', title: '服薬記録と服用率', description: '今週・今月の服用率を確認し、カレンダーで日ごとの服薬記録を見られます。' },
-    { href: '/pillkeep/ja/pill-organizer/', title: 'お薬の管理', description: 'お薬の名前、服用量、形、色を整理。お休み中のお薬は記録を残したまま無効にできます。' },
+    { href: '/dosebutler/ja/medication-reminder/', title: '服薬リマインダー', description: '決まった時間に通知。通知から「服用済み」「10分後に再通知」「スキップ」をすぐに選べます。' },
+    { href: '/dosebutler/ja/daily-medication-checklist/', title: '今日の服薬チェック', description: '今日飲むお薬を時間順に確認し、ワンタップで服用をチェックできます。' },
+    { href: '/dosebutler/ja/medication-schedule/', title: '服薬スケジュール', description: '毎日、曜日指定、N日おきのスケジュールを、1日に複数回の服用時間で登録できます。' },
+    { href: '/dosebutler/ja/medication-history/', title: '服薬記録と服用率', description: '今週・今月の服用率を確認し、カレンダーで日ごとの服薬記録を見られます。' },
+    { href: '/dosebutler/ja/pill-organizer/', title: 'お薬の管理', description: 'お薬の名前、服用量、形、色を整理。お休み中のお薬は記録を残したまま無効にできます。' },
   ],
 } as const;
 
-export const pillKeepRelatedTools = {
-  ko: { title: '관련 기능', tools: pillKeepFeatures.ko },
-  en: { title: 'Related features', tools: pillKeepFeatures.en },
-  ja: { title: '関連機能', tools: pillKeepFeatures.ja },
+export const doseButlerRelatedTools = {
+  ko: { title: '관련 기능', tools: doseButlerFeatures.ko },
+  en: { title: 'Related features', tools: doseButlerFeatures.en },
+  ja: { title: '関連機能', tools: doseButlerFeatures.ja },
 } as const;
 
-export function getPillKeepRelatedTools(lang: keyof typeof pillKeepRelatedTools, currentSlug: string) {
-  const tools = pillKeepRelatedTools[lang].tools.filter((tool) => !tool.href.endsWith(`/${currentSlug}/`));
+export function getDoseButlerRelatedTools(lang: keyof typeof doseButlerRelatedTools, currentSlug: string) {
+  const tools = doseButlerRelatedTools[lang].tools.filter((tool) => !tool.href.endsWith(`/${currentSlug}/`));
   return {
-    title: pillKeepRelatedTools[lang].title,
+    title: doseButlerRelatedTools[lang].title,
     tools,
   };
 }

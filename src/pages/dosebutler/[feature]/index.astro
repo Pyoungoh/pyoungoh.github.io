@@ -1,0 +1,37 @@
+---
+import FeatureDetailPage from '../../../components/FeatureDetailPage.astro';
+import DoseButlerDownloadCTA from '../../../components/DoseButlerDownloadCTA.astro';
+import RelatedTools from '../../../components/RelatedTools.astro';
+import { loadDoseButlerFeaturePage, doseButlerFeatureSlugs } from '../../../lib/dosebutler-content';
+import { getDoseButlerRelatedTools } from '../../../lib/site';
+
+export async function getStaticPaths() {
+  return doseButlerFeatureSlugs.map((feature) => ({
+    params: { feature },
+  }));
+}
+
+const { feature } = Astro.params;
+const page = await loadDoseButlerFeaturePage('ko', feature!);
+---
+
+<FeatureDetailPage
+  title={page.title}
+  description={page.description}
+  lang="ko"
+  currentPath={`/dosebutler/${feature}/`}
+  backHref={page.backHref}
+  backLabel={page.backLabel}
+>
+  <div set:html={page.introHtml} />
+
+  {page.sections.map((section) => (
+    <>
+      <h2>{section.heading}</h2>
+      <div set:html={section.html} />
+    </>
+  ))}
+
+  <DoseButlerDownloadCTA lang="ko" variant="detail" />
+  <RelatedTools {...getDoseButlerRelatedTools('ko', feature!)} />
+</FeatureDetailPage>

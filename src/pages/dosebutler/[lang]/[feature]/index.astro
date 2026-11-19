@@ -1,0 +1,40 @@
+---
+import FeatureDetailPage from '../../../../components/FeatureDetailPage.astro';
+import DoseButlerDownloadCTA from '../../../../components/DoseButlerDownloadCTA.astro';
+import RelatedTools from '../../../../components/RelatedTools.astro';
+import { loadDoseButlerFeaturePage, doseButlerFeatureSlugs } from '../../../../lib/dosebutler-content';
+import { getDoseButlerRelatedTools } from '../../../../lib/site';
+
+export async function getStaticPaths() {
+  const langs = ['en', 'ja'] as const;
+  return langs.flatMap((lang) =>
+    doseButlerFeatureSlugs.map((feature) => ({
+      params: { lang, feature },
+    })),
+  );
+}
+
+const { lang, feature } = Astro.params as { lang: 'en' | 'ja'; feature: string };
+const page = await loadDoseButlerFeaturePage(lang, feature);
+---
+
+<FeatureDetailPage
+  title={page.title}
+  description={page.description}
+  lang={lang}
+  currentPath={`/dosebutler/${lang}/${feature}/`}
+  backHref={page.backHref}
+  backLabel={page.backLabel}
+>
+  <div set:html={page.introHtml} />
+
+  {page.sections.map((section) => (
+    <>
+      <h2>{section.heading}</h2>
+      <div set:html={section.html} />
+    </>
+  ))}
+
+  <DoseButlerDownloadCTA lang={lang} variant="detail" />
+  <RelatedTools {...getDoseButlerRelatedTools(lang, feature)} />
+</FeatureDetailPage>

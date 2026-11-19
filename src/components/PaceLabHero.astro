@@ -6,7 +6,7 @@ const { eyebrow = 'Smart Running Calculator', title, lead, paragraphs = [], cta,
 
 <section class:list={['hero-panel', image ? 'hero-panel--showcase' : undefined]}>
   <div class="hero-copy">
-    <p class="hero-eyebrow">{eyebrow}</p>
+    {eyebrow && <p class="hero-eyebrow">{eyebrow}</p>}
     <h1>{title}</h1>
     <p class="hero-lead">{lead}</p>
     <div class="hero-body">

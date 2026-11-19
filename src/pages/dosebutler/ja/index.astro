@@ -1,0 +1,84 @@
+---
+import DoseButlerLanding from '../../../components/DoseButlerLanding.astro';
+import todayImage from '../../../assets/dosebutler/ja/01-today.png';
+import historyImage from '../../../assets/dosebutler/ja/02-history.png';
+import medicationsImage from '../../../assets/dosebutler/ja/03-medications.png';
+import repeatImage from '../../../assets/dosebutler/ja/04-repeat.png';
+---
+
+<DoseButlerLanding
+  lang="ja"
+  path="/dosebutler/ja/"
+  seoTitle="おくすり番 | お薬の記録とリマインダー"
+  seoDescription="おくすり番は、決まった時間に服薬を通知し、ワンタップで服用をチェック、服薬記録も確認できるシンプルな服薬リマインダーアプリです。"
+  hero={{
+    title: 'おくすり番',
+    lead: 'お薬の記録とリマインダー',
+    paragraphs: [
+      '決まった時間にお知らせ。タップひとつで服薬をチェックして、毎日の飲み忘れを防ぎます。',
+      '1日に何回も飲むお薬も、1日おきのお薬も、ひとつのアプリで管理できます。',
+      '服薬リマインダー、服薬チェック、服薬記録。必要な機能だけを備えています。',
+    ],
+    image: todayImage,
+    imageAlt: '今日のお薬が服用時間順に並んだおくすり番の画面',
+  }}
+  gallery={{
+    title: 'アプリ画面',
+    items: [
+      {
+        image: historyImage,
+        alt: '服薬記録',
+        title: '服薬記録',
+        description: '週間・月間の服用率や日ごとの記録をカレンダーで確認できます。',
+      },
+      {
+        image: medicationsImage,
+        alt: 'お薬一覧',
+        title: 'お薬一覧',
+        description: '登録したお薬と服用量をひと目で確認できます。',
+      },
+      {
+        image: repeatImage,
+        alt: '繰り返し設定',
+        title: '繰り返し設定',
+        description: '毎日、曜日指定、または数日おきに通知を設定できます。',
+      },
+    ],
+  }}
+  highlights={{
+    title: 'おくすり番でできること',
+    lead: '毎日の服薬に必要な機能をシンプルにまとめました。',
+    items: [
+      { href: '/dosebutler/ja/medication-reminder/', text: '決まった時間に服薬の通知を受け取る' },
+      { href: '/dosebutler/ja/daily-medication-checklist/', text: '今日飲むお薬をワンタップでチェック' },
+      { href: '/dosebutler/ja/medication-schedule/', text: '毎日、曜日指定、N日おきのスケジュールを登録' },
+      { href: '/dosebutler/ja/medication-history/', text: '週間・月間の服用率と日ごとの記録を確認' },
+      { href: '/dosebutler/ja/pill-organizer/', text: 'お薬の形や色、服用量を整理' },
+    ],
+  }}
+  trust={{
+    title: 'シンプルに使えます',
+    text: 'ログイン不要。服薬データはお使いの端末内にのみ保存されます。',
+  }}
+  seo={{
+    title: '服薬リマインダーアプリとは？',
+    intro: '服薬リマインダーアプリは、お薬を飲む時間を知らせ、服用したことを簡単に記録できるようにするアプリです。毎日お薬やサプリメントを飲む方に役立ちます。',
+    list: [
+      '決まった時間に服薬の通知を受け取る',
+      '通知から「服用済み」「10分後に再通知」「スキップ」を選ぶ',
+      '1日に複数回飲むお薬のスケジュールを登録',
+      '週間・月間の服用率とカレンダーで服薬記録を確認',
+    ],
+    outro: 'おくすり番はこれらの機能をひとつのシンプルなアプリにまとめ、毎日の服薬をより楽にします。',
+  }}
+  disclaimer={{
+    title: 'ご案内',
+    text: 'おくすり番は服薬の通知と記録のためのツールであり、医学的な助言、診断、処方を提供するものではありません。お薬の種類、飲み方、服用量は、必ず医師または薬剤師の指示に従ってください。',
+  }}
+  support={{
+    title: 'サポート',
+    privacyTitle: 'プライバシーポリシー',
+    privacyLabel: 'プライバシーポリシーを見る',
+    privacyHref: '/dosebutler/ja/privacy/',
+  }}
+/>

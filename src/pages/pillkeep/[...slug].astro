@@ -1,0 +1,17 @@
+---
+import { doseButlerFeatureSlugs } from '../../lib/dosebutler-content';
+
+export function getStaticPaths() {
+  return ['', 'en/', 'ja/'].flatMap((prefix) =>
+    ['', 'privacy', ...doseButlerFeatureSlugs].map((page) => {
+      const suffix = prefix + (page ? `${page}/` : '');
+      return {
+        params: { slug: suffix.slice(0, -1) || undefined },
+        props: { destination: `/dosebutler/${suffix}` },
+      };
+    }),
+  );
+}
+
+return Astro.redirect(Astro.props.destination, 301);
+---

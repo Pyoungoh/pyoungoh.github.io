@@ -1,0 +1,170 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PaceLabHero from './PaceLabHero.astro';
+import DoseButlerDownloadCTA from './DoseButlerDownloadCTA.astro';
+import ScreenshotGallery from './ScreenshotGallery.astro';
+
+const { lang, path, seoTitle, seoDescription, hero, gallery, highlights, support, trust, seo, disclaimer } = Astro.props;
+const languages = [
+  { lang: 'ko', label: '한국어', href: '/dosebutler/' },
+  { lang: 'en', label: 'English', href: '/dosebutler/en/' },
+  { lang: 'ja', label: '日本語', href: '/dosebutler/ja/' },
+];
+const languageLabel = { ko: '언어 선택', en: 'Choose language', ja: '言語を選択' };
+---
+
+<BaseLayout title={seoTitle} description={seoDescription} lang={lang} currentPath={path}>
+  <nav class="language-links" aria-label={languageLabel[lang as keyof typeof languageLabel]}>
+    {languages.map((language) => (
+      <a
+        href={language.href}
+        lang={language.lang}
+        hreflang={language.lang}
+        aria-current={language.lang === lang ? 'page' : undefined}
+      >{language.label}</a>
+    ))}
+  </nav>
+
+  <PaceLabHero {...hero} eyebrow="" frameClass="dosebutler-hero-frame" />
+
+  <section id="download" class="download-section">
+    <DoseButlerDownloadCTA lang={lang} variant="landing" className="cta-panel--wide-copy" />
+  </section>
+
+  <ScreenshotGallery {...gallery} className="dosebutler-gallery" />
+
+  <section class="plain-panel feature-benefits-panel">
+    <div class="section-heading">
+      <h2>{highlights.title}</h2>
+      <p>{highlights.lead}</p>
+    </div>
+
+    <ul class="feature-benefit-list">
+      {highlights.items.map((item) => (
+        <li>
+          <a href={item.href}>{item.text}</a>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="plain-panel trust-panel">
+    <h2>{trust.title}</h2>
+    <p>{trust.text}</p>
+  </section>
+
+  <section class="plain-panel seo-panel">
+    <h2>{seo.title}</h2>
+    <p>{seo.intro}</p>
+    <ul class="seo-list">
+      {seo.list.map((item) => <li>{item}</li>)}
+    </ul>
+    <p>{seo.outro}</p>
+  </section>
+
+  <section class="plain-panel disclaimer-panel">
+    <h2>{disclaimer.title}</h2>
+    <p>{disclaimer.text}</p>
+  </section>
+
+  <section class="plain-panel support-panel">
+    <h2>{support.title}</h2>
+    <p>
+      <a href="mailto:slowlane.dev@gmail.com">slowlane.dev@gmail.com</a>
+    </p>
+
+    <h2>{support.privacyTitle}</h2>
+    <p>
+      <a href={support.privacyHref}>{support.privacyLabel}</a>
+    </p>
+  </section>
+</BaseLayout>
+
+<style>
+  .language-links {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .language-links a[aria-current="page"] {
+    font-weight: 700;
+  }
+
+  :global(.dosebutler-hero-frame) {
+    width: min(100%, 280px);
+  }
+
+  @media (min-width: 900px) {
+    :global(.dosebutler-gallery .screenshot-grid) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  :global(.download-section .cta-panel) {
+    text-align: center;
+  }
+
+  :global(.download-section .cta-panel p) {
+    max-width: none;
+    margin-bottom: 0.9rem;
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+
+  .feature-benefit-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.25rem 0 0;
+    display: grid;
+    gap: 0.85rem;
+  }
+
+  .feature-benefit-list li {
+    margin: 0;
+  }
+
+  .feature-benefit-list a {
+    display: block;
+    padding: 0.95rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: rgba(248, 250, 255, 0.82);
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .feature-benefit-list a:hover {
+    border-color: rgba(77, 94, 168, 0.28);
+    background: rgba(241, 246, 255, 0.96);
+  }
+
+  .trust-panel p {
+    max-width: 72ch;
+  }
+
+  .seo-panel h2 {
+    text-wrap: wrap;
+  }
+
+  .seo-panel p,
+  .seo-list {
+    max-width: none;
+  }
+
+  .seo-list {
+    margin: 1rem 0;
+    padding-left: 1.2rem;
+  }
+
+  .seo-list li + li {
+    margin-top: 0.5rem;
+  }
+
+  .disclaimer-panel p {
+    max-width: 72ch;
+    color: var(--muted);
+  }
+</style>

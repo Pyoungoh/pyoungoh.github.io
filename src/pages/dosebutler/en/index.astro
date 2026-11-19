@@ -1,0 +1,84 @@
+---
+import DoseButlerLanding from '../../../components/DoseButlerLanding.astro';
+import todayImage from '../../../assets/dosebutler/en/01-today.png';
+import historyImage from '../../../assets/dosebutler/en/02-history.png';
+import medicationsImage from '../../../assets/dosebutler/en/03-medications.png';
+import repeatImage from '../../../assets/dosebutler/en/04-repeat.png';
+---
+
+<DoseButlerLanding
+  lang="en"
+  path="/dosebutler/en/"
+  seoTitle="DoseButler | Medication Reminders & Log"
+  seoDescription="DoseButler is a simple medication reminder app. Get reminders on time, check off each dose with a tap, and review your dose history."
+  hero={{
+    title: 'DoseButler',
+    lead: 'Medication Reminders & Log',
+    paragraphs: [
+      'Get a reminder at the right time and check off each dose with a tap. Stay on top of your medication without complicated setup.',
+      'Manage pills you take several times a day, or every other day, in one place.',
+      'Reminders, a daily checklist, and dose history. Just what you need.',
+    ],
+    image: todayImage,
+    imageAlt: 'DoseButler’s Today screen showing scheduled doses in time order',
+  }}
+  gallery={{
+    title: 'App screenshots',
+    items: [
+      {
+        image: historyImage,
+        alt: 'Dose history',
+        title: 'Dose history',
+        description: 'Review weekly and monthly adherence and browse past doses on the calendar.',
+      },
+      {
+        image: medicationsImage,
+        alt: 'Medications',
+        title: 'Medications',
+        description: 'See your medications and their doses at a glance.',
+      },
+      {
+        image: repeatImage,
+        alt: 'Repeat schedule',
+        title: 'Repeat schedule',
+        description: 'Set reminders for every day, selected weekdays, or every few days.',
+      },
+    ],
+  }}
+  highlights={{
+    title: 'What you can do with DoseButler',
+    lead: 'Simple features for taking your medication every day.',
+    items: [
+      { href: '/dosebutler/en/medication-reminder/', text: 'Get medication reminders at the right time' },
+      { href: '/dosebutler/en/daily-medication-checklist/', text: "Check off today's doses with a tap" },
+      { href: '/dosebutler/en/medication-schedule/', text: 'Set up daily, weekday, or every-N-days schedules' },
+      { href: '/dosebutler/en/medication-history/', text: 'Review weekly and monthly adherence by date' },
+      { href: '/dosebutler/en/pill-organizer/', text: 'Organize each medication by shape, color, and dose' },
+    ],
+  }}
+  trust={{
+    title: 'Built to stay simple',
+    text: 'No login required. Your medication data stays on your device.',
+  }}
+  seo={{
+    title: 'What is a medication reminder app?',
+    intro: 'A medication reminder app tells you when it is time to take your medication and makes it easy to record that you took it. It is useful for anyone who takes medication or supplements every day.',
+    list: [
+      'Get reminders at your scheduled times',
+      'Mark a dose as taken, snooze for 10 minutes, or skip it right from the notification',
+      'Set up medications you take several times a day',
+      'Review weekly and monthly adherence on a calendar',
+    ],
+    outro: 'DoseButler brings these features together in one simple app, so taking your medication every day feels easier.',
+  }}
+  disclaimer={{
+    title: 'Notice',
+    text: 'DoseButler is a tool for reminders and record keeping. It does not provide medical advice, diagnosis, or prescriptions. Always follow your doctor or pharmacist for the type, method, and amount of your medication.',
+  }}
+  support={{
+    title: 'Support',
+    privacyTitle: 'Privacy Policy',
+    privacyLabel: 'View Privacy Policy',
+    privacyHref: '/dosebutler/en/privacy/',
+  }}
+/>
