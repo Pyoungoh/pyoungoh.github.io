@@ -5,7 +5,7 @@ permalink: /dosebutler/en/privacy/
 
 # DoseButler Privacy Policy
 
-Last updated: November 19, 2026
+Last updated: November 20, 2026
 
 DoseButler is an application that reminds you when to take your medication and lets you record whether you took it. The app does not provide account registration or login functionality.
 
@@ -40,7 +40,7 @@ On Android, the app may use the exact alarm permission to deliver reminders at t
 
 ## 4. Advertising and Third-Party Services
 
-- **Google AdMob** delivers banner ads and measures their performance. It may process device identifiers, approximate location derived from IP addresses, ad impressions and interactions, app usage, and diagnostic data. On iOS, you can change your tracking choice in your device’s App Tracking Transparency settings.
+- **Google AdMob** delivers banner ads and measures their performance. It may process device identifiers, approximate location derived from IP addresses, ad impressions and interactions, app usage, and diagnostic data. The app does not request device location permission or provide GPS coordinates to advertisers. The advertising consent message may describe precise location as a possible use by advertising partners. Depending on your region, you can change your advertising privacy choices in the app settings. Limited ads may use local storage for invalid traffic detection. On iOS, you can change your tracking choice in your device’s App Tracking Transparency settings.
 - **Firebase Analytics** processes events such as app launches and screen views, along with app and device information, to help us understand how features are used. Our analytics events omit medication names, schedules, and dose records.
 - **Firebase Crashlytics** may process error reports, stack traces, app, device and operating system information, installation identifiers, and usage events leading up to a crash. We use these reports to diagnose errors.
 - **Firebase Remote Config** delivers app settings such as whether to show ads. When fetching settings, the SDK may process app and installation identifiers, device language, country code, time zone, and operating system information.
