@@ -11,9 +11,9 @@ A progress count like "2/3 done" shows where you stand at a glance.
 - View today's doses in time order
 - Check a dose off as taken
 - See when your next dose is due
-- Each dose shows a status: upcoming, taken, missed, or skipped
-- Skip, snooze for 10 minutes, or edit a medication from the item menu
-- See a confirmation when every dose for today is done
+- See scheduled, taken, past due and unlogged, or skipped doses
+- Skip a dose or edit a medication from the item menu
+- See a completion message and celebration after marking all of today’s doses as taken
 
 ## When to use it
 

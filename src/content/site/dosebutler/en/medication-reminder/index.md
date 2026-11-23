@@ -4,13 +4,13 @@
 
 DoseButler sends a reminder at each scheduled dose time.
 
-You can mark a dose as taken, snooze it for 10 minutes, or skip it right from the notification.
+You can mark a dose as taken, snooze it, or skip it from the notification. Choose the snooze interval in settings; the default is 10 minutes.
 
 ## What you can do
 
 - Get reminders at the dose times you set
 - Mark a dose as "taken" right from the notification
-- Snooze for 10 minutes to be reminded again
+- Choose a snooze interval of 5, 10, 15, or 30 minutes
 - Skip a single dose time
 - Tap the notification to open the app and see today's doses
 
@@ -24,7 +24,7 @@ Good for situations like these:
 
 ## Example
 
-When the 8:00 AM reminder arrives, take your medication and tap "Taken" in the notification. If now is not a good time, snooze it for 10 minutes.
+When the 8:00 AM reminder arrives, take your medication and tap "Taken" in the notification. If now is not a good time, snooze it for the interval you chose.
 
 ## Get the app
 

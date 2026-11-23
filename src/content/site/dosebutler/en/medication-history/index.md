@@ -2,17 +2,18 @@
 
 [Back to DoseButler](/dosebutler/en/)
 
-Review your weekly and monthly adherence and browse your dose history by date.
+Review the last 30 days or this week, for all medications or one medication at a time.
 
 See at a glance how consistently you take your medication.
 
 ## What you can do
 
-- Check weekly and monthly adherence
-- See counts for upcoming, taken, skipped, and unconfirmed doses
-- Browse your dose status by date on a calendar
+- Check adherence for the last 30 days or this week
+- See counts for due, taken, skipped, and missed doses
+- Select a medication to see its own history and adherence
+- Browse daily dose status and completion on a calendar
 - Select a date to see its detailed records
-- Doses scheduled on days you did not open the app are counted as unconfirmed
+- Past due doses without a record are counted as missed
 
 ## When to use it
 
@@ -24,7 +25,7 @@ Good for situations like these:
 
 ## Example
 
-Adherence is calculated as taken ÷ (taken + skipped + unconfirmed). Doses that have not come up yet are not counted.
+Adherence is calculated as taken ÷ (taken + skipped + missed). Doses that have not come up yet are not counted.
 
 ## Get the app
 

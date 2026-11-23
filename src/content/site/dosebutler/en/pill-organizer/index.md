@@ -9,6 +9,7 @@ Pause a medication you are not taking for now, and turn it back on when you need
 ## What you can do
 
 - Add a medication name and a note
+- Open a medication to see its schedules, adherence over the last 30 days, and dose history
 - Enter a dose: tablet, capsule, packet, mL, or time(s)
 - Pick a shape: pill, capsule, powder, liquid, injection, or other
 - Tell medications apart with 10 colors
